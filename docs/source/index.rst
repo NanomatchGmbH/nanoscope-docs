@@ -31,6 +31,13 @@
    user_guide/examples
    user_guide/settings
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Science
+
+   science/benchmarks
+   science/list_of_publications   
+
 
 .. toctree::
    :maxdepth: 1
