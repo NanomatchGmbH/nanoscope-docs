@@ -15,6 +15,16 @@
 
 .. toctree::
    :maxdepth: 1
+   :caption: Getting started
+
+   getting_started/installation
+   getting_started/workflows
+   getting_started/quick_start
+   getting_started/licensing
+
+
+.. toctree::
+   :maxdepth: 1
    :caption: Support
 
    support/contact
