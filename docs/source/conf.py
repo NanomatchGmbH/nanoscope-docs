@@ -43,3 +43,7 @@ redirects = {
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+html_theme_options = {
+    'collapse_navigation': True,
+    'navigation_depth': 2,  # Adjust depth as needed
+}
