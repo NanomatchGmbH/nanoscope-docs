@@ -8,7 +8,16 @@
     <script src="_static/redirect.js"></script>
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Home
+   :maxdepth: 2
+   :titlesonly:
 
    home/home
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Support
+
+   support/contact
+   support/faq
+   support/troubleshooting
+   
