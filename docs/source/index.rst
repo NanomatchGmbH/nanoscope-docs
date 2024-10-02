@@ -22,6 +22,15 @@
    getting_started/quick_start
    getting_started/licensing
 
+.. toctree::
+   :maxdepth: 1
+   :caption: User guide
+
+   user_guide/simulation_setup
+   user_guide/computed_properties
+   user_guide/examples
+   user_guide/settings
+
 
 .. toctree::
    :maxdepth: 1
