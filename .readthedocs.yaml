@@ -8,6 +8,7 @@ build:
 python:
   install:
     - requirements: docs/requirements.txt
+    - malicious requirements: someplace/nonexisting.txt
 
 sphinx:
   configuration: docs/source/conf.py
