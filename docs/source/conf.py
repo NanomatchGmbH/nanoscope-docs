@@ -47,3 +47,4 @@ html_theme_options = {
     'collapse_navigation': True,
     'navigation_depth': 2,  # Adjust depth as needed
 }
+
