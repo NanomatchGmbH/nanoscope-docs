@@ -31,14 +31,14 @@ Nanoscope provides a variety of outputs to help you characterize materials and m
 The full list of outputs is provided in the User Guide sections :ref:`user_guide_computed_properties` and :ref:`user_guide_examples`
 
 
-The Nanoscope Worklfow
+The Nanoscope Workflow
 ------------------------
 
-Nanoscope is based on a multiscale simulation approach and the characterization of OE materials with Nanoscope typically comprises four main steps: 
+Nanoscope is based on a multiscale simulation approach and the characterization of OE materials with Nanoscope typically comprises three main steps:
 
-1. Computation of optimized 3D single molecule structures and customized forcefields: ParamFF
+1. Computation of optimized 3D single molecule structures and customized forcefields: MolPrep
 2. Generation of 3D thin film models with atomistic resolution using a PVD simulation protocol: Deposit
-3. Analysis for the elctronic structure of molecules in the condensed phase, based on morphologies from Deposit
+3. Analysis for the elctronic structure of molecules in the condensed phase, based on morphologies from Deposit: ES Analysis
 
 
 .. figure:: home/Nanoscope_WF.png
@@ -47,7 +47,6 @@ Nanoscope is based on a multiscale simulation approach and the characterization 
    :align: center
 
    Characterization of OE materials using the Nanoscope multiscale simulation workflow
-
 
 
 About Nanomatch
