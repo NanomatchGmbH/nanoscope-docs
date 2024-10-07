@@ -15,12 +15,12 @@ Welcome to Nanoscope, the all-in-one simulation tool to characterize organic ele
 
 Introduction
 -------------
-A major challenge of the R&D of organic electronic (OE) materials for e.g. OLED or OPV applications is that the properties of materials only manifest themselves in the condensed phase, i.e. when molecules are embedded in thin films. Essential properties of OE materials are therefore hard to access experimentally. To support experimental R&D of OE materials and devices, we developed Nanoscope, an all-in-one simulation tool to characterize organic electronic materials in the condensed phase.
+A major challenge of the R&D of organic electronic (OE) materials for e.g., OLED or OPV applications is that the properties of materials only manifest themselves in the condensed phase, i.e. when molecules are embedded in thin films. Essential properties of OE materials are therefore hard to access experimentally. To support experimental R&D of OE materials and devices, we developed Nanoscope, an all-in-one simulation tool to characterize organic electronic materials in the condensed phase.
 
 
 Features
 ---------
-Nanoscope provides a variety of outputs to help you characterize materials and material combinations, understand dependencies between structure, property and function, and use this insight to improve your OE materials and devices. These outputs include:
+Nanoscope offers a variety of outputs that enable the characterization of materials and material combinations, facilitate the understanding of dependencies between structure, properties, and function, and provide insights for improving OE materials and devices. These outputs include:
 
 - Atomistic morphologies of pristine layers, mixed films or interfaces, to analyze e. g. orientation of molecules in the thin film phase, relative arrangement of molecules, etc.
 - Density of states (HOMO/LUMO distributions) of molecules in the condensed phase
@@ -36,10 +36,9 @@ The Nanoscope Workflow
 
 Nanoscope is based on a multiscale simulation approach and the characterization of OE materials with Nanoscope typically comprises three main steps:
 
-1. Computation of optimized 3D single molecule structures and customized forcefields: MolPrep
-2. Generation of 3D thin film models with atomistic resolution using a PVD simulation protocol: Deposit
-3. Analysis for the elctronic structure of molecules in the condensed phase, based on morphologies from Deposit: ES Analysis
-
+1. **MolPrep**: Computation of optimized 3D single molecule structures and customized forcefields.
+2. **Deposit**: Generation of 3D thin film models with atomistic resolution using a PVD simulation protocol.
+3. **ES Analysis**: Analysis of the electronic structure of molecules in the condensed phase, based on morphologies from Deposit.
 
 .. figure:: home/Nanoscope_WF.png
    :alt: Multiscale Workflow
