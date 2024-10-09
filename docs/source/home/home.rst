@@ -30,6 +30,7 @@ Nanoscope offers a variety of outputs that enable the characterization of materi
 
 The full list of outputs is provided in the User Guide sections :ref:`user_guide_computed_properties` and :ref:`user_guide_examples`
 
+.. _home_nanoscope_workflow:
 
 The Nanoscope Workflow
 ------------------------
