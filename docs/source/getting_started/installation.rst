@@ -65,11 +65,13 @@ On the computational resource
     ::
 
         git clone git@github.com:NanomatchGmbH/nanomatch-release.git
+
     2. Go into the repository and list all available releases:
-    :: 
+    ::
 
         cd nanomatch-release
         ./install_environment_helper.sh
+
     3. Copy and paste one of the printed commands to install the Nanoscope software. Use the **second topmost** command to get the latest version, e.g. 
     ::
 
@@ -84,6 +86,28 @@ On the computational resource
             git pull
 
         and execute steps 2.2, and subsequently 2.3 with a new version, as indicated in the printed commands.
+
+    4. Adapt the configuration file
+
+       During the installation you will be instructed to setup a configuration file `.nanomatch.config.` Afterwards, you can activate the environment with the following command:
+       ::
+            micromamba activate nmsci-2024.1 # This should produce an output on first activate.
+
+       **Check the output for details, when you activate the environment for the first time!**
+
+       Open the `.nanomatch.config` file (typically located in your home directory) and adapt the following:
+
+        * Scratch directory: Some of the simulations use a scratch directory for faster IO during the simulation, before final results are copied back into your workflow directory. Set this directory using
+          :: 
+
+                export SCRATCH=/scratch/
+
+        * In case you are using a commercial license, set the license server:
+          ::
+
+                export NM_LICENSE_SERVER=localhost
+
+          In case the CodeMeter runtime is installed on a different computer in your network than the computational resource itself, provide the corresponding IP address. See also :ref:`getting_started_licensing` for details.
 
 3. Install the SimStack **Server**
     In the list of available installs from step 2.2 above, execute the **topmost** command to install SimStack Server:
@@ -127,7 +151,7 @@ On the client / local PC
 
     Update the SimStack Client:
     ::
-        
+
         micromamba activate simstack
         micromamba update simstack -c https://mamba.nanomatch-distribution.de/mamba-repo -c conda-forge
         # Or if you need a specific version, example 1.2.5:
@@ -178,13 +202,13 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
    * Please choose the HPC where you want to have passwordless access.
 
       .. code-block:: bash
-         
+
          ssh-copy-id <username>@<computer name or IP address>
 
    * Test the connectivity of your passwordless ``ssh``  by running one of the commands below in the **Powershell** prompt.
 
       .. code-block:: bash
-        
+
          ssh <username>@<computer name or IP address>
 
    * After completing the above steps, run the below commands.
@@ -214,8 +238,7 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
 
          ssh-keygen
 
-   * To copy the ``ssh`` key to your user account on the HPC resource, choose and run
-     one of the commands below in the **Powershell** prompt. :green:`Literally copy the command changing only the` **user**.
+   * To copy the ``ssh`` key to your user account on the HPC resource, choose and run one of the commands below in the **Powershell** prompt.
 
       .. code:: bash
 
@@ -238,5 +261,62 @@ your HPC without entering your user password.
 
 
 Configuration of the SimStack Client
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Server Configuration within the Client
+""""""""""""""""""""""""""""""""""""""""
+
+1. Open the SimStack Client:
+    ::
+
+        # Activate the environment
+        micromamba activate simstack
+        # and run simstack:
+        simstack
+
+2. In the top menu, click on ``Configuration -> Servers``. Press the ``+``-button to add a new server
+
+    .. figure:: installation/ServerSetup.png
+       :alt: ServerConfiguration
+       :width: 50%
+       :align: center
+
+       Server Configuration Form
+
+    In this form, enter the following information on your computational resources:
+
+    =============================== ==================================
+    Label                           Description
+    =============================== ==================================
+    Hostname                        The hostname of your computational resource that is also used to login via ssh
+    Port                            ssh port of your computational resource
+    Username                        Your username on your computational resource
+    SSH Private Key                 Set to `UseSystemDefault`
+    Software Directory on Resource  Path of your micromamba on the computational resource, identify via ``echo $MAMBA_ROOT_PREFIX`` (on the computational resource)
+    Calculation Basepath            Path in your home directory where workflows are executed
+    Queuing System                  Queueing system in use on your computational resource to schedule jobs
+    Extra config                    Leave at `None required (default)`
+    =============================== ==================================
+
+.. note::
+
+    The data provided in the image above is only an example. Please adapt all values according to your computational resource. **Contact your system administrator** if you don't know how to set these values.
+
+.. note::
+
+    You can add the same computational resource multiple times, but with different ``Default Resources`` to simplify defining computational resources when setting up workflows.
+
+Set local paths
+"""""""""""""""""""
+Define the local paths (on your local PC) to the WaNo directory and the workflow directory:
+
+1. In the top menu, click on ``Configuration -> Paths``
+2. Browse for the path to the directory where you cloned the WaNos (see above)
+3. Browse for any directory where you wish to save workflows
+4. Confirm your choice with ``Save``. 
+
+If the correct WaNo Repository path was set, WaNos will appear in the top left panel of the SimStack Client.
+
+.. note::
+
+    You can choose a separate workflow directory for each research project to keep a better overview.
