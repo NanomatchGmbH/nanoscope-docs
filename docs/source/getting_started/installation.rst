@@ -57,7 +57,7 @@ Number of cores                 120 or more             16
 Memory                          3 GB / core             1.5 GB / core
 =============================== ======================= =======================
 
-Client / Local PC
+Client / local PC
 ^^^^^^^^^^^^^^^^^
 There are no special requirements for the local resource where the SimStack Client and the WaNos are installed. The SimStack Client is available for Linux, Windows and MacOS.
 
@@ -253,7 +253,8 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
 
          ssh-keygen
 
-   * To copy the ``ssh`` key to your user account on the HPC resource, choose and run one of the commands below in the **Powershell** prompt.
+   * To copy the ``ssh`` key to your user account on the HPC resource, choose and run
+     one of the commands below in the **Powershell** prompt. :green:`Literally copy the command changing only the` **user**.
 
       .. code:: bash
 
