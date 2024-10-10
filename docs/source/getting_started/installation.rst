@@ -253,8 +253,7 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
 
          ssh-keygen
 
-   * To copy the ``ssh`` key to your user account on the HPC resource, choose and run
-     one of the commands below in the **Powershell** prompt. :green:`Literally copy the command changing only the` **user**.
+   * To copy the ``ssh`` key to your user account on the HPC resource, choose and run one of the commands below in the **Powershell** prompt.
 
       .. code:: bash
 
