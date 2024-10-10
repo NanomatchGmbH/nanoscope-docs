@@ -57,10 +57,10 @@ Number of cores                 120 or more             16
 Memory                          3 GB / core             1.5 GB / core
 =============================== ======================= =======================
 
-Client / local PC
+Client / Local PC
 ^^^^^^^^^^^^^^^^^
-There are no special requirements for the `Client` where the SimStack Client and the WaNos are installed.
-The SimStack Client is available for Linux, Windows and MacOS.
+There are no special requirements for the local resource where the SimStack Client and the WaNos are installed. The SimStack Client is available for Linux, Windows and MacOS.
+
 
 
 Installation step-by-step
