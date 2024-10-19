@@ -6,18 +6,32 @@ Installation
 Software structure
 -------------------
 
-Nanoscope is designed to run on scalable computational resources. To define simulation workflows and then execute on remote computational resources we use the `SimStack workflow platform <https://simstack.readthedocs.io/>`_ that consists of a SimStack Client to be installed locally (on the `Client`, e.g. your laptop) and a SimStack Server component on your computational resource. In total the Nanoscope consists of four parts:
+
+Nanoscope is designed to run on scalable computational resources.
+It operates on a **Client-Server architecture**, which requires defining the `Client`—the machine you use to set up,
+submit, and analyze simulations—and the `Server`—the machine where computational resources will be used to perform simulations (typically, an HPC Cluster).
+Note that to test `Nanoscope`, both the `Server` and `Client` can be your laptop.
+This architecture is implemented using the `SimStack workflow platform <https://simstack.readthedocs.io/>`_ .
+
+`SimStack Client` and `SimStack Server` need to be installed on the `Client` and `Server`, respectively.
+While `SimStack` provides the infrastructure, additional components specific to Nanoscope are also required:
+- The **Nanoscope Simulation Software**, containing simulation algorithms, must be installed on the `Server`.
+- The **WaNos** (short for **Workflow Active Nodes**), the graphical representation of Nanoscope modules, must be installed on the `Client`.
+
+`WaNos` modules are combined into simulation workflows, one of which is Nanoscope itself.
+
+In total the Nanoscope consists of four parts:
 
 =============================== =======================
 Module                          Installed on...
 =============================== =======================
-Nanoscope Simulation Software   Computational resource
-SimStack Server                 Computational resource
-SimStack Client                 Client (e.g. laptop)
-WaNos                           Client (e.g. laptop)
+SimStack Server                 `Server`
+Nanoscope Simulation Software   `Server`
+SimStack Client                 `Client`
+WaNos                           `Client`
 =============================== =======================
 
-`WaNos` - short for `Workflow Active Nodes` are the graphical representation of the Nanoscope modules on the Client to combine into simulation workflows. The setup is summarized in the figure below.
+The setup is summarized in the figure below.
 
 .. figure:: installation/SoftwareStructure.png
    :alt: Software Structure
@@ -45,13 +59,13 @@ Memory                          3 GB / core             1.5 GB / core
 
 Client / local PC
 ^^^^^^^^^^^^^^^^^
-There are no special requirements for the local resource where the SimStack Client and the WaNos are installed. The SimStack Client is available for Linux, Windows and MacOS.
-
+There are no special requirements for the `Client` where the SimStack Client and the WaNos are installed.
+The SimStack Client is available for Linux, Windows and MacOS.
 
 
 Installation step-by-step
 ----------------------------
-On the computational resource
+On the `Server` / HPC Cluster
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Install micromamba
     ::
@@ -118,8 +132,8 @@ On the computational resource
 
 Details on steps 2 and 3 are provided in the `README <https://github.com/NanomatchGmbH/nanomatch-release/blob/main/README.md>`_ of the repository.
 
-On the client / local PC
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+On the `Client` / local PC
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Install micromamba
     On Linux distributions: see above
 
@@ -178,7 +192,8 @@ SimStack configuration
 Setup of passwordless ssh
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Communication between the SimStack Client and the SimStack Server requires passwordless ssh access from your local PC to your computational resource. *On your local PC*, generate a ``ssh`` keypair and transfer the key to the ``authorized_keys`` file of your user account on the computational resource with one of the following commands:
+Communication between the SimStack Client and the SimStack Server requires passwordless ssh access from your local PC to your computational resource.
+*On your local PC*, generate a ``ssh`` keypair and transfer the key to the ``authorized_keys`` file of your user account on the computational resource with one of the following commands:
 
 On Linux and OSX (Arm and x64)
 """"""""""""""""""""""""""""""""""""
@@ -199,7 +214,7 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
         id_rsa
         id_rsa.pub
 
-   * Please choose the HPC where you want to have passwordless access.
+   * Please choose the `Client` (normally, HPC) where you want to have passwordless access.
 
       .. code-block:: bash
 
