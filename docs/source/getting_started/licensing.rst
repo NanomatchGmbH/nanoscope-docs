@@ -15,19 +15,33 @@ Conditions for free usage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Usage of the Nanoscope is free for simulations containing only molecules with 40 atoms or less or systems containing only molecules of the table below, that were used in our :ref:`user_guide_examples` and :ref:`science_benchmarks`.
 
-=============  ======================================  =================
-Common name    InChIKey                                Some other ident?
-=============  ======================================  =================
+=============  ======================================
+Common name    InChIKey                              
+=============  ======================================
 BCFN           MCUZYKAMUTVDBU-UHFFFAOYSA-N
 mSiTrz         YZIDAMOKOLBRDB-UHFFFAOYSA-N
 SiCzCz         STPFPCDLLYBTHV-UHFFFAOYSA-N
 SiTrzCz2       MZZBVCAAWVBQJO-UHFFFAOYSA-N
-BD-01          YTTYUJQCITVIOG-UHFFFAOYSA-N
-BD-02          RTFYABRDOJAYJF-UHFFFAOYSA-N
-=============  ======================================  =================
+PtON7-t-Bu     YTTYUJQCITVIOG-UHFFFAOYSA-N
+PtON-TBBI      RTFYABRDOJAYJF-UHFFFAOYSA-N
+BCFA           GJWBRYKOJMOBHH-UHFFFAOYSA-N
+BCP            STTGYIUESPWXOW-UHFFFAOYSA-N
+CBP            VFUDMQLBKNMONU-UHFFFAOYSA-N
+DBFPO          AIAJGVRFXREWPK-UHFFFAOYSA-N
+mCBP           NSXJEEMTGWMJPY-UHFFFAOYSA-N
+mCBP-2CN       YJWGCXZCQQGAET-UHFFFAOYSA-N
+mCP            MZYDBGLUVPLRKR-UHFFFAOYSA-N
+mCP-2CN        UXQKXYUKGWMNCG-UHFFFAOYSA-N
+mCPD           UWQYKNJBKPIMFH-UHFFFAOYSA-N
+MTDATA         DIVZFUBWFAOMCW-UHFFFAOYSA-N
+NPB            IBHBKWKFFTZAHE-UHFFFAOYSA-N
+oCBP           LYOMPPLHDCWOED-UHFFFAOYSA-N
+Pton7-dtb      BLAOQYVUHYPTDS-UHFFFAOYSA-N
+TBPDP          CEPOTRIVHUXAQM-UHFFFAOYSA-N
+TCTA           AWXGSYPUMWKTBR-UHFFFAOYSA-N
+TMBT           MMNNWKCYXNXWBG-UHFFFAOYSA-N
+=============  ======================================
 
-.. ToDo: Find out common names of BD-01 and BD-02
-.. ToDo: Include all molecules from Franz' IP Benchmark
 .. ToDo: Do we need another identifier such as smiles?
 
 How to cite
@@ -36,13 +50,13 @@ When using the free version of the Nanoscope for work that is in any way made pu
 
 ::
 
-    Properties [`List properties and compounds`] were computed using the Nanoscope Software provided by Nanomatch GmbH
+    [`List of properties`] of molecules [`List of compounds`] were computed using the Nanoscope Software provided by Nanomatch GmbH
     Nanoscope is available at https://nanoscope.readthedocs.io
 
 
 Full version
 ------------
 
-For unlimited usage you need to purchase a commercial license from Nanomatch GmbH. Please contact us (info@nanomatch.com) for details. Further information is available `here <http://docs.nanomatch.de/technical/licensing/licensing.html>`_ .
+For unlimited usage you need to purchase a commercial license from Nanomatch GmbH. Please contact us (info@nanomatch.com) for a quote. Further information on the setup of a commercial license is available `here <http://docs.nanomatch.de/technical/licensing/licensing.html>`_ .
 
-.. ToDo: include pricing
+.. ToDo: include pricing once known.
