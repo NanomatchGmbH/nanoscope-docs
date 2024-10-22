@@ -7,7 +7,10 @@ Terms and Conditions
 --------------------
 
 Official terms and conditions are displayed during the installation and need to be accepted.
-We offer a free and commercial Nanoscope versions, see below.
+We offer three versions of Nanoscope:
+a **Basic** version for free,
+an **Academic** version and
+a **Professional** version for unlimited usage, as described below.
 
 License Comparison
 ------------------
