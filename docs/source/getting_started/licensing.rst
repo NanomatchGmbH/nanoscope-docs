@@ -9,6 +9,8 @@ Terms and Conditions
 Official terms and conditions are displayed during the installation and need to be accepted.
 We offer a free and commercial Nanoscope versions, see below.
 
+License Comparison
+------------------
 
 .. list-table::
    :header-rows: 1
@@ -79,9 +81,6 @@ TCTA           AWXGSYPUMWKTBR-UHFFFAOYSA-N
 TMBT           MMNNWKCYXNXWBG-UHFFFAOYSA-N
 =============  ======================================
 
-.. ToDo: Do we need another identifier such as smiles?
-.. ToDo: Find out common names of BD-01 and BD-02
-.. ToDo: Include all molecules from Franz's IP Benchmark
 .. ToDo: Do we need another identifier such as SMILES?
 
 How to Cite
@@ -89,19 +88,16 @@ How to Cite
 
 When using the **Basic** version of Nanoscope for work that is in any way made public (presentations, journal publications), you need to cite Nanoscope as follows:
 
-    [`List of properties`] of molecules [`List of compounds`] were computed using the Nanoscope Software provided by Nanomatch GmbH
 .. code-block:: text
 
-    Properties [list properties and compounds] were computed using the Nanoscope software provided by Nanomatch GmbH.
+    [`List of properties`] of molecules [`List of compounds`] were computed using the Nanoscope Software provided by Nanomatch GmbH
     Nanoscope is available at https://nanoscope.readthedocs.io
 
 Academic and Professional Versions
 ----------------------------------
 
-For unlimited usage (**Academic** or **Professional**), you need to purchase a commercial license from Nanomatch GmbH.
-Please contact us at (info@nanomatch.com) for details.
-Further information is available `here <http://docs.nanomatch.de/technical/licensing/licensing.html>`_.
+For unlimited usage (**Academic** or **Professional**) you need to purchase a commercial license from Nanomatch GmbH.
+Please contact us (info@nanomatch.com) for a quote.
+Further information is available `here <http://docs.nanomatch.de/technical/licensing/licensing.html>`_ .
 
-For unlimited usage you need to purchase a commercial license from Nanomatch GmbH. Please contact us (info@nanomatch.com) for a quote. Further information on the setup of a commercial license is available `here <http://docs.nanomatch.de/technical/licensing/licensing.html>`_ .
-
-.. ToDo: include pricing once known.
+.. ToDo: Include pricing once known.
