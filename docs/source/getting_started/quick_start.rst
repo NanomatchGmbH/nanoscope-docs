@@ -1,5 +1,6 @@
 .. _getting_started_quick_start:
 
+
 Quick Start Guide
 ==================
 
@@ -17,7 +18,7 @@ Simulation Setup
 -----------------
 
 
-1. Create a input molecule file
+1. Create an input molecule file
 
     1. Go to `MolView <https://www.nanomatch.de/nanomatch-files/molview/>`_ and design a molecule, e.g. a biphenyl molecule. 
     2. Use the ``clean`` and the ``2D to 3D`` buttons to generate a 3D structure of the molecule
@@ -146,14 +147,95 @@ Simulation Setup
         Further information on resources is provided in the :ref:`user_guide_settings` section.
 
 
-3. Save and submit the workflow
+4. Save and submit the workflow
 
-
-4. Submit the workflow
+    1. Save the workflow with ``Ctrl+S`` or by clicking ``File -> Save`` or ``File -> Save As...``
+    2. Connect to your resource using the `Connect` button in the top right of SimStack. Wait for the button to become green.
+    3. Submit the workflow wiht ``Ctrl+R`` or by clicking ``Run -> Run``.
+ 
 
 5. Monitor progress
+
+    You can monitor the progress of your workflow with the `Jobs & Workflows` tab in the right panel of SimStack:
+
+    1. Double click on `Workflows`
+    2. Double click on the submitted workflow (identified by the timestamp, if multiple are listed) to expand the view and show the status of all modules. The color code for both the workflow icon and the modules is:
+    
+        * green: Finished successfully
+        * yellow: Running
+        * red: crashed
+       
+      Note that modules are only listed in this view once they have been started, i.e. when the predecessing module was finished successfully.
+
+    3. Double click on each module to view and download output files.
+
+    .. figure:: quick_start/quick_start_monitor.png
+       :alt: progress_monitoring
+       :width: 60%
+       :align: center
+
+
 
 
 Output
 ------
 
+Here we present a few examples of outputs of the standard Nanoscope workflow. For a detailed description, refer to :ref:`user_guide_computed_properties` or :ref:`user_guide_examples`.
+
+MolPrep Output
+^^^^^^^^^^^^^^^
+
+=============================== ================================================================
+File                            Content
+=============================== ================================================================
+output_molecule.mol2            coordinates of the optimized vaccum conformation
+molecule.pdb                    optimized molecular vacuum conformation, formatted for Deposit
+molecule_forcefield.spf         forcefield file for Deposit
+mol_data.yml                    HOMO, LUMO and static dipole
+=============================== ================================================================
+
+Deposit Output
+^^^^^^^^^^^^^^^
+
+.. table:: 
+   :class: responsive-table
+
+   =============================== ========
+   File                            Content
+   =============================== ========
+   structure.cml                   3D coordinates of the atoms in the thin film morphology. This file can be visualized with `jmol <https://jmol.sourceforge.net/>`_
+   structure.mol2                  Atom coordinates in mol2 format
+   structurePBC.cml                Morphology extended periodically in x- and y-direction, lateral to the deposition axis
+   summary_RDF.png                 Plot of radial distribution functions of molecular center-of-geometry (COG) positions
+   visualization_2D_and_3D.png     Visualization of molecular COG positions
+   output_dict.yml                 Raw data of radial distribution functions, density (in g/cm3) and simulation settings
+   =============================== ========
+
+
+ESAnalysis Output
+^^^^^^^^^^^^^^^^^^
+
+The main output of the ESAnalysis module can be found in the module runtime folder in the subfolder `Analysis/DOS`. The following figure summarizes the main output, i.e. the density of states in the thin film morphology. The values in the figure are onsets of the distributions that compare to experimental values.
+
+.. figure:: quick_start/quick_start_all_DOS_plot.png
+   :alt: DOS of pristine film
+   :width: 100%
+   :align: center
+
+   Density of States of a pristine morphology
+
+Further outputs are:
+
+.. table:: 
+   :class: responsive-table
+
+   ==================================== ========
+   File                                 Content
+   ==================================== ========
+   DOS_Gaussian.png                     Plot visualizing the Gaussian-broadened DOS for HOMO and LUMO levels without vibrational effects.
+   Vibrational_Gaussian_DOS_plot.png    Plot showing the Gaussian-broadened DOS including vibrational broadening.
+   all_DOS_plot.png                     Combined plot overlaying DOS distributions with and without vibrational broadening (both are Gaussian-broadened).
+   raw_data_homo_lumo.yaml              Exact HOMO and LUMO energies (in mixed morphologies for each molecule type). Includes mean, std, and all individual energy levels.
+   homo_lumo_onsets.yaml                Calculated onset energies for HOMO and LUMO levels for each molecule type, can be compared with experimental onsets.
+   homo_lumo_centers.yaml               Mean and standard deviation of the DOS distributions for HOMO and LUMO levels for each molecule type. Can be used as an ab-initio input for multi-scale simulation workflows.
+   ==================================== ========
