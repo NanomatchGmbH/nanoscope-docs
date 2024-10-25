@@ -105,6 +105,7 @@ On the `Server` / HPC Cluster
 
        During the installation you will be instructed to setup a configuration file `.nanomatch.config.` Afterwards, you can activate the environment with the following command:
        ::
+
             micromamba activate nmsci-2024.1 # This should produce an output on first activate.
 
        **Check the output for details, when you activate the environment for the first time!**
