@@ -6,22 +6,22 @@ Quick Start Guide
 
 Introduction
 -------------
-This section is a step-by-step instruction of the deposition and electronic structure analysis of a simple thin film morphology. For the setup of more involved use cases, refer to the sections in the User Guide.
-
+This guide provides step-by-step instructions for depositing a simple thin-film morphology and performing electronic structure analysis on it using Nanoscope. It is designed to help you quickly get started with the basic functionalities of Nanoscope. For more complex use cases, please refer to the **User Guide** section.
 
 Prerequesits
 -------------
-Follow the :ref:`getting_started_installation` section to setup Nanoscope. 
-
+* **Nanoscope Installation**: Ensure that Nanoscope is installed on your system. If not, follow the  :ref:`getting_started_installation` to set it up.
+* **Open Babel**: Install Open Babel for molecule file conversion tasks.
 
 Simulation Setup
 -----------------
 
 
-1. Create an input molecule file
-
-    1. Go to `MolView <https://www.nanomatch.de/nanomatch-files/molview/>`_ and design a molecule, e.g. a biphenyl molecule. 
-    2. Use the ``clean`` and the ``2D to 3D`` buttons to generate a 3D structure of the molecule
+a. Design the Molecule.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    1. Open `MolView <https://www.nanomatch.de/nanomatch-files/molview/>`_  in your web browser.
+    2. Design a molecule of your choice, e.g. a biphenyl molecule.
+    3. Use the ``clean`` and the ``2D to 3D`` buttons to generate a 3D structure of the molecule.
 
         .. figure:: quick_start/quick_start_0.png
            :alt: Design a molecule with MolView
@@ -30,8 +30,10 @@ Simulation Setup
         
            Design a molecule with MolView
 
-    3. Download the 3D molecule file with ``Tools -> MOL file``
-    4. Convert the molecule to a valid mol2 input file for the MolPrep module via an xyz file
+b. Download and Convert the Molecule file.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    1. In MolView, download the 3D molecule file with ``Tools -> MOL file``.
+    2. Convert the molecule to a mol2 file suitable for the MolPrep module using:
     
         .. code-block:: bash
 
@@ -44,27 +46,37 @@ Simulation Setup
 
 
 
-2. Open SimStack Client on your local PC
+c. Lounch SimStack.
+^^^^^^^^^^^^^^^^^^^
+    On your local PC do the following:
 
     .. code-block:: bash
 
        micromamba activate simstack
-       # and run simstack:
        simstack
 
+    This will activate SimStack environment and launch SimStack.
 
-3. Setup the basic Nanoscope workflow
+d. Set Up the Basic Nanoscope Workflow.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    1. **Drag&Drop** the modules `MolPrep`, `Deposit` and `ESAnalysis` from the top left panel into the middle workflow panel into a linear workflow and arrange as depicted below. Double click on each module to adapt settings and allocate resources for each simulation step.
+    **Drag&Drop** the modules `MolPrep`, `Deposit` and `ESAnalysis` from the top left panel into the middle workflow panel into a linear workflow and arrange as depicted below. Double click on each module to adapt settings and allocate resources for each simulation step.
     
         .. figure:: quick_start/quick_start_1.png
            :alt: Construct the workflow with drag&drop
            :width: 100%
            :align: center
         
-           Construct the standard Nanoscope workflow with drag&drop
 
-    2. **MolPrep** settings
+e. Set up Individual Modules
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    In the central panel, double-click on the module to set it up.
+
+    1. **MolPrep**.
+
+        * Set the `Molecule (Mol2)` file: select the molecule you created above.
+        * Adjust other settings as shown below.
 
         .. figure:: quick_start/quick_start_molprep.png
            :alt: MolPrep settings
@@ -74,21 +86,26 @@ Simulation Setup
 
 
 
-    3. **Desposit**
+    2. **Desposit**
 
-        In the ``Simulation Parameters`` panel of Deposit, adapt the settings as follows:
+        * Adjust the ``Simulation Parameters`` tab:
 
         .. figure:: quick_start/quick_start_deposit_box.png
            :alt: deposit_box_settings
            :width: 60%
            :align: center
 
-        This will generate a sufficiently large sample for the electronic structure analysis. 
+        This will generate a sufficiently large sample for the electronic structure analysis.
 
-        Switch to the ``Molecules`` tab. Click on the rightmost buttons next to the input fields to load molecule and forcefield file from `MolPrep`:
+        * In the ``Molecules`` tab:
 
-            * `Molecule` input: `MolPPrep/outputs/molecule.pbd`
-            * `Forcefield` input: `MolPPrep/outputs/molecule_forcefield.spf`
+           Click on the rightmost buttons next to the input fields to load molecule and forcefield file from `MolPrep`:
+
+             * `Molecule` input: `MolPPrep/outputs/molecule.pbd`
+             * `Forcefield` input: `MolPPrep/outputs/molecule_forcefield.spf`
+
+            .. note :: The `*.pdb`/`*.spf` files above do not yet exist; you specify the file paths where `MolProp` module will generate them.
+
 
         .. figure:: quick_start/quick_start_Deposit_mols.png
            :alt: deposit_molecules_input
@@ -98,7 +115,7 @@ Simulation Setup
 
 
 
-    4. **ESAnalysis**
+    3. **ESAnalysis**
 
         .. list-table::
            :widths: 50 50
@@ -117,57 +134,63 @@ Simulation Setup
             
                    ESAnalysis engines tab
 
-        In the ``General`` tab of the ESAnalysis module, adapt the following:
+        * In the ``General`` tab of the ESAnalysis module, adapt the following:
 
             * `Morphology`: `Deposit3/outputs/structurePBC.cml` (again using the rightmost button)
             * `Core Shell/Number of molecules`: For a quick test, reduce this number, minimal value 2.
             * `Shell for Disorder and Couplings/Number of molecules`: For a quick test, reduce this number to 100, increase to 400 for significant statistics.
 
-        In the ``Engines`` tab, set `Memory per CPU` to the total memory of your compute node divided by the number of processors.
+        * In the ``Engines`` tab, set `Memory per CPU` to the total memory of your compute node divided by the number of processors.
 
-    5. **Resources**
-        
-        Double click on each module and select the ``Resources`` tab to set computational resources for each module individually. 
+f. Set Up Resources for Every Module
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-        * **CPUs**: The following is recommended:
+       For each module, go to the **Resources** tab and set the computational resources:
 
-            =============================== =======================
-            Module                          cpus_per_node
-            =============================== =======================
-            MolPrep                         32 or more
-            Deposit                         32
-            ESAnalysis                      64 or more
-            =============================== =======================
+   +------------+--------------+-------------+-----------+
+   | Module     | CPUs         | Memory (GB) | Walltime  |
+   +============+==============+=============+===========+
+   | MolPrep    | ≥32          | ≥64         | A few     |
+   |            |              |             | hours     |
+   +------------+--------------+-------------+-----------+
+   | Deposit    | 32           | ≥64         | A few     |
+   |            |              |             | hours     |
+   +------------+--------------+-------------+-----------+
+   | ESAnalysis | ≥64          | ≥128        | Several   |
+   |            |              |             | hours     |
+   +------------+--------------+-------------+-----------+
 
-            .. note :: You can run the workflow with fewer cores, if the above resources are not available. This increases runtime respectively.
-
-        * **walltime**: Provide a walltime in seconds suitable for your resource. Typical runtimes with the above number of cpus are a couple of hours.
-        * **memory**: Memory is provided in MB. For 32 cores, memory should be 64000 MB or higher. Large molecules may run into memory issues, if insufficiently memory is provided.
+   .. note :: You can run the workflow with fewer cores, if the above resources are not available. This increases runtime respectively.
 
         Further information on resources is provided in the :ref:`user_guide_settings` section.
 
 
-4. Save and submit the workflow
+g. Save and submit the workflow
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Save the workflow with ``Ctrl+S`` or by clicking ``File -> Save`` or ``File -> Save As...``
     2. Connect to your resource using the `Connect` button in the top right of SimStack. Wait for the button to become green.
     3. Submit the workflow wiht ``Ctrl+R`` or by clicking ``Run -> Run``.
  
 
-5. Monitor progress
+h. Monitor progress
+^^^^^^^^^^^^^^^^^^^
 
-    You can monitor the progress of your workflow with the `Jobs & Workflows` tab in the right panel of SimStack:
+    You can monitor the progress of your workflow with the ``Jobs & Workflows`` tab in the right panel of SimStack:
 
-    1. Double click on `Workflows`
-    2. Double click on the submitted workflow (identified by the timestamp, if multiple are listed) to expand the view and show the status of all modules. The color code for both the workflow icon and the modules is:
-    
-        * green: Finished successfully
-        * yellow: Running
-        * red: crashed
-       
-      Note that modules are only listed in this view once they have been started, i.e. when the predecessing module was finished successfully.
+    1. Navigate to the ``Jobs & Workflows`` tab on the right panel.
 
-    3. Double click on each module to view and download output files.
+    2. Expand **Workflows** and locate your submitted workflow (identified by timestamp if necessary).
+
+    3. Monitor the status of each module:
+
+       - **Green**: Completed successfully
+       - **Yellow**: Currently running
+       - **Red**: Encountered an error
+
+    4. Double-click on a module to view logs, output files, and detailed status.
+
+    .. note :: Modules are only listed in this view once they have been started, i.e. when the predecessing module was finished successfully.
 
     .. figure:: quick_start/quick_start_monitor.png
        :alt: progress_monitoring
@@ -215,7 +238,7 @@ Deposit Output
 ESAnalysis Output
 ^^^^^^^^^^^^^^^^^^
 
-The main output of the ESAnalysis module can be found in the module runtime folder in the subfolder `Analysis/DOS`. The following figure summarizes the main output, i.e. the density of states in the thin film morphology. The values in the figure are onsets of the distributions that compare to experimental values.
+The primary outputs of the ESAnalysis module are located in the `Analysis/DOS` directory within the module's runtime folder.
 
 .. figure:: quick_start/quick_start_all_DOS_plot.png
    :alt: DOS of pristine film
