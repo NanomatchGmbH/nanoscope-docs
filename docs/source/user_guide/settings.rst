@@ -8,23 +8,24 @@ This section contains a reference of all settings available in the individual mo
 
 MolPrep
 ---------
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Setting            | Description                                           | Standard value | Anything? |
-+====================+=======================================================+================+===========+
-| Molecule (Mol2)    |Input file in mol2 format. Refer to the first steps of | N/A            |           |
-|                    |:ref:`getting_started_quick_start_setup` for           |                |           |
-|                    |instructions how to generate input files.              |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Molecule Identifier|A 3-letter numeric string to label the molecule        | ABC (random)   |           |
-|                    |throughout the workflow in various output files        |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Optimize Molecule  |Optimize the molecule with DFT (B3LYP, def2-TZVP)      | True           |           |
-|                    |Disable to use the molecular conformation as provided  | (checked)      |           |
-|                    |in the inpup file                                      |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Compute Dihedral   |Energy profiles for dihedral rotations are computed    | True           |           |
-| Forcefields        |to sample different conformations during deposition    | (checked)      |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
+
++--------------------+-------------------------------------------------------+----------------+
+| Setting            | Description                                           | Standard value |
++====================+=======================================================+================+
+| Molecule (Mol2)    |Input file in mol2 format. Refer to the first steps of | N/A            |
+|                    |:ref:`getting_started_quick_start_setup` for           |                |
+|                    |instructions how to generate input files.              |                |
++--------------------+-------------------------------------------------------+----------------+
+| Molecule Identifier|A 3-letter numeric string to label the molecule        | ABC (random)   |
+|                    |throughout the workflow in various output files        |                |
++--------------------+-------------------------------------------------------+----------------+
+| Optimize Molecule  |Optimize the molecule with DFT (B3LYP, def2-TZVP)      | True           |
+|                    |Disable to use the molecular conformation as provided  | (checked)      |
+|                    |in the inpup file                                      |                |
++--------------------+-------------------------------------------------------+----------------+
+| Compute Dihedral   |Energy profiles for dihedral rotations are computed    | True           |
+| Forcefield         |to sample different conformations during deposition    | (checked)      |
++--------------------+-------------------------------------------------------+----------------+
 
 
 Deposit
@@ -35,95 +36,107 @@ Simulation Parameters Tab
 
 * Simulation Box
     
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Setting            | Description                                           | Standard value | Anything? |
-+====================+=======================================================+================+===========+
-| Lx                 |Input file in mol2 format. Refer to the first steps of | 45.0           |           |
-|                    |:ref:`getting_started_quickstart_setup` for            |                |           |
-|                    |instructions how to generate input files.              |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Ly                 |                                                       | 45.0           |           |
-|                    |                                                       |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Ly                 |                                                       | 180.0          |           |
-|                    |                                                       |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| PBC enabled        |                                                       | True           |           |
-|                    |                                                       | (checked)      |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| PBC cutoff         |                                                       | 20.0           |           |
-|                    |                                                       |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
++--------------------+-------------------------------------------------------+----------------+
+| Setting            | Description                                           | Standard value |
++====================+=======================================================+================+
+| Lx                 |Half the box size in x direction in A. Box extends     | 45.0           |
+|                    |from -Lx to Lx.                                        |                |
++--------------------+-------------------------------------------------------+----------------+
+| Ly                 |Half the box size in y direction in A. Box extends     | 45.0           |
+|                    |from -Ly to Ly. Recommended: Lx=Ly                     |                |
++--------------------+-------------------------------------------------------+----------------+
+| Ly                 |Box size in z direction (deposition axis) in A. For    | 180.0          |
+|                    |180A is sufficient for 2000 standard molecules with    |                |
+|                    |60-100 atoms. Increase for morphologies containing     |                |
+|                    |more or larger molecules                               |                |
++--------------------+-------------------------------------------------------+----------------+
+| PBC enabled        |If enabled, periodic boundary conditions in x and y    | True           |
+|                    |direction are applied, and the final morphology is     | (checked)      |
+|                    |expanded in x and y direction (file `structurePBC.cml`)|                |
++--------------------+-------------------------------------------------------+----------------+
+| PBC cutoff         |Cutoff in A applied in the computation of forcefield   | 20.0           |
+|                    |contributions of periodic copies.                      |                |
++--------------------+-------------------------------------------------------+----------------+
 
 * Simulation Parameters
 
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Setting            | Description                                           | Standard value | Anything? |
-+====================+=======================================================+================+===========+
-| Number of          |Input file in mol2 format. Refer to the first steps of | 1000-4000      |           |
-| Molecules          |:ref:`getting_started_quickstart_setup` for            |                |           |
-|                    |instructions how to generate input files.              |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Initial            |                                                       | 4000.0         |           |
-| Temperature [K]    |                                                       |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Final              |                                                       | 300.0          |           |
-| Temperature [K]    |                                                       |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| SA Acc Temp        |                                                       | 5.0            |           |
-|                    |                                                       |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Number of Steps    |                                                       | 130000         |           |
-|                    |                                                       |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Number of SA       |                                                       | 32             |           |
-| cycles             |                                                       |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Dihedral moves     |                                                       | True           |           |
-|                    |                                                       | (checked)      |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
-| Postrelaxaiton     |                                                       | 100000         |           |
-| Steps              |                                                       |                |           |
-+--------------------+-------------------------------------------------------+----------------+-----------+
+.. note:: Most of the simulation parameters are calibrated to generate good morphologies. We recommend to modify parameters only as indicated.
+
++--------------------+-------------------------------------------------------+----------------+
+| Setting            | Description                                           | Standard value |
++====================+=======================================================+================+
+| Number of          |Number of molecules in the morphology. Number required | 1000-4000      |
+| Molecules          |for ESAnalysis depends on the molecule size.           |                |
+|                    |For NPB, 2000 molecules are sufficient.                |                |
+|                    |For small molecules such as BPhen, increase to 3000    |                |
++--------------------+-------------------------------------------------------+----------------+
+| Initial            |Initial temperature of the simulated annealing cycles. | 4000.0         |
+| Temperature [K]    |*Leave as is*.                                         |                |
++--------------------+-------------------------------------------------------+----------------+
+| Final              |Initial temperature of the simulated annealing cycles. | 300.0          |
+| Temperature [K]    |*Leave as is*.                                         |                |
++--------------------+-------------------------------------------------------+----------------+
+| SA Acc Temp        |Acceptance temperature of the simulated annealing      | 5.0            |
+|                    |cycles. *Leave as is*.                                 |                |
++--------------------+-------------------------------------------------------+----------------+
+| Number of Steps    |Number of Monte Carlo steps per SA cycle.              | 130000         |
+|                    |*Leave as is*.                                         |                |
++--------------------+-------------------------------------------------------+----------------+
+| Number of SA       |Number of simulated annealing (SA) cycles per          | 32             |
+| cycles             |deposition. SA cycles are executed in parallel.        |                |
+|                    |Optimal performance of deposit is achieved in case of  |                |
+|                    |`Number of SA cycles` = `cpus_per_node`                |                |
+|                    |We recommend to use no fewer than 20 SA cycles.        |                |
++--------------------+-------------------------------------------------------+----------------+
+| Dihedral moves     |Allow for intramolecular dihedral rotations for        | True           |
+|                    |flexible molecules. Moves are only executed if         | (checked)      |
+|                    |`compute Dihedral Forcefield` was enabled in MolPrep.  |                |
++--------------------+-------------------------------------------------------+----------------+
+| Postrelaxaiton     |Number of low-temperature Monte Carlo steps at the     | 100000         |
+| Steps              |end of each SA cycle. *Leave as is*.                   |                |
++--------------------+-------------------------------------------------------+----------------+
 
 
 Molecules Tab
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-+--------------------+-------------------------------------------------------+----------------------------+-----------+
-| Setting            | Description                                           | Standard value             | Anything? |
-+====================+=======================================================+============================+===========+
-| Restart from       |Input file in mol2 format. Refer to the first steps of | False                      |           |
-| existing           |:ref:`getting_started_quickstart_setup` for            |                            |           |
-| morphology         |instructions how to generate input files.              |                            |           |
-+--------------------+-------------------------------------------------------+----------------------------+-----------+
-| Restartfile        |Only visible when Restart enabled. Load file from your | restartfile.zip            |           |
-|                    |hardrive or import from another Deposit run            |                            |           |
-+--------------------+-------------------------------------------------------+----------------------------+-----------+
-| Molecules/         |                                                       | molecule.pdb               |           |
-| Molecule           |                                                       | from MolPrep               |           |
-+--------------------+-------------------------------------------------------+----------------------------+-----------+
-| Molecules/         |                                                       | molecule_forcefield.spf    |           |
-| Forcefield         |                                                       | from MolPrep               |           |
-+--------------------+-------------------------------------------------------+----------------------------+-----------+
-| Molecules/         |                                                       | 1.0                        |           |
-| Mixing Ratio       |                                                       |                            |           |
-+--------------------+-------------------------------------------------------+----------------------------+-----------+
++--------------------+-------------------------------------------------------+----------------------------+
+| Setting            | Description                                           | Standard value             |
++====================+=======================================================+============================+
+| Restart from       |Enable to deposit on top of an existing morphology.    | False                      |
+| existing           |Note that box parameters need to be identical in both  |                            |
+| morphology         |Deposit runs.                                          |                            |
++--------------------+-------------------------------------------------------+----------------------------+
+| Restartfile        |Only visible when Restart enabled. Load file from your | restartfile.zip            |
+|                    |hardrive or import from another Deposit run to continue|                            |
+|                    |Deposition on the existing morphology                  |                            |
++--------------------+-------------------------------------------------------+----------------------------+
+| Molecules/         |Input molecule file from MolPrep                       | molecule.pdb               |
+| Molecule           |                                                       |                            |
++--------------------+-------------------------------------------------------+----------------------------+
+| Molecules/         |Input focefield file from MolPrep                      | molecule_forcefield.spf    |
+| Forcefield         |                                                       |                            |
++--------------------+-------------------------------------------------------+----------------------------+
+| Molecules/         |In case multiple molecular inputs are supplied via the | 1.0                        |
+| Mixing Ratio       |`+` button, adapt this number to define the mixing     |                            |
+|                    |ratio.                                                 |                            |
++--------------------+-------------------------------------------------------+----------------------------+
 
 
 
 Postprocessing Tab
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-+--------------------+-------------------------------------------------------+----------------------------+-----------+
-| Setting            | Description                                           | Standard value             | Anything? |
-+====================+=======================================================+============================+===========+
-| Extend             |Input file in mol2 format. Refer to the first steps of | True                       |           |
-| morphology         |:ref:`getting_started_quickstart_setup` for            | (checked)                  |           |
-| (x,y)              |instructions how to generate input files.              |                            |           |
-+--------------------+-------------------------------------------------------+----------------------------+-----------+
-| Cut first layer by |Only visible when Restart enabled. Load file from your | 7.0                        |           |
-| (A)                |hardrive or import from another Deposit run            |                            |           |
-+--------------------+-------------------------------------------------------+----------------------------+-----------+
++--------------------+-------------------------------------------------------+----------------------------+
+| Setting            | Description                                           | Standard value             |
++====================+=======================================================+============================+
+| Extend             |If PBC was enabled, the morphology can be expanded in  | True                       |
+| morphology         |x and y direction. If checked the final morphology is  | (checked)                  |
+|                    |expanded and provided in the file `structurePBC.cml`.  |                            |
+|                    |**The expanded file is required for ESAnalysis**       |                            |
++--------------------+-------------------------------------------------------+----------------------------+
+| Cut first layer by |The bottom layer may contain artefacts and is          | 7.0                        |
+| (A)                |cut during expansion. Increase for larger molecules.   |                            |
++--------------------+-------------------------------------------------------+----------------------------+
 
 
 ESAnalysis
