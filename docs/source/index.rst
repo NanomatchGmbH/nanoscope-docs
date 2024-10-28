@@ -15,6 +15,32 @@
 
 .. toctree::
    :maxdepth: 1
+   :caption: Getting started
+
+   getting_started/installation
+   getting_started/workflows
+   getting_started/quick_start
+   getting_started/licensing
+
+.. toctree::
+   :maxdepth: 1
+   :caption: User guide
+
+   user_guide/simulation_setup
+   user_guide/computed_properties
+   user_guide/examples
+   user_guide/settings
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Science
+
+   science/benchmarks
+   science/list_of_publications   
+
+
+.. toctree::
+   :maxdepth: 1
    :caption: Support
 
    support/contact
