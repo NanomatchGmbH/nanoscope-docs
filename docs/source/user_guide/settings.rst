@@ -227,3 +227,6 @@ Storage Tab
 |                    |to keep runtime files in scratch and only copy main    |                            |
 |                    |output files back to the work directory.               |                            |
 +--------------------+-------------------------------------------------------+----------------------------+
+
+
+.. ToDo: Check if we want to include settings of analysis tools, once documented in simulation setup section
