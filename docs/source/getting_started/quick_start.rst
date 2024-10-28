@@ -184,7 +184,7 @@ h. Monitor Progress
 
     2. Expand **Workflows** (double click) and locate your submitted workflow (identified by timestamp if necessary).
 
-    3. Monitor the status of each workflow and the contained modules:
+    3. Monitor the status of the workflow and the contained modules:
 
        - **Green**: Completed successfully
        - **Yellow**: Currently running
@@ -243,11 +243,11 @@ ESAnalysis Output
 The primary outputs of the ESAnalysis module are located in the `Analysis/DOS` directory within the module's runtime folder.
 
 .. figure:: quick_start/quick_start_all_DOS_plot.png
-   :alt: DOS of pristine film
+   :alt: DOS in pristine film
    :width: 100%
    :align: center
 
-   Density of States of a pristine morphology. The values in the figure are onsets of the distributions that compare to experimental values.
+   HOMO and LUMO distribution in a pristine morphology. The values in the figure are onsets of the distributions that compare to experimental values.
 
 Further outputs are:
 
@@ -257,10 +257,10 @@ Further outputs are:
    ==================================== ========
    File                                 Content
    ==================================== ========
-   DOS_Gaussian.png                     Plot visualizing the Gaussian-broadened DOS for HOMO and LUMO levels without vibrational effects.
-   Vibrational_Gaussian_DOS_plot.png    Plot showing the Gaussian-broadened DOS including vibrational broadening.
+   DOS_Gaussian.png                     Plot visualizing the Gaussian-broadened density of HOMO and LUMO levels without vibrational effects.
+   Vibrational_Gaussian_DOS_plot.png    Plot showing the Gaussian-broadened HOMO/LUMO distribution including vibrational broadening.
    all_DOS_plot.png                     Combined plot overlaying DOS distributions with and without vibrational broadening (both are Gaussian-broadened).
    raw_data_homo_lumo.yaml              Exact HOMO and LUMO energies (in mixed morphologies for each molecule type). Includes mean, std, and all individual energy levels.
-   homo_lumo_onsets.yaml                Calculated onset energies for HOMO and LUMO levels for each molecule type, can be compared with experimental onsets.
-   homo_lumo_centers.yaml               Mean and standard deviation of the DOS distributions for HOMO and LUMO levels for each molecule type. Can be used as an ab-initio input for multi-scale simulation workflows.
+   homo_lumo_onsets.yaml                Calculated onset energies for HOMO and LUMO levels distribution for each molecule type, can be compared with experimental onsets.
+   homo_lumo_centers.yaml               Mean and standard deviation of the distribution of HOMO and LUMO levels for each molecule type. Can be used as an ab-initio input for multi-scale simulation workflows.
    ==================================== ========
