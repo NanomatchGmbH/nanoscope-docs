@@ -13,9 +13,10 @@ Prerequesits
 * **Nanoscope Installation**: Ensure that Nanoscope is installed on your system. If not, follow the  :ref:`getting_started_installation` to set it up.
 * **Open Babel**: Install Open Babel for molecule file conversion tasks.
 
+.. _getting_started_quick_start_setup:
+
 Simulation Setup
 -----------------
-
 
 a. Design the Molecule.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
