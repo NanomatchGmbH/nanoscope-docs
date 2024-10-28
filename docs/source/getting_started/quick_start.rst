@@ -30,7 +30,7 @@ a. Design the Molecule.
         
            Design a molecule with MolView
 
-b. Download and Convert the Molecule file.
+b. Download and Convert the Molecule File.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     1. In MolView, download the 3D molecule file with ``Tools -> MOL file``.
     2. Convert the molecule to a mol2 file suitable for the MolPrep module using:
@@ -46,7 +46,7 @@ b. Download and Convert the Molecule file.
 
 
 
-c. Lounch SimStack.
+c. Launch SimStack.
 ^^^^^^^^^^^^^^^^^^^
     On your local PC do the following:
 
@@ -68,7 +68,7 @@ d. Set Up the Basic Nanoscope Workflow.
            :align: center
         
 
-e. Set up Individual Modules
+e. Set Up Individual Modules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     In the central panel, double-click on the module to set it up.
@@ -101,7 +101,7 @@ e. Set up Individual Modules
 
            Click on the rightmost buttons next to the input fields to load molecule and forcefield file from `MolPrep`:
 
-             * `Molecule` input: `MolPPrep/outputs/molecule.pbd`
+             * `Molecule` input: `MolPPrep/outputs/molecule.pdb`
              * `Forcefield` input: `MolPPrep/outputs/molecule_forcefield.spf`
 
             .. note :: The `*.pdb`/`*.spf` files above do not yet exist; you specify the file paths where `MolProp` module will generate them.
@@ -145,27 +145,29 @@ e. Set up Individual Modules
 f. Set Up Resources for Every Module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-       For each module, go to the **Resources** tab and set the computational resources:
+   For each module, go to the ``Resources`` tab and set the computational resources:
 
    +------------+--------------+-------------+-----------+
-   | Module     | CPUs         | Memory (GB) | Walltime  |
+   | Module     | CPUs         | Memory (MB) | Walltime  |
    +============+==============+=============+===========+
-   | MolPrep    | ≥32          | ≥64         | A few     |
+   | MolPrep    | ≥32          | ≥64000      | A few     |
    |            |              |             | hours     |
    +------------+--------------+-------------+-----------+
-   | Deposit    | 32           | ≥64         | A few     |
+   | Deposit    | 32           | ≥64000      | A few     |
    |            |              |             | hours     |
    +------------+--------------+-------------+-----------+
-   | ESAnalysis | ≥64          | ≥128        | Several   |
+   | ESAnalysis | ≥64          | ≥128000     | Several   |
    |            |              |             | hours     |
    +------------+--------------+-------------+-----------+
 
-   .. note :: You can run the workflow with fewer cores, if the above resources are not available. This increases runtime respectively.
+   .. note :: * You can run the workflow with fewer cores, if the above resources are not available. This increases runtime respectively.
 
-        Further information on resources is provided in the :ref:`user_guide_settings` section.
+        * Memory is provided in MB in the resources tab. Running Nanoscope with less memory than indicated in the table above is possible, but you may run into out-of-memory issues especially for larger molecules.
+
+        * Further information on resources is provided in the :ref:`user_guide_settings` section.
 
 
-g. Save and submit the workflow
+g. Save and Submit the Workflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Save the workflow with ``Ctrl+S`` or by clicking ``File -> Save`` or ``File -> Save As...``
@@ -173,16 +175,16 @@ g. Save and submit the workflow
     3. Submit the workflow wiht ``Ctrl+R`` or by clicking ``Run -> Run``.
  
 
-h. Monitor progress
+h. Monitor Progress
 ^^^^^^^^^^^^^^^^^^^
 
     You can monitor the progress of your workflow with the ``Jobs & Workflows`` tab in the right panel of SimStack:
 
     1. Navigate to the ``Jobs & Workflows`` tab on the right panel.
 
-    2. Expand **Workflows** and locate your submitted workflow (identified by timestamp if necessary).
+    2. Expand **Workflows** (double click) and locate your submitted workflow (identified by timestamp if necessary).
 
-    3. Monitor the status of each module:
+    3. Monitor the status of each workflow and the contained modules:
 
        - **Green**: Completed successfully
        - **Yellow**: Currently running
@@ -245,7 +247,7 @@ The primary outputs of the ESAnalysis module are located in the `Analysis/DOS` d
    :width: 100%
    :align: center
 
-   Density of States of a pristine morphology
+   Density of States of a pristine morphology. The values in the figure are onsets of the distributions that compare to experimental values.
 
 Further outputs are:
 
