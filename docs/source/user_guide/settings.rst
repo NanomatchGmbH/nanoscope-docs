@@ -6,6 +6,11 @@ Settings and Options
 
 This section contains a reference of all settings available in the individual modules. Refer to the :ref:`user_guide_examples` section to learn how different settings may be applied.
 
+.. image:: settings/MolPrep.png
+   :alt: MolPrep Icon
+   :width: 30px
+   :align: left
+
 MolPrep
 ---------
 
@@ -75,6 +80,10 @@ MolPrep
     </table>
 
 
+.. image:: settings/Deposit3.png
+   :alt: Deposit Icon
+   :width: 30px
+   :align: left
 
 Deposit
 --------
@@ -394,6 +403,10 @@ Postprocessing Tab
         </tbody>
     </table>
 
+.. image:: settings/ESAnalysis.png
+   :alt: ESAnalysis Icon
+   :width: 30px
+   :align: left
 
 ESAnalysis
 --------------
