@@ -172,23 +172,27 @@ General Tab
 * Shell setup
 
 
-+--------------------+--------------------------------------------------------------------------------------------+----------------------------+
-| Setting            | Description                                                                                | Standard value             |
-+====================+============================================================================================+============================+
-| Core Shell /       |Specify how to chose molecules for computation of IP                                        | Number of Molecules        |
-| Shell size defined |and EA.                                                                                     |                            |
-| by                 |Number of molecules   |  Compute IP and EA on the N innermost molecules in the morphology   |                            |
-|                    |                      |                                                                     |                            |
-+--------------------+--------------------------------------------------------------------------------------------+----------------------------+
-| Core Shell /       |Computes absolute values for ionization potential and                                       | True                       |
-| Number of molecules|electron affinity for molecules in the core shell.                                          | (checked)                  |
-|                    |Computationally more expensive than disorder.                                               |                            |
-|                    |Not required e.g. for mobility of pristine materials.                                       |                            |
-+--------------------+--------------------------------------------------------------------------------------------+----------------------------+
-| Compute disorder   |Compute distributions of HOMO and LUMO energies on a                                        | True                       |
-|                    |larger set of molecules.                                                                    | (checked)                  |
-|                    |                                                                                            |                            |
-+--------------------+--------------------------------------------------------------------------------------------+----------------------------+
++---------------------+--------------------------------------------------------------------------------------------+----------------------------+
+| Setting             | Description                                                                                | Standard value             |
++=====================+============================================================================================+============================+
+| Core Shell /        |Specify how to chose molecules for computation of IP                                        | Number of Molecules        |
+| Shell size defined  |and EA.                                                                                     |                            |
+| by                  |Number of molecules: Compute IP and EA on the N innermost molecules in the morphology:      |                            |
+|                     |Number of molecules of each type: Compute IP and EA on the N innermost molecules of each    |                            |
+|                     |type in the morphology;                                                                     |                            |
+|                     |List of Molecule IDs: Provide a specific list of molecule IDs.                              |                            |
++---------------------+--------------------------------------------------------------------------------------------+----------------------------+
+| Core Shell /        |Number of molecules or molecules of each type on which to compute IP and EA. Reasonable     | 8                          |
+| Number of molecules |values are between 2 and 8, depending on available resources and required statistics.       |                            |
++---------------------+--------------------------------------------------------------------------------------------+----------------------------+
+| Core Shell /        |Specific list of molecule IDs. IDs can be separated by                                      | 43; 57; 79-100             |
+| List of molecule IDs|semicolon, applied as a range using a hyphen, or a combination of both.                     |                            |
+|                     |                                                                                            |                            |
++---------------------+--------------------------------------------------------------------------------------------+----------------------------+
+| Disorder Shell /    |Number of molecules on which to compute HOMO and LUMO disorder. Depending on the available  | 200                        |
+| Number of molecules |resources, 200-400 molecules are recommended for sufficient statistics.                     |                            |
++---------------------+--------------------------------------------------------------------------------------------+----------------------------+
+
 
 Enginges Tab
 ^^^^^^^^^^^^^^^^^^^^^^^^^
