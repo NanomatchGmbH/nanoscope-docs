@@ -142,7 +142,84 @@ Postprocessing Tab
 ESAnalysis
 --------------
 
+General Tab
+^^^^^^^^^^^^^^^^^^^^^^^^^
+* General Settings
+
++--------------------+-------------------------------------------------------+----------------------------+
+| Setting            | Description                                           | Standard value             |
++====================+=======================================================+============================+
+| Morphology         |Morphology file from Deposit. Load from your hard drive| structurePBC.cml           |
+|                    |or import from the Deposit module in the same workflow.|                            |
+|                    |For sufficient environment, use the periodically       |                            |
+|                    |expanded morphology in `structurePBC.cml`              |                            |
++--------------------+-------------------------------------------------------+----------------------------+
+| Compute absolute   |Computes absolute values for ionization potential and  | True                       |
+| levels of IP/EA    |electron affinity for molecules in the core shell.     | (checked)                  |
+|                    |Computationally more expensive than disorder.          |                            |
+|                    |Not required e.g. for mobility of pristine materials.  |                            |
++--------------------+-------------------------------------------------------+----------------------------+
+| Compute disorder   |Compute distributions of HOMO and LUMO energies on a   | True                       |
+|                    |larger set of molecules.                               | (checked)                  |
+|                    |                                                       |                            |
++--------------------+-------------------------------------------------------+----------------------------+
+| Compute couplings  |Compute electronic couplings for molecules in the      | True                       |
+|                    |Disorder shell. Computationally insignificant in       | (checked)                  |
+|                    |comparison to disorder computation                     |                            |
++--------------------+-------------------------------------------------------+----------------------------+
 
 
+* Shell setup
 
 
++--------------------+--------------------------------------------------------------------------------------------+----------------------------+
+| Setting            | Description                                                                                | Standard value             |
++====================+============================================================================================+============================+
+| Core Shell /       |Specify how to chose molecules for computation of IP                                        | Number of Molecules        |
+| Shell size defined |and EA.                                                                                     |                            |
+| by                 |Number of molecules   |  Compute IP and EA on the N innermost molecules in the morphology   |                            |
+|                    |                      |                                                                     |                            |
++--------------------+--------------------------------------------------------------------------------------------+----------------------------+
+| Core Shell /       |Computes absolute values for ionization potential and                                       | True                       |
+| Number of molecules|electron affinity for molecules in the core shell.                                          | (checked)                  |
+|                    |Computationally more expensive than disorder.                                               |                            |
+|                    |Not required e.g. for mobility of pristine materials.                                       |                            |
++--------------------+--------------------------------------------------------------------------------------------+----------------------------+
+| Compute disorder   |Compute distributions of HOMO and LUMO energies on a                                        | True                       |
+|                    |larger set of molecules.                                                                    | (checked)                  |
+|                    |                                                                                            |                            |
++--------------------+--------------------------------------------------------------------------------------------+----------------------------+
+
+Enginges Tab
+^^^^^^^^^^^^^^^^^^^^^^^^^
++--------------------+-------------------------------------------------------+----------------------------+
+| Setting            | Description                                           | Standard value             |
++====================+=======================================================+============================+
+| Memory per CPU (MB)|Set to the total memory of your node / resource,       | 2000                       |
+|                    |divided by the number of processors.                   |                            |
+|                    |                                                       |                            |
++--------------------+-------------------------------------------------------+----------------------------+
+| GW Engine          |The GW step during IP/EA computation can be performed  | PySCF                      |
+|                    |with Turbomole or PySCF. PySCF is integrated in the    |                            |
+|                    |Nanoscope, Turbomole requires separate installation and|                            |
+|                    |license.                                               |                            |
++--------------------+-------------------------------------------------------+----------------------------+
+| Functional GW      |Functional for the GW step. For PySCF, this step is    | PBE0                       |
+|                    |only calibrated for PBE0. For Turbomole, TMHF is       |                            |
+|                    |slightly more accurate than PBE0.                      |                            |
++--------------------+-------------------------------------------------------+----------------------------+
+
+
+Storage Tab
+^^^^^^^^^^^^^^^^^^^^^^^^^
++--------------------+-------------------------------------------------------+----------------------------+
+| Setting            | Description                                           | Standard value             |
++====================+=======================================================+============================+
+| Storage            |ESAnalysis typically runs in a scratch directory       | Workdir                    |
+| location           |defined during installation. At the end of the run,    |                            |
+|                    |a certain set of runtime files are copied back to the  |                            |
+|                    |work directory where the job was submitted. In the     |                            |
+|                    |case of limited space in the Workdir, set to `Scratch` |                            |
+|                    |to keep runtime files in scratch and only copy main    |                            |
+|                    |output files back to the work directory.               |                            |
++--------------------+-------------------------------------------------------+----------------------------+
