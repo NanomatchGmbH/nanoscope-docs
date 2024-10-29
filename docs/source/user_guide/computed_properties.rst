@@ -3,13 +3,34 @@
 Computed Properties
 ===================
 
-Single molecule properties
----------------------------
+
+Ionization potential (IP) and electron affinity (EA) distributions
+------------------------------------------------------------------
 
 
-Morphological properties
+Dielectric permittivity
 -------------------------
 
 
-Electronic thin film properties
---------------------------------
+Charge carrier mobility
+-------------------------
+
+
+Molecular arrangement in thin films: Outcoupling and GSP/SOP
+--------------------------------------------------------------
+
+
+Density and Radial distribution function
+--------------------------------------------
+
+
+
+.. _ug_cp_orientation:
+
+
+
+
+
+
+Output file reference
+-----------------------
