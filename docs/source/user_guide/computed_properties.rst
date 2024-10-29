@@ -116,47 +116,47 @@ Data Files in `Analysis/DOS/data`
       </thead>
       <tbody>
          <tr>
-            <td><a href="static_files/nanomatch-wanos/ESAnalysis/Analysis/data/raw_data_homo_lumo.yaml">raw_data_homo_lumo.yaml</a></td>
+            <td><a href="/_static/user_guide/computed_properties/ip_ea/raw_data_homo_lumo.yaml">raw_data_homo_lumo.yaml</a></td>
             <td>Exact HOMO and LUMO energies for each molecule type (UUID). Includes mean, std, and all individual energy levels.</td>
             <td>YAML</td>
          </tr>
          <tr>
-            <td><a href="static_files/nanomatch-wanos/ESAnalysis/Analysis/data/DOS_Gaussian_homo.csv">DOS_Gaussian_homo.csv</a></td>
+            <td><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Gaussian_homo.csv">DOS_Gaussian_homo.csv</a></td>
             <td>Gaussian-broadened DOS data for HOMO levels without vibrational effects.</td>
             <td>CSV</td>
          </tr>
          <tr>
-            <td><a href="static_files/nanomatch-wanos/ESAnalysis/Analysis/data/DOS_Gaussian_lumo.csv">DOS_Gaussian_lumo.csv</a></td>
+            <td><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Gaussian_lumo.csv">DOS_Gaussian_lumo.csv</a></td>
             <td>Gaussian-broadened DOS data for LUMO levels without vibrational effects.</td>
             <td>CSV</td>
          </tr>
          <tr>
-            <td><a href="static_files/nanomatch-wanos/ESAnalysis/Analysis/data/DOS_Vibrational_homo.csv">DOS_Vibrational_homo.csv</a></td>
+            <td><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Vibrational_homo.csv">DOS_Vibrational_homo.csv</a></td>
             <td>DOS data for HOMO levels including vibrational broadening effects.</td>
             <td>CSV</td>
          </tr>
          <tr>
-            <td><a href="static_files/nanomatch-wanos/ESAnalysis/Analysis/data/DOS_Vibrational_lumo.csv">DOS_Vibrational_lumo.csv</a></td>
+            <td><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Vibrational_lumo.csv">DOS_Vibrational_lumo.csv</a></td>
             <td>DOS data for LUMO levels including vibrational broadening effects.</td>
             <td>CSV</td>
          </tr>
          <tr>
-            <td><a href="static_files/nanomatch-wanos/ESAnalysis/Analysis/data/DOS_Vibrational_Gaussian_homo.csv">DOS_Vibrational_Gaussian_homo.csv</a></td>
+            <td><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Vibrational_Gaussian_homo.csv">DOS_Vibrational_Gaussian_homo.csv</a></td>
             <td>Gaussian-broadened DOS data for HOMO levels with vibrational effects included.</td>
             <td>CSV</td>
          </tr>
          <tr>
-            <td><a href="static_files/nanomatch-wanos/ESAnalysis/Analysis/data/DOS_Vibrational_Gaussian_lumo.csv">DOS_Vibrational_Gaussian_lumo.csv</a></td>
+            <td><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Vibrational_Gaussian_lumo.csv">DOS_Vibrational_Gaussian_lumo.csv</a></td>
             <td>Gaussian-broadened DOS data for LUMO levels with vibrational effects included.</td>
             <td>CSV</td>
          </tr>
          <tr>
-            <td><a href="static_files/nanomatch-wanos/ESAnalysis/Analysis/data/homo_lumo_onsets.yaml">homo_lumo_onsets.yaml</a></td>
+            <td><a href="/_static/user_guide/computed_properties/ip_ea/homo_lumo_onsets.yaml">homo_lumo_onsets.yaml</a></td>
             <td>Calculated onset energies for HOMO and LUMO levels for each molecule type, can be compared with experimental onsets.</td>
             <td>YAML</td>
          </tr>
          <tr>
-            <td><a href="static_files/nanomatch-wanos/ESAnalysis/Analysis/data/homo_lumo_centers.yaml">homo_lumo_centers.yaml</a></td>
+            <td><a href="/_static/user_guide/computed_properties/ip_ea/homo_lumo_centers.yaml">homo_lumo_centers.yaml</a></td>
             <td>Mean and standard deviation of the DOS distributions for HOMO and LUMO levels for each molecule type. Can be used as an ab-initio input for multi-scale simulation workflows.</td>
             <td>YAML</td>
          </tr>
