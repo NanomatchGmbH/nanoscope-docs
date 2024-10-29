@@ -303,7 +303,7 @@ Output files
 
 
 
-Radial distribution function
+Radial Distribution Function
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Property description
 ~~~~~~~~~~~~~~~~~~~~~~~
