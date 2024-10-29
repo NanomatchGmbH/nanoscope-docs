@@ -52,39 +52,39 @@ This is the most comprehensive visualization. The image below is an example for 
 
 .. raw:: html
 
-   <table>
+   <table class="docutils" style="width: 100%; table-layout: fixed; border-collapse: collapse;">
       <thead>
          <tr>
-            <th>File</th>
-            <th>Description</th>
-            <th>Format</th>
+            <th style="width: 30%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">File</th>
+            <th style="width: 60%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">Description</th>
+            <th style="width: 10%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">Format</th>
          </tr>
       </thead>
       <tbody>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Gaussian.png">DOS_Gaussian.png</a></td>
-            <td>Plot visualizing the Gaussian-broadened DOS for HOMO and LUMO levels without vibrational effects.</td>
-            <td>PNG</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Gaussian.png">DOS_Gaussian.png</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Plot visualizing the Gaussian-broadened DOS for HOMO and LUMO levels without vibrational effects.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">PNG</td>
          </tr>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/Vibrational_Gaussian_DOS_plot.png">Vibrational_Gaussian_DOS_plot.png</a></td>
-            <td>Plot showing the Gaussian-broadened DOS including vibrational broadening.</td>
-            <td>PNG</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/Vibrational_Gaussian_DOS_plot.png">Vibrational_Gaussian_DOS_plot.png</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Plot showing the Gaussian-broadened DOS including vibrational broadening.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">PNG</td>
          </tr>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/all_DOS_plot.png">all_DOS_plot.png</a></td>
-            <td>Combined plot overlaying DOS distributions with and without vibrational broadening (both are Gaussian-broadened).</td>
-            <td>PNG</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/all_DOS_plot.png">all_DOS_plot.png</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Combined plot overlaying DOS distributions with and without vibrational broadening (both are Gaussian-broadened).</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">PNG</td>
          </tr>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/all_DOS_for_uuid_4c32a0a4f1938ddc47bf6ad0b748658e.png">all_DOS_for_uuid_4c..58e.png</a></td>
-            <td>Individual DOS plot for molecule type with UUID `4c32a0a4f1938ddc47bf6ad0b748658e`.</td>
-            <td>PNG</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/all_DOS_for_uuid_4c32a0a4f1938ddc47bf6ad0b748658e.png">all_DOS_for_uuid_4c..58e.png</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Individual DOS plot for molecule type with UUID `4c32a0a4f1938ddc47bf6ad0b748658e`.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">PNG</td>
          </tr>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/all_DOS_for_uuid_7bcea01794773fc317d8fb5a8ea7c275.png">all_DOS_for_uuid_7b..75.png</a></td>
-            <td>Individual DOS plot for molecule type with UUID `7bcea01794773fc317d8fb5a8ea7c275`.</td>
-            <td>PNG</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/all_DOS_for_uuid_7bcea01794773fc317d8fb5a8ea7c275.png">all_DOS_for_uuid_7b..75.png</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Individual DOS plot for molecule type with UUID `7bcea01794773fc317d8fb5a8ea7c275`.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">PNG</td>
          </tr>
       </tbody>
    </table>
@@ -106,59 +106,59 @@ Data Files in `Analysis/DOS/data`
 
 .. raw:: html
 
-   <table>
+   <table class="docutils" style="width: 100%; table-layout: fixed; border-collapse: collapse;">
       <thead>
          <tr>
-            <th>File</th>
-            <th>Description</th>
-            <th>Format</th>
+            <th style="width: 30%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">File</th>
+            <th style="width: 60%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">Description</th>
+            <th style="width: 10%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">Format</th>
          </tr>
       </thead>
       <tbody>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/raw_data_homo_lumo.yaml">raw_data_homo_lumo.yaml</a></td>
-            <td>Exact HOMO and LUMO energies for each molecule type (UUID). Includes mean, std, and all individual energy levels.</td>
-            <td>YAML</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/raw_data_homo_lumo.yaml">raw_data_homo_lumo.yaml</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Exact HOMO and LUMO energies for each molecule type (UUID). Includes mean, std, and all individual energy levels.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">YAML</td>
          </tr>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Gaussian_homo.csv">DOS_Gaussian_homo.csv</a></td>
-            <td>Gaussian-broadened DOS data for HOMO levels without vibrational effects.</td>
-            <td>CSV</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Gaussian_homo.csv">DOS_Gaussian_homo.csv</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Gaussian-broadened DOS data for HOMO levels without vibrational effects.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">CSV</td>
          </tr>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Gaussian_lumo.csv">DOS_Gaussian_lumo.csv</a></td>
-            <td>Gaussian-broadened DOS data for LUMO levels without vibrational effects.</td>
-            <td>CSV</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Gaussian_lumo.csv">DOS_Gaussian_lumo.csv</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Gaussian-broadened DOS data for LUMO levels without vibrational effects.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">CSV</td>
          </tr>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Vibrational_homo.csv">DOS_Vibrational_homo.csv</a></td>
-            <td>DOS data for HOMO levels including vibrational broadening effects.</td>
-            <td>CSV</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Vibrational_homo.csv">DOS_Vibrational_homo.csv</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">DOS data for HOMO levels including vibrational broadening effects.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">CSV</td>
          </tr>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Vibrational_lumo.csv">DOS_Vibrational_lumo.csv</a></td>
-            <td>DOS data for LUMO levels including vibrational broadening effects.</td>
-            <td>CSV</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Vibrational_lumo.csv">DOS_Vibrational_lumo.csv</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">DOS data for LUMO levels including vibrational broadening effects.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">CSV</td>
          </tr>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Vibrational_Gaussian_homo.csv">DOS_Vibrational_Gaussian_homo.csv</a></td>
-            <td>Gaussian-broadened DOS data for HOMO levels with vibrational effects included.</td>
-            <td>CSV</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Vibrational_Gaussian_homo.csv">DOS_Vibrational_Gaussian_homo.csv</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Gaussian-broadened DOS data for HOMO levels with vibrational effects included.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">CSV</td>
          </tr>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Vibrational_Gaussian_lumo.csv">DOS_Vibrational_Gaussian_lumo.csv</a></td>
-            <td>Gaussian-broadened DOS data for LUMO levels with vibrational effects included.</td>
-            <td>CSV</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/DOS_Vibrational_Gaussian_lumo.csv">DOS_Vibrational_Gaussian_lumo.csv</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Gaussian-broadened DOS data for LUMO levels with vibrational effects included.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">CSV</td>
          </tr>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/homo_lumo_onsets.yaml">homo_lumo_onsets.yaml</a></td>
-            <td>Calculated onset energies for HOMO and LUMO levels for each molecule type, can be compared with experimental onsets.</td>
-            <td>YAML</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/homo_lumo_onsets.yaml">homo_lumo_onsets.yaml</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Calculated onset energies for HOMO and LUMO levels for each molecule type, can be compared with experimental onsets.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">YAML</td>
          </tr>
          <tr>
-            <td><a href="/_static/user_guide/computed_properties/ip_ea/homo_lumo_centers.yaml">homo_lumo_centers.yaml</a></td>
-            <td>Mean and standard deviation of the DOS distributions for HOMO and LUMO levels for each molecule type. Can be used as an ab-initio input for multi-scale simulation workflows.</td>
-            <td>YAML</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"><a href="/_static/user_guide/computed_properties/ip_ea/homo_lumo_centers.yaml">homo_lumo_centers.yaml</a></td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Mean and standard deviation of the DOS distributions for HOMO and LUMO levels for each molecule type. Can be used as an ab-initio input for multi-scale simulation workflows.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">YAML</td>
          </tr>
       </tbody>
    </table>
@@ -281,21 +281,21 @@ Output files
 
 .. raw:: html
 
-   <table>
+   <table class="docutils" style="width: 100%; table-layout: fixed; border-collapse: collapse;">
       <thead>
          <tr>
-            <th>File</th>
-            <th>Description</th>
+            <th style="width: 20%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">File</th>
+            <th style="width: 80%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">Description</th>
          </tr>
       </thead>
       <tbody>
          <tr>
-            <td>output_dict.yml</td>
-            <td>Mass density and corresponding standard deviation are available at keys `averaged_box_density` and `std_box_dens`, provided in g/cm3.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">output_dict.yml</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Mass density and corresponding standard deviation are available at keys `averaged_box_density` and `std_box_dens`, provided in g/cm3.</td>
          </tr>
          <tr>
-            <td>Deposit3.stdout</td>
-            <td>Standard output of the Deposit run lists the density analysis near the end of the file, lines starting with `box density avg over 20 samples`. First line is mass density, second line is molecular particle density. Molecular volume is listed below.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Deposit3.stdout</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Standard output of the Deposit run lists the density analysis near the end of the file, lines starting with `box density avg over 20 samples`. First line is mass density, second line is molecular particle density. Molecular volume is listed below.</td>
          </tr>
       </tbody>
     </table>
@@ -314,21 +314,21 @@ Output files
 
 .. raw:: html
 
-   <table>
+   <table class="docutils" style="width: 100%; table-layout: fixed; border-collapse: collapse;">
       <thead>
          <tr>
-            <th>File</th>
-            <th>Description</th>
+            <th style="width: 20%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">File</th>
+            <th style="width: 80%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">Description</th>
          </tr>
       </thead>
       <tbody>
          <tr>
-            <td>summary_RDF.png</td>
-            <td>Plot of radial distribution functions of molecular center-of-geometry (COG) positions. For mixtures, this figure contains plots of RDF between all molecular species.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">summary_RDF.png</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Plot of radial distribution functions of molecular center-of-geometry (COG) positions. For mixtures, this figure contains plots of RDF between all molecular species.</td>
          </tr>
          <tr>
-            <td>rdf_{uuid1}_{uuid2}.png</td>
-            <td>Plots of individual rdfs between types. Exists only for mixed morphology.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">rdf_{uuid1}_{uuid2}.png</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Plots of individual rdfs between types. Exists only for mixed morphology.</td>
          </tr>
       </tbody>
     </table>
