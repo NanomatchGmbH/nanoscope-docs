@@ -80,7 +80,7 @@ resources for each simulation step.
 
 
 Workflow options
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 Click the link below to navigate to the workflow of your choice:
 
@@ -278,6 +278,27 @@ Your workflow should look like this:
 
     4. Switch to the Engines Tab and set `Memory per CPU (MB)`
 
+
+d. SOP/GSP analysis
+~~~~~~~~~~~~~~~~~~~~~~~
+To compute the spontaneous orientation potential (SOP), also called giant surface potential (GSP) of a deposited thin film, add the `GSPAnalysis` module as depicted in the figure below. An example study is available :ref:`science_publications_here `
+
+    .. figure:: simulation_setup/simulation_setup_GSP.png
+       :alt: Workflow for GSP analysis
+       :width: 100%
+       :align: center
+
+In the `GSPAnalysis` WaNo adapt the following settings:
+
+    * `Morphology`: load `Deposit3/outputs/structure.cml` (note: *not* `structurePBC.cml` from the preceding Deposit module
+    * `Forcefield`: load `MolPrep/outputs/molecule_forcefield.spf` from the preceding MolPrep module
+    * `BoxSize`: set the box size of your morphology in x- and y-direction, i.e. two times the settings `Lx` or `Ly` set in Deposit.
+
+.. note:: GSPAnalysis only works for morphologies with Lx=Ly
+
+.. note:: You can run the `GSPAnalysis` not only on pristine morphologies, but also on mixed systems. In this case, provide the `merged.spf` file from the Deposit module as input for `Forcefield`.
+
+.. note:: In the above setup, vacuum ESP charges from MolPrep are used to compute GSP. You can also compute GSP based on charges equilibrated for the full morphology. A tutorial on how to do this will be supplied shortly.
 
 3. Save and submit the workflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
