@@ -473,7 +473,27 @@ Data Files in `Analysis/DOS/data`
 
     .. code-block:: yaml
 
+        <uuid1>:
+          homo:
+            UPS: float  # Ultraviolet Photoemission Spectroscopy onset energy
+            PYS: float  # Photoemission Yield Spectroscopy onset energy
+          lumo:
+            IPES: float # Inverse Photoemission Spectroscopy onset energy
+        <uuid2>:
+          ...
 
+4. `homo_lumo_centers.yaml`
+
+    .. code-block:: yaml
+
+        <uuid1>:
+          homo:
+            mean: float  # Mean energy of the HOMO distribution
+            std: float   # Standard deviation of the HOMO distribution
+          lumo:
+            mean: float  # Mean energy of the LUMO distribution
+            std: float   # Standard deviation of the LUMO distribution
+        <uuid2>:
 
 
 .. _charge_transport:
