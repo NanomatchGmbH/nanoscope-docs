@@ -36,7 +36,7 @@
    :caption: Science
 
    science/benchmarks
-   science/list_of_publications   
+   science/publications   
 
 
 .. toctree::
