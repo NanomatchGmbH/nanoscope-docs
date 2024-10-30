@@ -178,8 +178,15 @@ POLARIZATION RESPONSE
 
 :ref:`Polarization Energies <polarization_energies>`
 
+.. _dielectric_permittivity:
+
+Dielectric Permittivity
+-----------------------
 
 .. _polarization_energies:
+
+Content about Dielectric Permittivity.
+
 
 Polarization Energies
 ---------------------
@@ -187,17 +194,9 @@ Polarization Energies
 Content about Polarization Energies.
 
 
-.. _dielectric_permittivity:
-
-Dielectric Permittivity
------------------------
-
-Content about Dielectric Permittivity.
 
 
 .. _embedded_molecules:
-
-
 
 EMBEDDED MOLECULES
 ------------------
@@ -451,12 +450,14 @@ CHARGE TRANSPORT
 
 :ref:`Energy Disorder <energy_disorder>`
 
+
 .. _mobility:
 
-Mobility
---------
+Charge Carrier Mobility
+-----------------------
 
 Content about Mobility.
+
 
 .. _overlap_integrals:
 
@@ -464,6 +465,7 @@ Overlap Integrals
 -----------------
 
 Content about Overlap Integrals.
+
 
 .. _energy_disorder:
 
