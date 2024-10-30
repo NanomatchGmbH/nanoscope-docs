@@ -195,7 +195,7 @@ In addition, this module provides the following output files:
       <tbody>
          <tr>
             <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"> output_dict.yml</td>
-            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Computed GSP value.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Computed GSP value in mV/nm.</td>
          </tr>
          <tr>
             <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">GSP_analysis_system_potential_data.dat</td>
