@@ -208,27 +208,27 @@ In addition, this module provides the following output files:
 
 .. _polarization_response:
 
-POLARIZATION RESPONSE
----------------------
+.. POLARIZATION RESPONSE
+.. ---------------------
 
-:ref:`Dielectric Permittivity <dielectric_permittivity>`
+.. :ref:`Dielectric Permittivity <dielectric_permittivity>`
 
-:ref:`Polarization Energies <polarization_energies>`
+.. :ref:`Polarization Energies <polarization_energies>`
 
 .. _dielectric_permittivity:
 
-Dielectric Permittivity
------------------------
+.. Dielectric Permittivity
+.. -----------------------
 
 .. _polarization_energies:
 
-Content about Dielectric Permittivity.
+.. Content about Dielectric Permittivity.
 
 
-Polarization Energies
----------------------
+.. Polarization Energies
+.. ---------------------
 
-Content about Polarization Energies.
+.. Content about Polarization Energies.
 
 
 
@@ -478,35 +478,35 @@ Data Files in `Analysis/DOS/data`
 
 .. _charge_transport:
 
-CHARGE TRANSPORT
-----------------
+.. CHARGE TRANSPORT
+.. ----------------
 
-:ref:`Charge Carrier Mobility <mobility>`
+.. :ref:`Charge Carrier Mobility <mobility>`
 
-:ref:`Overlap Integrals <overlap_integrals>`
+.. :ref:`Overlap Integrals <overlap_integrals>`
 
-:ref:`Energy Disorder <energy_disorder>`
+.. :ref:`Energy Disorder <energy_disorder>`
 
 
 .. _mobility:
 
-Charge Carrier Mobility
------------------------
+.. Charge Carrier Mobility
+.. -----------------------
 
-Content about Mobility.
+.. Content about Mobility.
 
 
 .. _overlap_integrals:
 
-Overlap Integrals
------------------
+.. Overlap Integrals
+.. -----------------
 
-Content about Overlap Integrals.
+.. Content about Overlap Integrals.
 
 
 .. _energy_disorder:
 
-Energy Disorder
----------------
+.. Energy Disorder
+.. ---------------
 
-Content about Energy Disorder.
+.. Content about Energy Disorder.
