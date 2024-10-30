@@ -163,10 +163,47 @@ Output files
 
 .. _molecular_arrangement:
 
-Molecular arrangement in thin films: Outcoupling and GSP/SOP
+.. ToDo: Once setup for TD-orientation is documented, change title to `Molecular arrangement in thin films: Outcoupling and GSP/SOP`
+
+Molecular arrangement in thin films: GSP/SOP
 ------------------------------------------------------------
 
-Content about Molecular Arrangement.
+Property description
+~~~~~~~~~~~~~~~~~~~~~~~
+In amorphous solids, spontaneous orientation of polar molecules due to van-der-Waals interaction with the substrate may induce a potential drop across the thin film along the deposition axis. This effect is called spontaneous orientation polarization (SOP), giant surface potential (GSP) or built-in potential. We compute the slope of the potential across (in x- and y-direction infinitly extended) thin films using the orientation of molecular dipoles in deposited thin film morphologies using the `GSPAnalysis` module. Further details are available in the publications section:   :ref:`science_publications_gsp`.
+
+Output files
+~~~~~~~~~~~~~~~~~
+The `GSPAnalysis` module prints the value of the potential slope into the standard output, typically named `GSPAnalysis.stdout`. Further, the figure `GSP_analysis_system_scatter_fit.png` shows the potential on all molecular sites induced by the spontaneous orientation of all dipoles in the thin film over the z-position, i.e. along the deposition axis, and the fit applied to compute the potential slope. The resulting slope is provided in the legend:
+
+.. image:: computed_properties/GSP_analysis_system_scatter_fit.png
+   :alt: GSP_analysis_fit
+   :width: 80%
+   :align: center
+
+In addition, this module provides the following output files: 
+
+.. raw:: html
+
+   <table class="docutils" style="width: 100%; table-layout: fixed; border-collapse: collapse;">
+      <thead>
+         <tr>
+            <th style="width: 40%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">File</th>
+            <th style="width: 60%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">Description</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;"> output_dict.yml</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Computed GSP value.</td>
+         </tr>
+         <tr>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">GSP_analysis_system_potential_data.dat</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Potential computed at molecule center of geometries.</td>
+         </tr>
+      </tbody>
+    </table>
+
 
 
 .. _polarization_response:

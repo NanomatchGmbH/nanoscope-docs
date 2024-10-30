@@ -90,6 +90,8 @@ Click the link below to navigate to the workflow of your choice:
 
   :ref:`simulation_multi_layer`.
 
+  :ref:`simulation_gsp`.
+
 
 .. _simulation_pristine_layer:
 
@@ -130,6 +132,7 @@ To simulate a pristine layer we construct a linear worklfow in SimStack comprisi
     2. Depending on the required output, adjust the `Compute X` options in the General Settings panel
     3. Depending on the settings of 2., adapt `Core Shell` definition and `Shell for Disorder and Couplings`
     4. Switch to the Engines Tab and set `Memory per CPU (MB)`.
+
 
 .. _simulation_guest_host:
 
@@ -278,10 +281,11 @@ Your workflow should look like this:
 
     4. Switch to the Engines Tab and set `Memory per CPU (MB)`
 
+.. _simulation_gsp:
 
 d. SOP/GSP analysis
 ~~~~~~~~~~~~~~~~~~~~~~~
-To compute the spontaneous orientation potential (SOP), also called giant surface potential (GSP) of a deposited thin film, add the `GSPAnalysis` module as depicted in the figure below. An example study is available :ref:`science_publications_here `
+To compute the spontaneous orientation potential (SOP), also called giant surface potential (GSP) of a deposited thin film, add the `GSPAnalysis` module as depicted in the figure below. An example study is available in the publications: :ref:`science_publications_gsp`
 
     .. figure:: simulation_setup/simulation_setup_GSP.png
        :alt: Workflow for GSP analysis
@@ -299,6 +303,8 @@ In the `GSPAnalysis` WaNo adapt the following settings:
 .. note:: You can run the `GSPAnalysis` not only on pristine morphologies, but also on mixed systems. In this case, provide the `merged.spf` file from the Deposit module as input for `Forcefield`.
 
 .. note:: In the above setup, vacuum ESP charges from MolPrep are used to compute GSP. You can also compute GSP based on charges equilibrated for the full morphology. A tutorial on how to do this will be supplied shortly.
+
+.. ToDo: Add setup for pc from QP.
 
 3. Save and submit the workflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
