@@ -250,6 +250,8 @@ Organic Semiconductors: Toward Design of Novel Materials for Organic Electronics
 
 **Link**: `https://doi.org/https://doi.org/10.1002/sdtp.12905 <https://doi.org/https://doi.org/10.1002/sdtp.12905>`_
 
+.. _science_publications_gsp:
+
 Built-In Potentials Induced by Molecular Order in Amorphous Organic Thin Films
 ------------------------------------------------------------------------------
 
