@@ -4,12 +4,104 @@ Computed Properties
 ===================
 
 
+.. list-table:: Overview of Property Groups
+   :widths: 50 50
+   :header-rows: 0
+
+   * - .. image:: computed_properties/Deposit3.png
+         :width: 100px
+         :height: 100px
+         :align: center
+
+       `Morphology <#morphology>`_
+
+       Density
+
+       Radial Distribution Function (RDF)
+
+       Molecular Arrangement
+
+
+     - .. image:: computed_properties/ESAnalysis.png
+         :width: 100px
+         :height: 100px
+         :align: center
+
+       `Polarization Response <#polarization-response>`_
+
+       Dielectric Permittivity
+
+       Polarization Energies
+
+
+   * - .. image:: computed_properties/MolPrep.png
+         :width: 100px
+         :height: 100px
+         :align: center
+
+       `Embedded Molecules <#embedded-molecules>`_.
+
+       :ref:`Ionization Potential (IP) <ip_and_ea>`
+
+       :ref:`Electron Affinity (EA) <ip_and_ea>`
+
+
+     - .. image:: computed_properties/lightforge2.png
+         :width: 100px
+         :height: 100px
+         :align: center
+
+       `Charge Transport <#charge-transport>`_
+
+       Mobility,
+
+       Hopping Rates,
+
+       Charge Carrier Dynamics
+
+
+.. note::
+   Click on a property group to navigate to its detailed section.
+
+
+
+
+
+
+
+Where are computed properties
+=============================
+
+In the right panel of SimStack, go to ``Jobs & Workflows``. Completed jobs (shown in green) appear here, organized by the module that generated them, as illustrated below:
+
++---------------------------------------------+----------------------------------------------------------+
+| **Output Structure**                        | **Example**                                              |
++---------------------------------------------+----------------------------------------------------------+
+| .. code-block:: text                        | .. figure:: computed_properties/where_is_output.png      |
+|                                             |    :alt: progress_monitoring                             |
+|     Workflows                               |    :width: 60%                                           |
+|     └─── <TimeStamp><WorkflowName>          |    :align: center                                        |
+|          ├── MolPrep                        |                                                          |
+|          │    └── ... (files and folders)   |                                                          |
+|          ├── Deposit3                       |                                                          |
+|          │    └── ... (files and folders)   |                                                          |
+|          └── ESAnalysis                     |                                                          |
+|               └── ... (files and folders)   |                                                          |
++---------------------------------------------+----------------------------------------------------------+
+
+
+.. _ip_and_ea:
+
 Ionization potential and electron affinity distributions in organic thin films
--------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
 
 Property description
 ^^^^^^^^^^^^^^^^^^^^
-Ionization potential (IP) and electron affinity (EA), commonly referred to as HOMO and LUMO, are computed by the ESAnalysis module on molecules embedded in thin-film morphologies provided by Deposit. The impact of the unique electrostatic environment of each individual molecule is explicitly take into account. This approach provides: 
+
+Ionization potential (IP) and electron affinity (EA), commonly referred to as HOMO and LUMO, are computed by the
+ESAnalysis module on molecules embedded in thin-film morphologies provided by Deposit. The impact of the unique
+electrostatic environment of each individual molecule is explicitly take into account. This approach provides:
 
 * Distributions of IP and EA (density of states, DOS) in organic semiconductor materials
 * Shift of IP and EA in guest-host systems compared to pristine films
@@ -332,9 +424,3 @@ Output files
          </tr>
       </tbody>
     </table>
-
-
-
-
-Output file reference
------------------------
