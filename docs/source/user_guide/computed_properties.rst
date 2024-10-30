@@ -208,27 +208,27 @@ In addition, this module provides the following output files:
 
 .. _polarization_response:
 
-POLARIZATION RESPONSE
----------------------
+.. POLARIZATION RESPONSE
+.. ---------------------
 
-:ref:`Dielectric Permittivity <dielectric_permittivity>`
+.. :ref:`Dielectric Permittivity <dielectric_permittivity>`
 
-:ref:`Polarization Energies <polarization_energies>`
+.. :ref:`Polarization Energies <polarization_energies>`
 
 .. _dielectric_permittivity:
 
-Dielectric Permittivity
------------------------
+.. Dielectric Permittivity
+.. -----------------------
 
 .. _polarization_energies:
 
-Content about Dielectric Permittivity.
+.. Content about Dielectric Permittivity.
 
 
-Polarization Energies
----------------------
+.. Polarization Energies
+.. ---------------------
 
-Content about Polarization Energies.
+.. Content about Polarization Energies.
 
 
 
@@ -473,7 +473,27 @@ Data Files in `Analysis/DOS/data`
 
     .. code-block:: yaml
 
+        <uuid1>:
+          homo:
+            UPS: float  # Ultraviolet Photoemission Spectroscopy onset energy
+            PYS: float  # Photoemission Yield Spectroscopy onset energy
+          lumo:
+            IPES: float # Inverse Photoemission Spectroscopy onset energy
+        <uuid2>:
+          ...
 
+4. `homo_lumo_centers.yaml`
+
+    .. code-block:: yaml
+
+        <uuid1>:
+          homo:
+            mean: float  # Mean energy of the HOMO distribution
+            std: float   # Standard deviation of the HOMO distribution
+          lumo:
+            mean: float  # Mean energy of the LUMO distribution
+            std: float   # Standard deviation of the LUMO distribution
+        <uuid2>:
 
 
 .. _charge_transport:
@@ -483,9 +503,9 @@ CHARGE TRANSPORT
 
 :ref:`Charge Carrier Mobility <mobility>`
 
-:ref:`Overlap Integrals <overlap_integrals>`
+.. :ref:`Overlap Integrals <overlap_integrals>`
 
-:ref:`Energy Disorder <energy_disorder>`
+.. :ref:`Energy Disorder <energy_disorder>`
 
 
 .. _mobility:
@@ -607,8 +627,8 @@ File Content
 
 .. _overlap_integrals:
 
-Overlap Integrals
------------------
+.. Overlap Integrals
+.. -----------------
 
 Content about Overlap Integrals.
 
