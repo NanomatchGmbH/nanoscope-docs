@@ -493,7 +493,116 @@ CHARGE TRANSPORT
 Charge Carrier Mobility
 -----------------------
 
-Content about Mobility.
+Charge carrier mobility is a measure of the speed at which charge carriers, such as electrons or holes,
+can move through a material when an electric field is applied. It reflects the material's ability to conduct charge and
+is influenced by various intrinsic and extrinsic factors.
+
+
+Modeling Method
+~~~~~~~~~~~~~~~
+`Nanoscope` estimates the electron and hole mobility using the Generalized Effective Medium Model (GEMM) method
+using the formula:
+
+.. math::
+
+   \mu = \frac{e \cdot \beta \cdot M \cdot J^2 r^2}{n \cdot \hbar \cdot \sqrt{\lambda}}
+         \cdot \sqrt{\frac{\pi \cdot \beta}{1 + \frac{\beta \cdot \sigma^2}{\lambda}}}
+         \cdot \exp\left(-C \cdot (\beta \cdot \sigma)^2 - C \cdot \beta \cdot \lambda\right)
+
+where constants are:
+
+- :math:`e` is the elementary charge,
+- :math:`\beta = \frac{1}{k_B \cdot T}` with :math:`k_B` being the Boltzmann constant and :math:`T` being the inverse temperature,
+- :math:`n` is the dimensionality of the system,
+- :math:`\hbar` is the reduced Planck's constant,
+
+Other parameters are explained below.
+
+Fixed Parameters
+~~~~~~~~~~~~~~~~
+
+Parameters below are not very material-specific and we fix their values to provide the best agreement with experiments / reference kMC studies:
+
+- :math:`T`: Temperature, fixed to 300 K,
+- :math:`M`: Mean number of nearest neighbors, fixed to 8.0,
+- :math:`C`: Empirical parameter, fixed to 0.25 to provide the best agreement with experiments for small organic molecules.
+- :math:`\lambda`: Reorganization energy, fixed to 200 meV.
+
+Computed Parameters
+~~~~~~~~~~~~~~~~~~~
+
+Parameters below are highly materials-specific and are computed with `Nanoscope`:
+
+- :math:`\sigma`: Energy disorder due to environmental variations in molecular energy levels, [:math:`eV`],
+- :math:`J^2 r^2`: Reflects the ease of charge transfer between molecules,  [:math:`eV²·Å²`].
+
+**Computed Mobility Data**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The computed mobility for both holes and electrons is saved as a YAML file, which includes the parameter values used in the computation for reference.
+
+
+Output Files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The output of the GEMM-based mobility calculation is stored in the following file:
+
+::
+
+    ESAnalysis
+       └─── Analysis
+              └─── DOS
+                    └─── data
+                           └─── mobility.yaml
+
+File Content
+~~~~~~~~~~~~~
+
+.. raw:: html
+
+   <table class="docutils" style="width: 100%; table-layout: fixed; border-collapse: collapse;">
+      <thead>
+         <tr>
+            <th style="width: 20%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">File</th>
+            <th style="width: 80%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">Description</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">mobility.yaml</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Contains the computed values of hole and electron mobilities, along with detailed parameters used for the calculation.</td>
+         </tr>
+      </tbody>
+    </table>
+
+**Example:**
+~~~~~~~~~~~~
+
+.. code-block:: yaml
+
+    hole_mobility:
+      unit: cm²/V·s
+      value: 2.09e-5  # hole mobility in cm2/Vs
+      parameters:
+        J2_r2: 1.42e-3  # (eV²·Å²)
+        lambda_eV: 0.266  # eV
+        sigma: 0.13  # eV
+        T: 290  # K
+        M: 8.16
+        n: 3
+        C: 0.25
+    electron_mobility:
+      unit: cm²/V·s
+      value: 1.01e-10  # electron mobility in cm2/Vs
+      parameters:
+        J2_r2: 9.99e-3  # (eV²·Å²)
+        lambda_eV: 0.296
+        sigma: 0.224
+        T: 290
+        M: 7.31
+        n: 3
+        C: 0.25
+
+
 
 
 .. _overlap_integrals:
