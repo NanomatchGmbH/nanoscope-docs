@@ -356,7 +356,7 @@ Modeling disordered morphologies in organic semiconductors
 
 **Abstract**: Organic thin film devices are investigated for many diverse applications, including light emitting diodes, organic photovoltaic and organic field effect transistors. Modeling of their properties on the basis of their detailed molecular structure requires generation of representative morphologies, many of which are amorphous. Because time-scales for the formation of the molecular structure are slow, we have developed a linear-scaling single molecule deposition protocol which generates morphologies by simulation of vapor deposition of molecular films. We have applied this protocol to systems comprising argon, buckminsterfullerene, N,N-Di(naphthalene-1-yl)-N,N'-diphenyl-benzidine, mer-tris(8-hydroxy-quinoline)aluminum(III), and phenyl-C61-butyric acid methyl ester, with and without postdeposition relaxation of the individually deposited molecules. The proposed single molecule deposition protocol leads to formation of highly ordered morphologies in argon and buckminsterfullerene systems when postdeposition relaxation is used to locally anneal the configuration in the vicinity of the newly deposited molecule. The other systems formed disordered amorphous morphologies and the postdeposition local relaxation step has only a small effect on the characteristics of the disordered morphology in comparison to the materials forming crystals.
 
-**DOI**: https://doi.org/10.1002/jcc.23445
+**DOI**: 10.1002/jcc.23445
 
 **Link**: `https://doi.org/https://doi.org/10.1002/jcc.23445 <https://doi.org/https://doi.org/10.1002/jcc.23445>`_
 
