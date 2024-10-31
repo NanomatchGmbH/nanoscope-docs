@@ -55,7 +55,7 @@ Usage of Nanoscope is free for either of two cases:
 - Simulations containing only molecules with 40 atoms or fewer
 - Systems containing only the molecules in the table below, which were used in our :ref:`user_guide_examples` and :ref:`science_benchmarks`.
 
-Molecules included in **Basic** Version are listed below and can be downloaded `here </_static/getting_started/licensing/nanoscope_included_molecules.zip>`_.
+Molecules included in **Basic** Version are listed below and are available in this `archive </_static/getting_started/licensing/nanoscope_included_molecules.zip>`_.
 
 .. note:: Only molecule files that have the correct ordering of atoms work in the basic version. Therefore, use the files provided in the archive.
 
