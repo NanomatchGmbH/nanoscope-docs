@@ -221,12 +221,12 @@ Dielectric Permittivity
 -----------------------
 
 Property description
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Dielectric permittivity is a short terms used for Relative Dielectric Permittivity, and contains only electronic component of the response of the medium.
 
-Modeling Method
-~~~~~~~~~~~~~~~
+**Modeling Method**
+
 `Nanoscope` calculates the dielectric permittivity using the polarization energy as a function of the polarization shell radius.
 For details, refer to the paper:
 
