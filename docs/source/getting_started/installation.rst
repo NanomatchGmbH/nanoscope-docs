@@ -74,11 +74,16 @@ On the `Server` / HPC Cluster
 
     For details or special installation requirements, refer to the `Micromamba documentation page <https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html>`_.
 
+.. ToDo: fix for micromamba 2 issue
+
+
 2. Install the Nanoscope software
     1. Clone the `nanomatch-release Github respository <https://github.com/NanomatchGmbH/nanomatch-release.git>`_
     ::
 
-        git clone git@github.com:NanomatchGmbH/nanomatch-release.git
+        git clone https://github.com/NanomatchGmbH/nanomatch-release.git
+
+.. ToDo: adapt to https:
 
     2. Go into the repository and list all available releases:
     ::
@@ -234,6 +239,7 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
          cd  simstack_linux
          ./run_simstack.sh
 
+     .. ToDo: fix for new micromamba based SimStack
 
 On Windows
 """"""""""""""""""""""""""""
@@ -336,3 +342,5 @@ If the correct WaNo Repository path was set, WaNos will appear in the top left p
 .. note::
 
     You can choose a separate workflow directory for each research project to keep a better overview.
+
+.. ToDo: Include instructions for usage on workstation where Client == Server
