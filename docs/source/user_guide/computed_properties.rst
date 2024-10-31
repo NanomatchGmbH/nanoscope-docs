@@ -208,8 +208,8 @@ In addition, this module provides the following output files:
 
 .. _polarization_response:
 
-.. POLARIZATION RESPONSE
-.. ---------------------
+POLARIZATION RESPONSE
+---------------------
 
 .. :ref:`Dielectric Permittivity <dielectric_permittivity>`
 
@@ -217,13 +217,51 @@ In addition, this module provides the following output files:
 
 .. _dielectric_permittivity:
 
-.. Dielectric Permittivity
-.. -----------------------
+Dielectric Permittivity
+-----------------------
+
+Property description
+^^^^^^^^^^^^^^^^^^^^
+
+Dielectric permittivity is a short terms used for Relative Dielectric Permittivity, and contains only electronic component of the response of the medium.
+
+Modeling Method
+~~~~~~~~~~~~~~~
+`Nanoscope` calculates the dielectric permittivity using the polarization energy as a function of the polarization shell radius.
+For details, refer to the paper:
+
+  1. :ref:`science_publications_ipea_eps_paper`,
+
+
+Output Files
+~~~~~~~~~~~~~
+
+The computed dielectric permittivity results are saved as a YAML file:
+
+::
+
+    ESAnalysis
+       └─── Analysis
+              └─── DOS
+                    └─── data
+                           └─── dielectric_permittivity.yaml
+
+This file contains the dielectric constant per molecule type and standard deviation of its values for various molecule types.
+
+.. ToDo: std must be per molecule, not per molecule type. If it is large, this signals problems!
+
+Example of ``dielectric_permittivity.yaml``
+"""""""""""""""""""""""""""""""""""""""""""
+
+.. code-block:: yaml
+
+    dielectric_permittivity:
+      value: 3.6  # Dielectric constant
+      std: 0.2  # Standard deviation (for multicomponent systems)
+
+
 
 .. _polarization_energies:
-
-.. Content about Dielectric Permittivity.
-
 
 .. Polarization Energies
 .. ---------------------
@@ -250,6 +288,8 @@ Ionization Potential and Electron Affinity Distributions in Organic Thin Films
 Property description
 ~~~~~~~~~~~~~~~~~~~~
 
+.. Todo: add a summary of every property like method, units, references. This makes live of the user so much easier
+
 Ionization potential (IP) and electron affinity (EA), commonly referred to as HOMO and LUMO, are computed by the ESAnalysis module on molecules embedded in thin-film morphologies provided by Deposit. The impact of the unique electrostatic environment of each individual molecule is explicitly taken into account. This approach provides:
 
 * Distributions of IP and EA (density of states, DOS) in organic semiconductor materials
@@ -274,7 +314,7 @@ Output structure of the ES Analysis module
 
 
 Images in `Analysis/DOS/plots`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **1. all_DOS_asis_plot.png**
 
@@ -342,7 +382,7 @@ This is the most comprehensive visualization. The image below is an example for 
 
 
 Data Files in `Analysis/DOS/data`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Summary**
 
@@ -513,6 +553,9 @@ Data Files in `Analysis/DOS/data`
 .. Charge Carrier Mobility
 .. -----------------------
 
+Property description
+^^^^^^^^^^^^^^^^^^^^
+
 Charge carrier mobility is a measure of the speed at which charge carriers, such as electrons or holes,
 can move through a material when an electric field is applied. It reflects the material's ability to conduct charge and
 is influenced by various intrinsic and extrinsic factors.
@@ -525,21 +568,31 @@ using the formula:
 
 .. math::
 
-   \mu = \frac{e \cdot \beta \cdot M \cdot J^2 r^2}{n \cdot \hbar \cdot \sqrt{\lambda}}
+   \mu = \frac{e \cdot \beta \cdot M \cdot \langle J^2 r^2 \rangle}{n \cdot \hbar \cdot \sqrt{\lambda}}
          \cdot \sqrt{\frac{\pi \cdot \beta}{1 + \frac{\beta \cdot \sigma^2}{\lambda}}}
          \cdot \exp\left(-C \cdot (\beta \cdot \sigma)^2 - C \cdot \beta \cdot \lambda\right)
 
-where constants are:
+For more details about GEMM, refer to publications:
+
+  1. :ref:`science_publications_GEMM_1`,
+  2. :ref:`science_publications_GEMM_2`
+
+Parameters in the formula are explained below.
+
+Constants
+"""""""""
+
+Universal constants:
 
 - :math:`e` is the elementary charge,
-- :math:`\beta = \frac{1}{k_B \cdot T}` with :math:`k_B` being the Boltzmann constant and :math:`T` being the inverse temperature,
+- :math:`\beta = \frac{1}{k_B \cdot T}` with :math:`k_B` being the Boltzmann constant and :math:`T` being the temperature,
 - :math:`n` is the dimensionality of the system,
 - :math:`\hbar` is the reduced Planck's constant,
 
 Other parameters are explained below.
 
 Fixed Parameters
-~~~~~~~~~~~~~~~~
+"""""""""""""""""
 
 Parameters below are not very material-specific and we fix their values to provide the best agreement with experiments / reference kMC studies:
 
@@ -549,22 +602,21 @@ Parameters below are not very material-specific and we fix their values to provi
 - :math:`\lambda`: Reorganization energy, fixed to 200 meV.
 
 Computed Parameters
-~~~~~~~~~~~~~~~~~~~
+"""""""""""""""""""
 
 Parameters below are highly materials-specific and are computed with `Nanoscope`:
 
 - :math:`\sigma`: Energy disorder due to environmental variations in molecular energy levels, [:math:`eV`],
-- :math:`J^2 r^2`: Reflects the ease of charge transfer between molecules,  [:math:`eV²·Å²`].
+- :math:`J`: Electronic couplings  between molecules, [:math:`eV`],
+- :math:`r`: Intermolecular distances (between centers of the geometry) [:math:`Å`]
 
-**Computed Mobility Data**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The computed mobility for both holes and electrons is saved as a YAML file, which includes the parameter values used in the computation for reference.
+:math:`\langle J^2 r^2 \rangle` is the mean of the squared product of :math:`J` and :math:`r`, units: [:math:`eV²·Å²`].
 
 
 Output Files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
-The output of the GEMM-based mobility calculation is stored in the following file:
+The computed mobility for both holes and electrons is saved as a YAML file:.
 
 ::
 
@@ -574,28 +626,11 @@ The output of the GEMM-based mobility calculation is stored in the following fil
                     └─── data
                            └─── mobility.yaml
 
-File Content
-~~~~~~~~~~~~~
 
-.. raw:: html
+It contains the computed values of hole and electron mobilities, along with detailed parameters used for the calculation.
 
-   <table class="docutils" style="width: 100%; table-layout: fixed; border-collapse: collapse;">
-      <thead>
-         <tr>
-            <th style="width: 20%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">File</th>
-            <th style="width: 80%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">Description</th>
-         </tr>
-      </thead>
-      <tbody>
-         <tr>
-            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">mobility.yaml</td>
-            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Contains the computed values of hole and electron mobilities, along with detailed parameters used for the calculation.</td>
-         </tr>
-      </tbody>
-    </table>
-
-**Example:**
-~~~~~~~~~~~~
+Example of ``mobility.yaml`` file
+""""""""""""""""""""""""""""""""""
 
 .. code-block:: yaml
 
@@ -621,7 +656,6 @@ File Content
         M: 7.31
         n: 3
         C: 0.25
-
 
 
 

@@ -118,6 +118,8 @@ De Novo Calculation of the Charge Carrier Mobility in Amorphous Small Molecule O
 
 **Link**: `https://www.frontiersin.org/journals/chemistry/articles/10.3389/fchem.2021.801589 <https://www.frontiersin.org/journals/chemistry/articles/10.3389/fchem.2021.801589>`_
 
+.. _science_publications_ipea_eps_paper:
+
 Computing Charging and Polarization Energies of Small Organic Molecules Embedded into Amorphous Materials with Quantum Accuracy
 -------------------------------------------------------------------------------------------------------------------------------
 
@@ -296,6 +298,9 @@ Rational In Silico Design of an Organic Semiconductor with Improved Electron Mob
 
 **Link**: `https://doi.org/10.1002/adma.201703505 <https://doi.org/10.1002/adma.201703505>`_
 
+
+.. _science_publications_GEMM_2:
+
 Molecular Origin of the Charge Carrier Mobility in Small Molecule Organic Semiconductors
 ----------------------------------------------------------------------------------------
 
@@ -361,6 +366,9 @@ Modeling disordered morphologies in organic semiconductors
 **DOI**: 10.1002/jcc.23445
 
 **Link**: `https://doi.org/https://doi.org/10.1002/jcc.23445 <https://doi.org/https://doi.org/10.1002/jcc.23445>`_
+
+
+.. _science_publications_GEMM_1:
 
 Generalized effective-medium model for the carrier mobility in amorphous organic semiconductors
 -----------------------------------------------------------------------------------------------
