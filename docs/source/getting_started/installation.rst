@@ -183,7 +183,7 @@ On the `Client` / local PC
     WaNos are available in a `public repository <https://github.com/NanomatchGmbH/wano.git>`_. To get the WaNos, go into a directory of your choice and run
     ::
 
-        git clone git@github.com:NanomatchGmbH/wano.git
+        git clone https://github.com/NanomatchGmbH/wano.git
 
     Make sure to remember the directory for the SimStack configuration below.
 
