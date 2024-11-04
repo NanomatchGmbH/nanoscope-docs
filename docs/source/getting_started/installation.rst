@@ -3,15 +3,84 @@
 Installation
 ============
 
+
+Workstation vs. Client-Server Setup
+-------------------------------------
+
+Nanoscope was originally designed to run on scalable computational resources and consists therefore of a **Client-Server architecture**, with 
+
+* the `Client`—the machine you use to set up, submit, and analyze simulations (e.g. your laptop)
+* and the `Server`—the machine where computational resources will be used to perform simulations (typically, an HPC Cluster).
+
+With standarlone workstations becoming more powerful and Nanoscope becoming more efficient, it is also possible to setup the full Nanoscope on a single workstation. 
+
+
+.. _getting_started_installation_workstation:
+
+Workstation Installation
+-------------------------
+Technical requirements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Nanoscope modules are best executed on 32 cores or more. Especially the `ES Analysis` scales very well with the number of cores. The modules `MolPrep` and `Deposit` scale well up to 64 and 32 cores respectively.
+
+=============================== ======================= =======================
+Feature                         Recommendation          Minimal requirement
+=============================== ======================= =======================
+Operating system                Linux                   Linux
+Number of cores                 60 or more              16
+Memory                          3 GB / core             1.5 GB / core
+=============================== ======================= =======================
+
+.. note:: The workstation setup requires a Linux operating system.
+
+Installation step-by-step
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Install micromamba and downgrade to version 1.5.6 (see note below)
+    ::
+
+        # install micromamba
+        "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+        # downgrade to version 1.5.6
+        micromamba self-update --version=1.5.6
+
+    For details or special installation requirements, refer to the `Micromamba documentation page <https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html>`_.
+
+    .. note:: Due to a bug in the latest micromamba release, a downgrade to version 1.5.6 is required. We will update the documentation once the bug is fixed by micromamba.
+
+2. Download and execute the `installation script <https://github.com/NanomatchGmbH/nanomatch-release/blob/main/install_workstation_nanoscope.sh>`_.
+    :: 
+
+        # download with wget
+        wget 
+        # execute
+        ./install_workstation_nanoscope.sh
+
+    and follow the instructions in the installation script
+
+
+3. Start SimStack
+
+    ::
+
+        # Activate the environment
+        micromamba activate simstack
+        # and run simstack:
+        simstack
+
+4. Make sure `localhost` is set as Server in the top right dropdown menu and press the `Connect` button to test the setup
+
+.. _getting_started_installation_client_server:
+
+Client-Server Installation
+------------------------------
+
 Software structure
--------------------
+~~~~~~~~~~~~~~~~~~~~
 
-
-Nanoscope is designed to run on scalable computational resources.
-It operates on a **Client-Server architecture**, which requires defining the `Client`—the machine you use to set up,
+To operate Nanoscope on a **Client-Server architecture** requires defining the `Client`—the machine you use to set up,
 submit, and analyze simulations—and the `Server`—the machine where computational resources will be used to perform simulations (typically, an HPC Cluster).
-Note that to test `Nanoscope`, both the `Server` and `Client` can be your laptop.
-This architecture is implemented using the `SimStack workflow platform <https://simstack.readthedocs.io/>`_ .
+To test `Nanoscope` with both the `Server` and `Client` on your laptop, refer to the :ref:`getting_started_installation_workstation` above.
 
 `SimStack Client` and `SimStack Server` need to be installed on the `Client` and `Server`, respectively.
 While `SimStack` provides the infrastructure, additional components specific to Nanoscope are also required:
@@ -44,9 +113,9 @@ The setup is summarized in the figure below.
 
 
 Technical requirements
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 Computational resource
-^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""
 The Nanoscope modules are best executed on 32 cores or more. Especially the `ES Analysis` scales very well with the number of cores. The modules `MolPrep` and `Deposit` scale well up to 64 and 32 cores respectively. 
 
 =============================== ======================= =======================
@@ -58,23 +127,26 @@ Memory                          3 GB / core             1.5 GB / core
 =============================== ======================= =======================
 
 Client / local PC
-^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""
 There are no special requirements for the `Client` where the SimStack Client and the WaNos are installed.
 The SimStack Client is available for Linux, Windows and MacOS.
 
 
 Installation step-by-step
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 On the `Server` / HPC Cluster
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. Install micromamba
+"""""""""""""""""""""""""""""""""""
+1. Install micromamba and downgrade to version 1.5.6 (see below)
     ::
 
+        # install micromamba
         "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+        # downgrade to version 1.5.6
+        micromamba self-update --version=1.5.6
 
     For details or special installation requirements, refer to the `Micromamba documentation page <https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html>`_.
 
-.. ToDo: fix for micromamba 2 issue
+    .. note:: Due to a bug in the latest micromamba release, a downgrade to version 1.5.6 is required. We will update the documentation once the bug is fixed by micromamba.
 
 
 2. Install the Nanoscope software
@@ -139,7 +211,7 @@ On the `Server` / HPC Cluster
 Details on steps 2 and 3 are provided in the `README <https://github.com/NanomatchGmbH/nanomatch-release/blob/main/README.md>`_ of the repository.
 
 On the `Client` / local PC
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""""
 1. Install micromamba
     On Linux distributions: see above
 
@@ -188,7 +260,7 @@ On the `Client` / local PC
     Make sure to remember the directory for the SimStack configuration below.
 
 SimStack configuration
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
 
@@ -196,13 +268,13 @@ SimStack configuration
 
 
 Setup of passwordless ssh
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""
 
 Communication between the SimStack Client and the SimStack Server requires passwordless ssh access from your local PC to your computational resource.
 *On your local PC*, generate a ``ssh`` keypair and transfer the key to the ``authorized_keys`` file of your user account on the computational resource with one of the following commands:
 
-On Linux and OSX (Arm and x64)
-""""""""""""""""""""""""""""""""""""
+**On Linux and OSX (Arm and x64)**
+
 
 If you don't have the ``ssh`` keys, use the steps below to generate them.
 
@@ -241,8 +313,8 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
 
      .. ToDo: fix for new micromamba based SimStack
 
-On Windows
-""""""""""""""""""""""""""""
+**On Windows**
+
 
 You have two options on Windows: You can install either the native Windows version or (in an updated WSL2 environment) the Linux version.
 WSL2 comes with all client tools required, so this is the recommended approach. If you want to use the Windows version, continue this tutorial.
@@ -269,8 +341,8 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
 
    * After completing the above steps, double-click on ``run-simstack`` and be happy.
 
-Test the connectivity
-""""""""""""""""""""""""""
+**Test the connectivity**
+
 
 You can test the connectivity of your passwordless ``ssh`` in both systems by running one of the
 commands below. You successfully transferred the key if you establish the ``ssh`` connectivity to
@@ -283,10 +355,10 @@ your HPC without entering your user password.
 
 
 Configuration of the SimStack Client
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""""""""""
 
-Server Configuration within the Client
-""""""""""""""""""""""""""""""""""""""""
+**Server Configuration within the Client**"
+
 
 1. Open the SimStack Client:
     ::
@@ -328,8 +400,8 @@ Server Configuration within the Client
 
     You can add the same computational resource multiple times, but with different ``Default Resources`` to simplify defining computational resources when setting up workflows.
 
-Set local paths
-"""""""""""""""""""
+**Set local paths**
+
 Define the local paths (on your local PC) to the WaNo directory and the workflow directory:
 
 1. In the top menu, click on ``Configuration -> Paths``
