@@ -51,7 +51,7 @@ Installation step-by-step
 2. Download and execute the `installation script <https://github.com/NanomatchGmbH/nanomatch-release/blob/main/install_workstation_nanoscope.sh>`_.
     :: 
 
-        # download with wget
+        # download with with the link above or use wget
         wget 
         # execute
         ./install_workstation_nanoscope.sh
