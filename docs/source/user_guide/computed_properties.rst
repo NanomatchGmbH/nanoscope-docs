@@ -478,32 +478,26 @@ Data Files in `Analysis/DOS/data`
 
 2. `DOS_*.csv` files.
 
-    The CSV files store the Density of States (DOS) data for HOMO and LUMO levels under different broadening conditions. All CSV files share a consistent energy range and resolution to be easily representable on the same plot.
+    The CSV files store Density of States (DOS) data for HOMO and LUMO levels with various broadening conditions.
+    Each file maintains a consistent energy range and resolution, making it easy to plot them together.
 
     Each CSV file follows the same structure with the following columns:
 
-        .. raw:: html
-    
-           <table>
-              <thead>
-                 <tr>
-                    <th>energy</th>
-                    <th>uuid1</th>
-                    <th>uuid2</th>
-                    <th>...</th>
-                    <th>uuidN</th>
-                 </tr>
-              </thead>
-              <tbody>
-                 <tr>
-                    <td>float</td>
-                    <td>float</td>
-                    <td>float</td>
-                    <td>...</td>
-                    <td>float</td>
-                 </tr>
-              </tbody>
-           </table>
+
+    .. list-table:: Structure of DOS CSV Files
+       :widths: 20 20 20 20 20
+       :header-rows: 1
+
+       * - energy
+         - uuid1
+         - uuid2
+         - ...
+         - uuidN
+       * - float
+         - float
+         - float
+         - ...
+         - float
 
 
     With the following properties:
