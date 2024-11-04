@@ -87,6 +87,9 @@ Open a terminal to execute the following steps.
         * `localhost` could connect successfully
 
 
+
+.. note:: If your system has special requirements that are not covered by the installation script for whatever reasons, please follow the :ref:`getting_started_installation_client_server` guide for manual installation of all components on the same resource, i.e. your workstation.
+
 .. _getting_started_installation_client_server:
 
 Client-Server Installation
@@ -376,14 +379,18 @@ Configuration of the SimStack Client
         # and run simstack:
         simstack
 
-2. In the top menu, click on ``Configuration -> Servers``. Press the ``+``-button to add a new server
+2. In the top menu, click on ``Configuration -> Servers``. Press the ``+``-button to add a new server. 
+
+    .. note:: For a workstation setup (see :ref:`getting_started_installation_workstation`) leave all predefined settings as is.
+
+    Example settings for a client-server setup are provided in the following figure:
 
     .. figure:: installation/ServerSetup.png
        :alt: ServerConfiguration
        :width: 50%
        :align: center
 
-       Server Configuration Form
+       Example Server Configuration Form
 
     In this form, enter the following information on your computational resources:
 
