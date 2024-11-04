@@ -80,8 +80,8 @@ In the right panel of SimStack, go to ``Jobs & Workflows``. Completed jobs (show
 
 .. _morphology:
 
-MORPHOLOGY
-----------
+**Morphology**
+---------------
 
 :ref:`Density <density>`
 
@@ -208,8 +208,8 @@ In addition, this module provides the following output files:
 
 .. _polarization_response:
 
-POLARIZATION RESPONSE
----------------------
+**Polarization Response**
+--------------------------
 
 .. :ref:`Dielectric Permittivity <dielectric_permittivity>`
 
@@ -225,7 +225,8 @@ Property description
 
 Dielectric permittivity is a short terms used for Relative Dielectric Permittivity, and contains only electronic component of the response of the medium.
 
-**Modeling Method**
+Modeling Method
+""""""""""""""""
 
 `Nanoscope` calculates the dielectric permittivity using the polarization energy as a function of the polarization shell radius.
 For details, refer to the paper:
@@ -273,8 +274,8 @@ Example of ``dielectric_permittivity.yaml``
 
 .. _embedded_molecules:
 
-EMBEDDED MOLECULES
-------------------
+**Embedded Molecules**
+------------------------
 
 :ref:`Ionization Potential (IP) <ip_and_ea>`
 
@@ -302,7 +303,7 @@ Output files
 ~~~~~~~~~~~~
 
 Output structure of the ES Analysis module
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 ::
 
@@ -314,7 +315,8 @@ Output structure of the ES Analysis module
 
 
 Images in `Analysis/DOS/plots`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 **1. all_DOS_asis_plot.png**
 
@@ -382,7 +384,8 @@ This is the most comprehensive visualization. The image below is an example for 
 
 
 Data Files in `Analysis/DOS/data`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 **Summary**
 
@@ -554,7 +557,7 @@ Data Files in `Analysis/DOS/data`
 .. -----------------------
 
 Property description
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 Charge carrier mobility is a measure of the speed at which charge carriers, such as electrons or holes,
 can move through a material when an electric field is applied. It reflects the material's ability to conduct charge and
@@ -562,7 +565,7 @@ is influenced by various intrinsic and extrinsic factors.
 
 
 Modeling Method
-~~~~~~~~~~~~~~~
+"""""""""""""""""""
 `Nanoscope` estimates the electron and hole mobility using the Generalized Effective Medium Model (GEMM) method
 using the formula:
 
