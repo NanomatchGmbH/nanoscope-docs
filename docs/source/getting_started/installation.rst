@@ -36,6 +36,10 @@ Memory                          3 GB / core             1.5 GB / core
 Installation step-by-step
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Open a terminal to execute the following steps.
+
+.. ToDo: Check if all the stuff below including submission works on WSL. If so, lose 1 sentence that WSL works as well as a pristine Linux machine, and how to open a terminal in WSL.
+
 1. Install micromamba and downgrade to version 1.5.6 (see note below)
     ::
 
