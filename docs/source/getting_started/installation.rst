@@ -68,7 +68,15 @@ Installation step-by-step
         # and run simstack:
         simstack
 
-4. Make sure `localhost` is set as Server in the top right dropdown menu and press the `Connect` button to test the setup
+4. Make sure `localhost` is set as Server in the top right dropdown menu and press the `Connect` button to test the setup. Your SimStack should look like this:
+
+    .. figure:: installation/successful_setup.png
+       :alt: Success
+       :width: 80%
+       :align: center
+
+       SimStack setup successfully
+
 
 .. _getting_started_installation_client_server:
 
