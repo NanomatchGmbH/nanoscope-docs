@@ -77,6 +77,11 @@ Installation step-by-step
 
        SimStack setup successfully
 
+    .. note:: Make sure that
+
+        * you have WaNos listed in the top left WaNo panel
+        * `localhost` could connect successfully
+
 
 .. _getting_started_installation_client_server:
 
