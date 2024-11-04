@@ -304,14 +304,6 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
 
          ssh <username>@<computer name or IP address>
 
-   * After completing the above steps, run the below commands.
-
-      .. code-block:: bash
-
-         cd  simstack_linux
-         ./run_simstack.sh
-
-     .. ToDo: fix for new micromamba based SimStack
 
 **On Windows**
 
@@ -339,7 +331,6 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
          type $env:USERPROFILE\.ssh\id_rsa.pub | ssh <username>@<computer name or IP address> "cat >> .ssh/authorized_keys"
 
 
-   * After completing the above steps, double-click on ``run-simstack`` and be happy.
 
 **Test the connectivity**
 
