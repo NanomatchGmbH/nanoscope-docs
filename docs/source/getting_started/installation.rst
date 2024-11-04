@@ -52,13 +52,13 @@ Open a terminal to execute the following steps.
 
     .. note:: Due to a bug in the latest micromamba release, a downgrade to version 1.5.6 is required. We will update the documentation once the bug is fixed by micromamba.
 
-2. Download and execute the `installation script <https://github.com/NanomatchGmbH/nanomatch-release/blob/main/install_workstation_nanoscope.sh>`_.
+2. Download and execute the `installation script <https://github.com/NanomatchGmbH/nanomatch-release/blob/main/nanoscope_workstation_install.sh>`_.
     :: 
 
         # download with with the link above or use wget
-        wget 
-        # execute
-        ./install_workstation_nanoscope.sh
+        wget https://github.com/NanomatchGmbH/nanomatch-release/blob/main/nanoscope_workstation_install.sh
+        # execute the installer script
+        ./nanoscope_workstation_install.sh
 
     and follow the instructions in the installation script
 
