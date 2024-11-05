@@ -19,7 +19,6 @@ With standarlone workstations becoming more powerful and Nanoscope becoming more
 Technical Requirements
 ----------------------
 
-.. _getting_started_test_setup:
 
 Test Nanoscope
 ~~~~~~~~~~~~~~
@@ -37,7 +36,6 @@ Memory                          any
 Local Disk Space                20 GiB
 =============================== =======================
 
-.. _getting_started_production_setup:
 
 Make Production Runs with Nanoscope
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
