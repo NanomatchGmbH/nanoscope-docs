@@ -3,6 +3,11 @@
 Installation
 ============
 
+For New Users
+-------------
+
+Get `Nanoscope` up and ready on your computer and HPC Cluster in less than 15 minutes with our :ref:`getting_started_learning_path`
+
 
 Workstation vs. Client-Server Setup
 -------------------------------------

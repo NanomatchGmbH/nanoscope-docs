@@ -21,6 +21,7 @@
    getting_started/workflows
    getting_started/quick_start
    getting_started/licensing
+   getting_started/learning_path
 
 .. toctree::
    :maxdepth: 1
