@@ -83,11 +83,91 @@ In the right panel of SimStack, go to ``Jobs & Workflows``. Completed jobs (show
 **Morphology**
 ---------------
 
+:ref:`viz`
+
 :ref:`Density <density>`
 
 :ref:`Radial Distribution Function (RDF) <radial_distribution_function>`
 
 :ref:`Molecular Arrangement <molecular_arrangement>`
+
+
+
+.. _viz:
+
+Morphology Files & Visualization
+-----------------------------
+Property description
+~~~~~~~~~~~~~~~~~~~~~~~
+
+A major output of Deposit are morphologies, i.e. 3D representations of molecular arrangement in thin films with atomistic resolution. These morphologies are the starting point for many types of analysis, ranging from the investigation of molecular arrangement and orientation to the analysis of the electronic structure of molecules embedded in the thin films. 
+
+Output files
+~~~~~~~~~~~~~
+
+.. raw:: html
+
+   <table class="docutils" style="width: 100%; table-layout: fixed; border-collapse: collapse;">
+      <thead>
+         <tr>
+            <th style="width: 20%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">File</th>
+            <th style="width: 80%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">Description</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">structure.cml</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Atom coordinates sorted by molecule in cml format.</td>
+         </tr>
+         <tr>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">structure.mol2</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Atom coordinates sorted by molecule in mol2 format.</td>
+         </tr>
+         <tr>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">structurePBC.cml</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Atom coordinates sorted by molecule, periodically expanded in x- and y- direction.</td>
+         </tr>
+      </tbody>
+    </table>
+
+Example: Visualization of a Morphology
+"""""""""""""""""""""""""""""""""""""""""
+
+You can visualize morphologies using common molecule visualization tools such as `jmol <https://jmol.sourceforge.net/>`_ or `pymol <https://www.pymol.org/>`_. 
+
+**cml files**:
+
+    * Get jmol from the `official jmol page <https://jmol.sourceforge.net/>`_.
+    * In the terminal, move to the runtime directory of Deposit
+    * Open the structure using
+
+        .. code-block:: bash
+
+            jmol structure.cml
+
+    * Click on the `show all frames` button (green circle in the figure below).
+
+    .. image:: computed_properties/morph_viz_jmol.png
+       :alt: morphology visualization with jmol
+       :align: center
+       :width: 60%
+
+**mol2 files**:
+
+    * Get pymol from the `official pymol page <https://www.pymol.org/>`_.
+    * In the terminal, move to the runtime directory of Deposit
+    * Open the structure using
+
+        .. code-block:: bash
+
+            pymol structure.mol2
+
+    * In pymol, type `set all_states, 1` to show all molecules.
+
+    .. image:: computed_properties/morph_viz_pymol.png
+       :alt: morphology visualization with pymol
+       :align: center
+       :width: 60%
 
 .. _density:
 
