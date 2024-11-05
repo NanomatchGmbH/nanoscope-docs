@@ -4,6 +4,7 @@ Installation
 ============
 
 
+
 Workstation vs. Client-Server Setup
 -------------------------------------
 
@@ -12,26 +13,57 @@ Nanoscope was originally designed to run on scalable computational resources and
 * the `Client`—the machine you use to set up, submit, and analyze simulations (e.g. your laptop)
 * and the `Server`—the machine where computational resources will be used to perform simulations (typically, an HPC Cluster).
 
-With standarlone workstations becoming more powerful and Nanoscope becoming more efficient, it is also possible to setup the full Nanoscope on a single workstation. 
+With standarlone workstations becoming more powerful and Nanoscope becoming more efficient, it is also possible to setup the full Nanoscope on a single workstation.
+
+
+Technical Requirements
+----------------------
+
+
+Test Nanoscope
+~~~~~~~~~~~~~~
+
+To test the `Nanoscope` software functionality, by e.g. depositing a few small molecules with relaxed
+accuracy, you can use your Linux laptop. Just make sure you have 20 GiB of free space on your local disk, and proceed
+with :ref:`getting_started_installation_workstation`:
+
+=============================== =======================
+Feature                         Minimal requirement
+=============================== =======================
+Operating system                Linux
+Number of cores                 any
+Memory                          any
+Local Disk Space                20 GiB
+=============================== =======================
+
+
+Make Production Runs with Nanoscope
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Nanoscope modules are best executed if the `Server` (which may also be your local computer) has 32 cores or more.
+In particular, the `ES Analysis` scales very well with the number of cores.
+The modules `MolPrep` and `Deposit` scale well up to 64 and 32 cores respectively.
+This and other requirements are listed below:
+
+=============================== ======================= =======================
+Feature                         Recommendation          Minimal requirement
+=============================== ======================= =======================
+Operating system                Linux                   Linux
+Number of cores                 32 or more              16
+Memory                          3 GB / core             1.5 GB / core
+=============================== ======================= =======================
+
+
+.. admonition:: Choosing Resources for Production Runs
+
+   - **Use** :ref:`getting_started_installation_workstation` **if** your workstation meets the minimal requirements.
+   - **Use** :ref:`getting_started_installation_client_server` **if** your laptop does not meet these requirements or if you prefer using external computational resources.
 
 
 .. _getting_started_installation_workstation:
 
 Workstation Installation
 -------------------------
-Technical requirements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The Nanoscope modules are best executed on 32 cores or more. Especially the `ES Analysis` scales very well with the number of cores. The modules `MolPrep` and `Deposit` scale well up to 64 and 32 cores respectively.
-
-=============================== ======================= =======================
-Feature                         Recommendation          Minimal requirement
-=============================== ======================= =======================
-Operating system                Linux                   Linux
-Number of cores                 60 or more              16
-Memory                          3 GB / core             1.5 GB / core
-=============================== ======================= =======================
-
-.. note:: The workstation setup requires a Linux operating system.
 
 Installation step-by-step
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,30 +72,51 @@ Open a terminal to execute the following steps.
 
 .. ToDo: Check if all the stuff below including submission works on WSL. If so, lose 1 sentence that WSL works as well as a pristine Linux machine, and how to open a terminal in WSL.
 
-1. Install micromamba and downgrade to version 1.5.6 (see note below)
+1. Install micromamba and downgrade to version 1.5.6 in three simple steps:
+
+    1.1. Install the latest micromamba version:
+
     ::
 
-        # install micromamba
         "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
-        # source .bashrc to initialize micromamba
-        source ~/.bashrc # note the output of the micromamba installation command for details
-        # downgrade to version 1.5.6
+
+    You will be asked four questions, if you do know now how to answer or do not have any preferences, just hit `Enter` four times.
+
+    1.2. Activate it:
+
+    ::
+
+        source ~/.bashrc
+
+
+    1.3. Downgrade:
+
+    ::
+
         micromamba self-update --version=1.5.6
 
     For details or special installation requirements, refer to the `Micromamba documentation page <https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html>`_.
 
-    .. note:: Due to a bug in the latest micromamba release, a downgrade to version 1.5.6 is required. We will update the documentation once the bug is fixed by micromamba.
+    .. note:: Downgrade tio version 1.5.6 is required due to a bug in the latest micromamba release. We will update the documentation once the bug is fixed by micromamba.
 
-2. Download and execute the `installation script <https://github.com/NanomatchGmbH/nanomatch-release/blob/main/nanoscope_workstation_install.sh>`_.
-    :: 
+2. Download and execute the `installation script <https://raw.githubusercontent.com/NanomatchGmbH/nanomatch-release/refs/heads/main/nanoscope_workstation_install.sh>`_.
+
+    2.0. Open a new terminal window, to activate the micromamba.
+
+
+    2.1. Install Nanoscope.
+
+    ::
 
         # download with with the link above or use wget
-        wget https://github.com/NanomatchGmbH/nanomatch-release/blob/main/nanoscope_workstation_install.sh
+        wget https://raw.githubusercontent.com/NanomatchGmbH/nanomatch-release/refs/heads/main/nanoscope_workstation_install.sh
         # execute the installer script
-        ./nanoscope_workstation_install.sh
+        bash nanoscope_workstation_install.sh
 
-    and follow the instructions in the installation script
+    and follow the instructions in the installation script. This may take a while.
 
+.. ToDo: get rid of chmod
+.. ToDO: get rid of necessity to reopen the window.
 
 3. Start SimStack
 
@@ -100,12 +153,16 @@ Client-Server Installation
 Software structure
 ~~~~~~~~~~~~~~~~~~~~
 
-To operate Nanoscope on a **Client-Server architecture** requires defining the `Client`—the machine you use to set up,
-submit, and analyze simulations—and the `Server`—the machine where computational resources will be used to perform simulations (typically, an HPC Cluster).
+To operate Nanoscope on a **Client-Server architecture** requires defining:
+
+- the `Client`—the machine you use to set up, submit, and analyze simulations—and
+- the `Server`—the machine where computational resources will be used to perform simulations (typically, an HPC Cluster).
+
 To test `Nanoscope` with both the `Server` and `Client` on your laptop, refer to the :ref:`getting_started_installation_workstation` above.
 
 `SimStack Client` and `SimStack Server` need to be installed on the `Client` and `Server`, respectively.
 While `SimStack` provides the infrastructure, additional components specific to Nanoscope are also required:
+
 - The **Nanoscope Simulation Software**, containing simulation algorithms, must be installed on the `Server`.
 - The **WaNos** (short for **Workflow Active Nodes**), the graphical representation of Nanoscope modules, must be installed on the `Client`.
 
@@ -385,7 +442,7 @@ Configuration of the SimStack Client
 
     .. note:: For a workstation setup (see :ref:`getting_started_installation_workstation`) leave all predefined settings as is.
 
-    Example settings for a client-server setup are provided in the following figure:
+    Example settings for a `Client`-`Server` setup are provided in the following figure:
 
     .. figure:: installation/ServerSetup.png
        :alt: ServerConfiguration
@@ -399,13 +456,15 @@ Configuration of the SimStack Client
     =============================== ==================================
     Label                           Description
     =============================== ==================================
-    Hostname                        The hostname of your computational resource that is also used to login via ssh
-    Port                            ssh port of your computational resource
-    Username                        Your username on your computational resource
+    Hostname                        The hostname of your `Server` that is also used to login via ssh
+
+    Port                            ssh port of your `Server`
+    Username                        Your username on your `Server`
     SSH Private Key                 Set to `UseSystemDefault`
-    Software Directory on Resource  Path of your micromamba on the computational resource, identify via ``echo $MAMBA_ROOT_PREFIX`` (on the computational resource)
+    Software Directory on Resource  Path of your micromamba on the `Server`, identify via
+                                    ``echo $MAMBA_ROOT_PREFIX`` (on the `Server`)
     Calculation Basepath            Path in your home directory where workflows are executed
-    Queuing System                  Queueing system in use on your computational resource to schedule jobs
+    Queuing System                  Queueing system in use on your `Server` to schedule jobs
     Extra config                    Leave at `None required (default)`
     =============================== ==================================
 
