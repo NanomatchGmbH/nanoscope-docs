@@ -11,35 +11,26 @@ This guide provides step-by-step instructions for depositing a simple thin-film 
 Prerequesits
 -------------
 * **Nanoscope Installation**: Ensure that Nanoscope is installed on your system. If not, follow the  :ref:`getting_started_installation` to set it up.
-* **Open Babel**: Install Open Babel for molecule file conversion tasks.
 
 .. _getting_started_quick_start_setup:
 
 Simulation Setup
 -----------------
 
-a. Design the Molecule.
+a. Design and Download the Molecule.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
     1. Open `MolView <https://www.nanomatch.de/nanomatch-files/molview/>`_  in your web browser.
     2. Design a molecule of your choice, e.g. a biphenyl molecule.
     3. Use the ``clean`` and the ``2D to 3D`` buttons to generate a 3D structure of the molecule.
+    4. Download the 3D molecule file with ``Tools -> MOL file``.
 
         .. figure:: quick_start/quick_start_0.png
            :alt: Design a molecule with MolView
            :width: 100%
            :align: center
-        
+
            Design a molecule with MolView
 
-b. Download and Convert the Molecule File.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    1. In MolView, download the 3D molecule file with ``Tools -> MOL file``.
-    2. Convert the molecule to a mol2 file suitable for the MolPrep module using:
-    
-        .. code-block:: bash
-
-           obabel MolView.mol -oxyz -OMyMol.xyz
-           obabel MyMol.xyz -omol2 -OMyMol.mol2
 
     .. note:: We use biphenyl as a simple example as it allows for quick computation. It is not meant as a physical case study.
 
@@ -76,7 +67,7 @@ e. Set Up Individual Modules
 
     1. **MolPrep**.
 
-        * Set the `Molecule (Mol2)` file: select the molecule you created above.
+        * Set the `Input Molecule File` file: select the molecule you created above.
         * Adjust other settings as shown below.
 
         .. figure:: quick_start/quick_start_molprep.png
