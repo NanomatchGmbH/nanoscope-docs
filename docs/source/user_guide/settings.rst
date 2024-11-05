@@ -18,8 +18,8 @@ MolPrep
 .. +--------------------+-------------------------------------------------------+----------------+
 .. | Setting            | Description                                           | Standard value |
 .. +====================+=======================================================+================+
-.. | Molecule (Mol2)    |Input file in mol2 format. Refer to the first steps of | N/A            |
-.. |                    |:ref:`getting_started_quick_start_setup` for           |                |
+.. | Input Molecule     |Input file in mol, mol2, pdb, cml or xyz format. Refer to the first steps of | N/A            |
+.. | File               |:ref:`getting_started_quick_start_setup` for           |                |
 .. |                    |instructions how to generate input files.              |                |
 .. +--------------------+-------------------------------------------------------+----------------+
 .. | Molecule Identifier|A 3-letter numeric string to label the molecule        | ABC (random)   |
@@ -45,9 +45,9 @@ MolPrep
         </thead>
         <tbody>
             <tr>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Molecule (Mol2)</td>
+                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Input Molecule File</td>
                 <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">
-                    Input file in mol2 format. Refer to the first steps of
+                    Input file in mol, mol2, pdb, cml or xyz format. Refer to the first steps of
                     <a href="#getting_started_quick_start_setup">Simulation Setup</a>
                     for instructions on how to generate input files.
                 </td>
