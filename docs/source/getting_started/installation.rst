@@ -20,12 +20,14 @@ Technical Requirements
 ----------------------
 
 
-Test Nanoscope
-~~~~~~~~~~~~~~
+Nanoscope Test Runs
+~~~~~~~~~~~~~~~~~~~~
 
 To test the `Nanoscope` software functionality, by e.g. depositing a few small molecules with relaxed
-accuracy, you can use your Linux laptop. Just make sure you have 20 GiB of free space on your local disk, and proceed
-with :ref:`getting_started_installation_workstation`:
+accuracy, you can use your laptop with a Linux OS. Just make sure you have 20 GiB of free space on your local disk, and proceed
+with :ref:`getting_started_installation_workstation`. 
+
+.. todo @Artem I'm not sure this table is needed
 
 =============================== =======================
 Feature                         Minimal requirement
@@ -36,11 +38,12 @@ Memory                          any
 Local Disk Space                20 GiB
 =============================== =======================
 
+.. warning:: Note that results from any test run with settings to allow for short computation time, as indicated throughout the documentation, may lead to inaccurate results. To generate meaningful data, a larger workstation or Client-Server setup as indicated below is required.
 
-Make Production Runs with Nanoscope
+Nanoscope Production Runs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Nanoscope modules are best executed if the `Server` (which may also be your local computer) has 32 cores or more.
+To achieve meaningful results in feasible computation time, Nanoscope are best executed on 32 cores or more.
 In particular, the `ES Analysis` scales very well with the number of cores.
 The modules `MolPrep` and `Deposit` scale well up to 64 and 32 cores respectively.
 This and other requirements are listed below:
@@ -56,8 +59,8 @@ Memory                          3 GB / core             1.5 GB / core
 
 .. admonition:: Choosing Resources for Production Runs
 
-   - **Use** :ref:`getting_started_installation_workstation` **if** your workstation meets the minimal requirements.
-   - **Use** :ref:`getting_started_installation_client_server` **if** your laptop does not meet these requirements or if you prefer using external computational resources.
+   - **Use** :ref:`getting_started_installation_workstation` to install the full Nanoscope on a single machine **if** your workstation meets the minimal requirements.
+   - **Use** :ref:`getting_started_installation_client_server` **if** you only have a small workstation or laptop that does **not** meet these requirements but have access to external computational resources.
 
 
 .. _getting_started_installation_workstation:
@@ -72,7 +75,7 @@ Open a terminal to execute the following steps.
 
 .. ToDo: Check if all the stuff below including submission works on WSL. If so, lose 1 sentence that WSL works as well as a pristine Linux machine, and how to open a terminal in WSL.
 
-1. Install micromamba and downgrade to version 1.5.6 in three simple steps:
+1. Install micromamba and downgrade to version 1.5.6:
 
     1.1. Install the latest micromamba version:
 
@@ -115,7 +118,6 @@ Open a terminal to execute the following steps.
 
     and follow the instructions in the installation script. This may take a while.
 
-.. ToDo: get rid of chmod
 .. ToDO: get rid of necessity to reopen the window.
 
 3. Start SimStack
@@ -453,11 +455,10 @@ Configuration of the SimStack Client
 
     In this form, enter the following information on your computational resources:
 
-    =============================== ==================================
+    =============================== =================================================================
     Label                           Description
-    =============================== ==================================
+    =============================== =================================================================
     Hostname                        The hostname of your `Server` that is also used to login via ssh
-
     Port                            ssh port of your `Server`
     Username                        Your username on your `Server`
     SSH Private Key                 Set to `UseSystemDefault`
@@ -466,7 +467,7 @@ Configuration of the SimStack Client
     Calculation Basepath            Path in your home directory where workflows are executed
     Queuing System                  Queueing system in use on your `Server` to schedule jobs
     Extra config                    Leave at `None required (default)`
-    =============================== ==================================
+    =============================== =================================================================
 
 .. note::
 
