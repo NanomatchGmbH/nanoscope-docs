@@ -18,7 +18,7 @@ Simulation Setup
 -----------------
 
 a. Design and Download the Molecule.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     1. Open `MolView <https://www.nanomatch.de/nanomatch-files/molview/>`_  in your web browser.
     2. Design a molecule of your choice, e.g. a biphenyl molecule.
     3. Use the ``clean`` and the ``2D to 3D`` buttons to generate a 3D structure of the molecule.
@@ -67,7 +67,7 @@ e. Set Up Individual Modules
 
     1. **MolPrep**.
 
-        * Set the `Input Molecule File` file: select the molecule you created above.
+        * Set the `Input Molecule File`: select the molecule you created above.
         * Adjust other settings as shown below.
 
         .. figure:: quick_start/quick_start_molprep.png
