@@ -45,6 +45,8 @@ Open a terminal to execute the following steps.
 
         # install micromamba
         "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+        # source .bashrc to initialize micromamba
+        source ~/.bashrc # note the output of the micromamba installation command for details
         # downgrade to version 1.5.6
         micromamba self-update --version=1.5.6
 
