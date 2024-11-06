@@ -27,18 +27,9 @@ To test the `Nanoscope` software functionality, by e.g. depositing a few small m
 accuracy, you can use your laptop with a Linux OS. Just make sure you have 20 GiB of free space on your local disk, and proceed
 with :ref:`getting_started_installation_workstation`. 
 
-.. todo @Artem I'm not sure this table is needed
-
-=============================== =======================
-Feature                         Minimal requirement
-=============================== =======================
-Operating system                Linux
-Number of cores                 any
-Memory                          any
-Local Disk Space                20 GiB
-=============================== =======================
 
 .. warning:: Note that results from any test run with settings to allow for short computation time, as indicated throughout the documentation, may lead to inaccurate results. To generate meaningful data, a larger workstation or Client-Server setup as indicated below is required.
+
 
 Nanoscope Production Runs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
