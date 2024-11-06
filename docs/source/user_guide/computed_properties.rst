@@ -95,12 +95,15 @@ In the right panel of SimStack, go to ``Jobs & Workflows``. Completed jobs (show
 
 .. _viz:
 
-Morphology Files & Visualization
------------------------------
+Morphological Structure
+-----------------------
 Property description
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-A major output of Deposit are morphologies, i.e. 3D representations of molecular arrangement in thin films with atomistic resolution. These morphologies are the starting point for many types of analysis, ranging from the investigation of molecular arrangement and orientation to the analysis of the electronic structure of molecules embedded in the thin films. 
+A major output of Deposit are morphologies, i.e. 3D representations of molecular arrangement in thin films with
+atomistic resolution. These morphologies are the starting point for many types of analysis, ranging from the
+investigation of molecular arrangement and orientation to the analysis of the electronic structure of molecules
+embedded in the thin films.
 
 Output files
 ~~~~~~~~~~~~~
@@ -130,12 +133,24 @@ Output files
       </tbody>
     </table>
 
-Example: Visualization of a Morphology
-"""""""""""""""""""""""""""""""""""""""""
 
-You can visualize morphologies using common molecule visualization tools such as `jmol <https://jmol.sourceforge.net/>`_ or `pymol <https://www.pymol.org/>`_. 
+.. ToDo: move to some extra section. For instance, third-party software or visualizing outputs or examples. This section is about computed properties. It is big and complex enough without this.
 
-**cml files**:
+Example of ``structure.cml`` and ``structure.mol2`` files (visualization)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+You can visualize the content of **cml** and **mol2** files using common molecule visualization tools such as `jmol <https://jmol.sourceforge.net/>`_ or `pymol <https://www.pymol.org/>`_.
+
+**Visualisation of** ``structure.cml`` **with jmol**:
+
+    .. image:: computed_properties/morph_viz_jmol.png
+       :alt: morphology visualization with jmol
+       :align: center
+       :width: 60%
+
+.. ToDo: move instructions away from this page
+
+*Instructions*:
 
     * Get jmol from the `official jmol page <https://jmol.sourceforge.net/>`_.
     * In the terminal, move to the runtime directory of Deposit
@@ -145,15 +160,22 @@ You can visualize morphologies using common molecule visualization tools such as
 
             jmol structure.cml
 
-    * Click on the `show all frames` button (green circle in the figure below).
+    * Click on the `show all frames` button (green circle in the figure above).
 
-    .. image:: computed_properties/morph_viz_jmol.png
-       :alt: morphology visualization with jmol
+
+**Visualisation of** ``structure.mol2`` **with pymol**:
+
+
+    .. image:: computed_properties/morph_viz_pymol.png
+       :alt: morphology visualization with pymol
        :align: center
        :width: 60%
 
-**mol2 files**:
+.. ToDo: move instructions away from this page
 
+*Instructions*:
+
+    * In pymol, type `set all_states, 1` to show all molecules.
     * Get pymol from the `official pymol page <https://www.pymol.org/>`_.
     * In the terminal, move to the runtime directory of Deposit
     * Open the structure using
@@ -162,12 +184,6 @@ You can visualize morphologies using common molecule visualization tools such as
 
             pymol structure.mol2
 
-    * In pymol, type `set all_states, 1` to show all molecules.
-
-    .. image:: computed_properties/morph_viz_pymol.png
-       :alt: morphology visualization with pymol
-       :align: center
-       :width: 60%
 
 .. _density:
 
