@@ -63,6 +63,10 @@ d. Set Up the Basic Nanoscope Workflow.
 e. Set Up Individual Modules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+    .. ToDo: all this tips for test settings is ugly. Make extra page for test settings, refer to it.
+
+    .. Tip:: All settings indicated in the following workflow and corresponding figures indicate settings for :ref:`production runs <getting_started_production_setup>`. Settings suitable for quick :ref:`technical tests <getting_started_test_setup>` that achieve quick, but meaningless results are indicated as tips below.
+
     In the central panel, double-click on the module to set it up.
 
     1. **MolPrep**.
@@ -74,8 +78,9 @@ e. Set Up Individual Modules
            :alt: MolPrep settings
            :width: 60%
            :align: center
-        
 
+
+    .. Tip:: For technical testing, use a small molecule and disable `Optimize Molecule` and `Compute Dihedral Forcefield`.
 
 
     2. **Desposit**
@@ -88,6 +93,15 @@ e. Set Up Individual Modules
            :align: center
 
         This will generate a sufficiently large sample for the electronic structure analysis.
+
+        .. Tip:: For technical testing especially on your laptop, adapt the settings as follows:
+
+                * Lx, Ly = 10.0, Lz = 30.0
+                * Number of Molecules: 10
+                * Number of Steps: 30000
+                * Number of SA cycles: 4 (or as many cpus as you have available)
+                * Postrelaxation steps: 0
+
 
         * In the ``Molecules`` tab:
 
@@ -108,6 +122,8 @@ e. Set Up Individual Modules
 
 
     3. **ESAnalysis**
+
+        .. Tip:: `ESAnalysis` is likely to crash for small morphologies that were generated with the test settings described in the green Tip box above. We therefore recommend to limit technical tests to the generation of morphologies, i.e. `MolPrep` and `Deposit`. If you insist to run `ESAnalysis` in a :ref:`test setup <getting_started_test_setup>` as well, disable `Compute absolute values of IP/EA` and set `Number of Molecules` for the Disorder Shell to 4. Note that you need a morphology (`structurePBC.cml`) with at least a few hundred molecules.
 
         .. list-table::
            :widths: 50 50
