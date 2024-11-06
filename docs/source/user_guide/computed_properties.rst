@@ -13,6 +13,8 @@ Computed Properties
           :width: 100px
           :align: center
 
+       :ref:`Morphological Structure <viz>`
+
        :ref:`Density <density>`
 
        :ref:`Radial Distribution Function (RDF) <radial_distribution_function>`
