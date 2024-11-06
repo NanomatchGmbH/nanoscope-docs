@@ -19,6 +19,7 @@ With standarlone workstations becoming more powerful and Nanoscope becoming more
 Technical Requirements
 ----------------------
 
+.. _getting_started_test_setup:
 
 Nanoscope Test Runs
 ~~~~~~~~~~~~~~~~~~~~
@@ -30,6 +31,7 @@ with :ref:`getting_started_installation_workstation`.
 
 .. warning:: Note that results from any test run with settings to allow for short computation time, as indicated throughout the documentation, may lead to inaccurate results. To generate meaningful data, a larger workstation or Client-Server setup as indicated below is required.
 
+.. _getting_started_production_setup:
 
 Nanoscope Production Runs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
