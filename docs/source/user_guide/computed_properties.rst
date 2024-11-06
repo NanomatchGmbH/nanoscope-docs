@@ -95,8 +95,8 @@ In the right panel of SimStack, go to ``Jobs & Workflows``. Completed jobs (show
 
 .. _viz:
 
-Generated Morphology
---------------------
+Morphological Structure
+-----------------------
 Property description
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -148,6 +148,8 @@ You can visualize the content of **cml** and **mol2** files using common molecul
        :align: center
        :width: 60%
 
+.. ToDo: move instructions away from this page
+
 *Instructions*:
 
     * Get jmol from the `official jmol page <https://jmol.sourceforge.net/>`_.
@@ -158,20 +160,22 @@ You can visualize the content of **cml** and **mol2** files using common molecul
 
             jmol structure.cml
 
-    * Click on the `show all frames` button (green circle in the figure below).
+    * Click on the `show all frames` button (green circle in the figure above).
 
 
 **Visualisation of** ``structure.mol2`` **with pymol**:
 
-    * In pymol, type `set all_states, 1` to show all molecules.
 
     .. image:: computed_properties/morph_viz_pymol.png
        :alt: morphology visualization with pymol
        :align: center
        :width: 60%
 
+.. ToDo: move instructions away from this page
+
 *Instructions*:
 
+    * In pymol, type `set all_states, 1` to show all molecules.
     * Get pymol from the `official pymol page <https://www.pymol.org/>`_.
     * In the terminal, move to the runtime directory of Deposit
     * Open the structure using
