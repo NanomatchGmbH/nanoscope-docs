@@ -397,6 +397,18 @@ Ionization potential (IP) and electron affinity (EA), commonly referred to as HO
 
 ... i.e. the investigation of IP and EA on molecules in any given setup.
 
+.. Note::
+
+   We will use HOMO/LUMO interchangeably as the negative of IP/EA throughout the documentation where appropriate or commonly accepted by the community.
+
+   .. math::
+
+      \text{HOMO} = -\text{IP}
+
+      \text{LUMO} = -\text{EA}
+
+   It is important to note, however, that in some contexts, HOMO/LUMO and -IP/-EA may not be strictly equivalent due to differences in experimental conditions or computational approximations.
+
 Output files
 ~~~~~~~~~~~~
 
