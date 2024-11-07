@@ -185,7 +185,7 @@ You can visualize the content of **cml** and **mol2** files using common molecul
 
             pymol structure.mol2
 
-    * In pymol, type `set all_states, 1` to show all molecules (green circle in the figure above.
+    * In pymol, type `set all_states, 1` to show all molecules (green circle in the figure above).
 
 
 .. _density:
