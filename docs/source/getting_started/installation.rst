@@ -13,7 +13,7 @@ Nanoscope was originally designed to run on scalable computational resources and
 * the `Client`—the machine you use to set up, submit, and analyze simulations (e.g. your laptop)
 * and the `Server`—the machine where computational resources will be used to perform simulations (typically, an HPC Cluster).
 
-With standarlone workstations becoming more powerful and Nanoscope becoming more efficient, it is also possible to setup the full Nanoscope on a single workstation.
+With standaone workstations becoming more powerful and Nanoscope becoming more efficient, it is also possible to setup the full Nanoscope on a single workstation.
 
 
 Technical Requirements
