@@ -108,7 +108,7 @@ Open a terminal to execute the following steps.
 
     2.2. Install Nanoscope.
 
-    The nanoscope installation script is available `here <https://raw.githubusercontent.com/NanomatchGmbH/nanomatch-release/refs/heads/main/nanoscope_workstation_install.sh>`_.
+    The `Nanoscope` installation script is available `here <https://raw.githubusercontent.com/NanomatchGmbH/nanomatch-release/refs/heads/main/nanoscope_workstation_install.sh>`_.
     Download and install:
 
     ::
@@ -157,7 +157,7 @@ Client-Server Installation
 Software structure
 ~~~~~~~~~~~~~~~~~~~~
 
-To operate Nanoscope on a **Client-Server architecture** requires defining:
+To operate Nanoscope on a **Client-Server architecture** you need to define:
 
 - the `Client`—the machine you use to set up, submit, and analyze simulations—and
 - the `Server`—the machine where computational resources will be used to perform simulations (typically, an HPC Cluster).
