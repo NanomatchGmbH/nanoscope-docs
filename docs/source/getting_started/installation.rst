@@ -381,12 +381,13 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
 
          ssh-copy-id <username>@<computer name or IP address>
 
-   * Test the connectivity of your passwordless ``ssh``  by running one of the commands below.
+   * Test the connectivity of your passwordless ``ssh``  by running the command below:
 
       .. code-block:: bash
 
          ssh <username>@<computer name or IP address>
 
+     You successfully transferred the key if you establish the ``ssh`` connectivity to your HPC without entering your user password.
 
 **On Windows**
 
@@ -414,19 +415,14 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
          type $env:USERPROFILE\.ssh\id_rsa.pub | ssh <username>@<computer name or IP address> "cat >> .ssh/authorized_keys"
 
 
-   * Test the connectivity
-
-        You can test the connectivity of your passwordless ``ssh`` in both systems by running one of the
-        commands below. You successfully transferred the key if you establish the ``ssh`` connectivity to
-        your HPC without entering your user password.
+   * Test the connectivity of your passwordless ``ssh`` by running the command below:
         
            .. code-block:: bash
         
                 ssh <username>@<computer name or IP address>
-        
-        
-        You successfully transferred the key if you establish the ``ssh`` connectivity to
-        your HPC without entering your user password.
+
+        You successfully transferred the key if you establish the ``ssh`` connectivity to your HPC without entering your user password.
+
 
 Configuration of the SimStack Client
 """"""""""""""""""""""""""""""""""""""""""
