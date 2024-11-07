@@ -1,6 +1,5 @@
 .. _getting_started_quick_start:
 
-
 Quick Start Guide
 ==================
 
@@ -272,3 +271,4 @@ Further outputs are:
    homo_lumo_onsets.yaml                Calculated onset energies for HOMO and LUMO levels distribution for each molecule type, can be compared with experimental onsets.
    homo_lumo_centers.yaml               Mean and standard deviation of the distribution of HOMO and LUMO levels for each molecule type. Can be used as an ab-initio input for multi-scale simulation workflows.
    ==================================== ========
+

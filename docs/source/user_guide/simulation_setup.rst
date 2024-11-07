@@ -342,4 +342,3 @@ Monitor progress and view results
        :align: center
 
     Once modules have completed successfully, you can download and view results by double-clicking on the modules and then the respective files in the ``Jobs & Workflows`` tab. Refer to :ref:`user_guide_computed_properties` for reference.
-

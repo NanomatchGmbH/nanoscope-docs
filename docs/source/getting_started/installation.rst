@@ -3,8 +3,6 @@
 Installation
 ============
 
-
-
 Workstation vs. Client-Server Setup
 -------------------------------------
 
@@ -231,14 +229,12 @@ On the `Server` / HPC Cluster
 
     .. note:: Due to a bug in the latest micromamba release, a downgrade to version 1.5.6 is required. We will update the documentation once the bug is fixed by micromamba.
 
-
 2. Install the Nanoscope software
     1. Clone the `nanomatch-release Github respository <https://github.com/NanomatchGmbH/nanomatch-release.git>`_
     ::
 
         git clone https://github.com/NanomatchGmbH/nanomatch-release.git
 
-.. ToDo: adapt to https:
 
     2. Go into the repository and list all available releases:
     ::
@@ -295,6 +291,7 @@ Details on steps 2 and 3 are provided in the `README <https://github.com/Nanomat
 
 On the `Client` / local PC
 """""""""""""""""""""""""""""""
+
 1. Install micromamba
     On Linux distributions: see above
 
@@ -338,12 +335,15 @@ On the `Client` / local PC
     WaNos are available in a `public repository <https://github.com/NanomatchGmbH/wano.git>`_. To get the WaNos, go into a directory of your choice and run
     ::
 
+
         git clone https://github.com/NanomatchGmbH/wano.git
+
 
     Make sure to remember the directory for the SimStack configuration below.
 
 SimStack configuration
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 
 .. note::
 
@@ -353,11 +353,12 @@ SimStack configuration
 Setup of passwordless ssh
 """"""""""""""""""""""""""""""
 
+
 Communication between the SimStack Client and the SimStack Server requires passwordless ssh access from your local PC to your computational resource.
 *On your local PC*, generate a ``ssh`` keypair and transfer the key to the ``authorized_keys`` file of your user account on the computational resource with one of the following commands:
 
-**On Linux and OSX (Arm and x64)**
 
+**On Linux and OSX (Arm and x64)**
 
 If you don't have the ``ssh`` keys, use the steps below to generate them.
 
@@ -390,6 +391,14 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
 
 **On Windows**
 
+   * After completing the above steps, run the below commands.
+
+      .. code-block:: bash
+
+         cd  simstack_linux
+         ./run_simstack.sh
+
+
 
 You have two options on Windows: You can install either the native Windows version or (in an updated WSL2 environment) the Linux version.
 WSL2 comes with all client tools required, so this is the recommended approach. If you want to use the Windows version, continue this tutorial.
@@ -417,6 +426,8 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
 
 **Test the connectivity**
 
+   * After completing the above steps, double-click on ``run-simstack`` and be happy.
+
 
 You can test the connectivity of your passwordless ``ssh`` in both systems by running one of the
 commands below. You successfully transferred the key if you establish the ``ssh`` connectivity to
@@ -434,6 +445,7 @@ Configuration of the SimStack Client
 **Server Configuration within the Client**"
 
 
+
 1. Open the SimStack Client:
     ::
 
@@ -447,6 +459,7 @@ Configuration of the SimStack Client
     .. note:: For a workstation setup (see :ref:`getting_started_installation_workstation`) leave all predefined settings as is.
 
     Example settings for a `Client`-`Server` setup are provided in the following figure:
+
 
     .. figure:: installation/ServerSetup.png
        :alt: ServerConfiguration
@@ -470,6 +483,7 @@ Configuration of the SimStack Client
     Queuing System                  Queueing system in use on your `Server` to schedule jobs
     Extra config                    Leave at `None required (default)`
     =============================== =================================================================
+
 
 .. note::
 
@@ -495,3 +509,4 @@ If the correct WaNo Repository path was set, WaNos will appear in the top left p
     You can choose a separate workflow directory for each research project to keep a better overview.
 
 .. ToDo: Include instructions for usage on workstation where Client == Server
+

@@ -3,7 +3,6 @@
 Settings and Options
 ====================
 
-
 This section contains a reference of all settings available in the individual modules. Refer to the :ref:`user_guide_examples` section to learn how different settings may be applied.
 
 .. image:: settings/MolPrep.png
