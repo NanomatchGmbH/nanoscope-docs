@@ -28,16 +28,16 @@
 
    user_guide/simulation_setup
    user_guide/computed_properties
-   user_guide/examples
    user_guide/settings
+.. user_guide/examples
 
 .. toctree::
    :maxdepth: 1
    :caption: Science
 
    science/benchmarks
-   science/list_of_publications   
-
+   science/publications
+.. science/methods
 
 .. toctree::
    :maxdepth: 1
