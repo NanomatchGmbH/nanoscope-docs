@@ -95,12 +95,21 @@ Open a terminal to execute the following steps.
 
     .. note:: Downgrade tio version 1.5.6 is required due to a bug in the latest micromamba release. We will update the documentation once the bug is fixed by micromamba.
 
-2. Download and execute the `installation script <https://raw.githubusercontent.com/NanomatchGmbH/nanomatch-release/refs/heads/main/nanoscope_workstation_install.sh>`_.
+2. Download and install Nanoscope
 
-    2.0. Open a new terminal window, to activate the micromamba.
+    2.1. Open a new terminal window. Make sure that micromamba is available, e.g. using
+
+    :: 
+
+        micromamba env list
+
+    If you encounter an error along the lines of `micromamba not found`, please revisit step 1 above.
 
 
-    2.1. Install Nanoscope.
+    2.2. Install Nanoscope.
+
+    The nanoscope installation script is available `here <https://raw.githubusercontent.com/NanomatchGmbH/nanomatch-release/refs/heads/main/nanoscope_workstation_install.sh>`_.
+    Download and install:
 
     ::
 
