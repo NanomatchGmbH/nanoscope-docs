@@ -177,7 +177,6 @@ You can visualize the content of **cml** and **mol2** files using common molecul
 
 *Instructions*:
 
-    * In pymol, type `set all_states, 1` to show all molecules.
     * Get pymol from the `official pymol page <https://www.pymol.org/>`_.
     * In the terminal, move to the runtime directory of Deposit
     * Open the structure using
@@ -185,6 +184,8 @@ You can visualize the content of **cml** and **mol2** files using common molecul
         .. code-block:: bash
 
             pymol structure.mol2
+
+    * In pymol, type `set all_states, 1` to show all molecules (green circle in the figure above.
 
 
 .. _density:
