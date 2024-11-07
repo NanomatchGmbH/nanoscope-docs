@@ -382,7 +382,7 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
 
          ssh-copy-id <username>@<computer name or IP address>
 
-   * Test the connectivity of your passwordless ``ssh``  by running one of the commands below in the **Powershell** prompt.
+   * Test the connectivity of your passwordless ``ssh``  by running one of the commands below.
 
       .. code-block:: bash
 
@@ -390,14 +390,6 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
 
 
 **On Windows**
-
-   * After completing the above steps, run the below commands.
-
-      .. code-block:: bash
-
-         cd  simstack_linux
-         ./run_simstack.sh
-
 
 
 You have two options on Windows: You can install either the native Windows version or (in an updated WSL2 environment) the Linux version.
@@ -423,21 +415,15 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
          type $env:USERPROFILE\.ssh\id_rsa.pub | ssh <username>@<computer name or IP address> "cat >> .ssh/authorized_keys"
 
 
+   * Test the connectivity. You can test the connectivity of your passwordless ``ssh`` by running the command below:
 
-**Test the connectivity**
-
-   * After completing the above steps, double-click on ``run-simstack`` and be happy.
-
-
-You can test the connectivity of your passwordless ``ssh`` in both systems by running one of the
-commands below. You successfully transferred the key if you establish the ``ssh`` connectivity to
-your HPC without entering your user password.
-
-   .. code-block:: bash
+       .. code-block:: bash
 
         ssh <username>@<computer name or IP address>
 
 
+    You successfully transferred the key if you establish the ``ssh`` connectivity to
+    your HPC without entering your user password.
 
 Configuration of the SimStack Client
 """"""""""""""""""""""""""""""""""""""""""
