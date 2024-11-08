@@ -97,11 +97,15 @@ Open a terminal to execute the following steps.
 
 2. Download and install Nanoscope
 
-    2.1. Open a new terminal window. Make sure that micromamba is available, e.g. using
+    2.1. Open a **new** terminal window. Make sure that micromamba is available, e.g. using
 
     :: 
 
         micromamba env list
+
+
+    .. note:: If micromamba is not available, make sure you opened a new terminal after step 1.
+
 
     If you encounter an error along the lines of `micromamba not found`, please revisit step 1 above.
 
