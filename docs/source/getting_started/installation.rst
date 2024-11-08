@@ -417,11 +417,11 @@ If you don't have the ``ssh`` keys, use the steps below to generate them.
 
    * Test the connectivity of your passwordless ``ssh`` by running the command below:
         
-           .. code-block:: bash
-        
-                ssh <username>@<computer name or IP address>
+       .. code-block:: bash
 
-        You successfully transferred the key if you establish the ``ssh`` connectivity to your HPC without entering your user password.
+            ssh <username>@<computer name or IP address>
+
+    You successfully transferred the key if you establish the ``ssh`` connectivity to your HPC without entering your user password.
 
 
 Configuration of the SimStack Client
