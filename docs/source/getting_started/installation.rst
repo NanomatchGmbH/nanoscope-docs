@@ -242,7 +242,7 @@ On the `Server` / HPC Cluster
 
         git clone https://github.com/NanomatchGmbH/nanomatch-release.git
 
-.. ToDo: adapt to https:
+    .. ToDo: adapt to https:
 
     2. Go into the repository and list all available releases:
     ::
