@@ -48,3 +48,10 @@ html_theme_options = {
     'navigation_depth': 2,  # Adjust depth as needed
 }
 
+html_context = {
+    "display_github": True,  # Integrate GitHub
+    "github_user": "NanomatchGmbH",  # GitHub username
+    "github_repo": "nanoscope-docs",  # Repository name
+    "github_version": "main",  # Branch name
+    "conf_py_path": "/docs/source/",  # Path to your documentation folder
+}
