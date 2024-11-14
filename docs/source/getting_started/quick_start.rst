@@ -161,9 +161,9 @@ d. Set Up Individual Modules
 
             * `Morphology`: `Deposit3/outputs/structurePBC.cml` (again using the rightmost button)
 
-        * For **Test Runs** only or if the absolute energy levels is not important:
+            * For **Test Runs** only or if the absolute energy levels is not important:
 
-            * Disable computation of absolute values and compute disorder and couplings only for a small shell
+                * Disable computation of absolute values and compute disorder and couplings only for a small shell
 
 
         .. list-table::
