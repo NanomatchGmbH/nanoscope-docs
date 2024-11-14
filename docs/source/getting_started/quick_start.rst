@@ -14,6 +14,23 @@ Prerequesits
 
 .. _getting_started_quick_start_setup:
 
+
+Production run vs. test run
+-----------------------------
+
+Below we provde settings for each of the modules of the Nanoscope workflow. For each module, two sets of settings are provided in tables as follows: 
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - **Production runs**
+     - **Test runs**
+   * - Settings for :ref:`production runs <getting_started_production_setup>`, resulting in meaningful, accurate results
+     - Settings suitable for quick :ref:`technical tests <getting_started_test_setup>` that deliver quick, but meaningless results also on small computational resources. 
+
+
+
 Simulation Setup
 -----------------
 
@@ -63,10 +80,6 @@ d. Set Up the Basic Nanoscope Workflow.
 e. Set Up Individual Modules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    .. ToDo: all this tips for test settings is ugly. Make extra page for test settings, refer to it.
-
-    .. Tip:: All settings indicated in the following workflow and corresponding figures indicate settings for :ref:`production runs <getting_started_production_setup>`. Settings suitable for quick :ref:`technical tests <getting_started_test_setup>` that achieve quick, but meaningless results are indicated as tips below.
-
     In the central panel, double-click on the module to set it up.
 
     1. **MolPrep**.
@@ -74,33 +87,40 @@ e. Set Up Individual Modules
         * Set the `Input Molecule File`: select the molecule you created above.
         * Adjust other settings as shown below.
 
-        .. figure:: quick_start/quick_start_molprep.png
-           :alt: MolPrep settings
-           :width: 60%
-           :align: center
-
-
-    .. Tip:: For technical testing, use a small molecule and disable `Optimize Molecule` and `Compute Dihedral Forcefield`.
+        .. list-table::
+           :widths: 50 50
+           :header-rows: 1
+        
+           * - **Production runs**
+             - **Test runs**
+           * - .. image:: quick_start/quick_start_molprep.png
+                  :width: 100%
+                  :alt: MolPrep settings prod
+                  :align: center
+             - .. image:: quick_start/quick_start_molprep.png
+                  :width: 100%
+                  :alt: MolPrep settings test
+                  :align: center
 
 
     2. **Desposit**
 
         * Adjust the ``Simulation Parameters`` tab:
 
-        .. figure:: quick_start/quick_start_deposit_box.png
-           :alt: deposit_box_settings
-           :width: 60%
-           :align: center
-
-        This will generate a sufficiently large sample for the electronic structure analysis.
-
-        .. Tip:: For technical testing especially on your laptop, adapt the settings as follows:
-
-                * Lx, Ly = 10.0, Lz = 30.0
-                * Number of Molecules: 10
-                * Number of Steps: 30000
-                * Number of SA cycles: 4 (or as many cpus as you have available)
-                * Postrelaxation steps: 0
+        .. list-table::
+           :widths: 50 50
+           :header-rows: 1
+        
+           * - **Production runs**
+             - **Test runs**
+           * - .. image:: quick_start/quick_start_deposit_box.png
+                  :width: 100%
+                  :alt: deposit_box_settings
+                  :align: center
+             - .. image:: quick_start/quick_start_deposit_box.png
+                  :width: 100%
+                  :alt: deposit_box_settings
+                  :align: center
 
 
         * In the ``Molecules`` tab:
@@ -111,6 +131,8 @@ e. Set Up Individual Modules
              * `Forcefield` input: `MolPPrep/outputs/molecule_forcefield.spf`
 
             .. note :: The `*.pdb`/`*.spf` files above do not yet exist; you specify the file paths where `MolProp` module will generate them.
+
+            .. note :: This step is the same for both production and test runs.
 
 
         .. figure:: quick_start/quick_start_Deposit_mols.png
@@ -123,14 +145,42 @@ e. Set Up Individual Modules
 
     3. **ESAnalysis**
 
-        .. Tip:: `ESAnalysis` is likely to crash for small morphologies that were generated with the test settings described in the green Tip box above. We therefore recommend to limit technical tests to the generation of morphologies, i.e. `MolPrep` and `Deposit`. If you insist to run `ESAnalysis` in a :ref:`test setup <getting_started_test_setup>` as well, disable `Compute absolute values of IP/EA` and set `Number of Molecules` for the Disorder Shell to 4. Note that you need a morphology (`structurePBC.cml`) with at least a few hundred molecules.
+
+        * In the ``General`` tab of the ESAnalysis module, adapt the following:
+
+            * `Morphology`: `Deposit3/outputs/structurePBC.cml` (again using the rightmost button)
+            * For a quick test, disable computation of absolute values and compute disorder and couplings only for a small shell
 
         .. list-table::
            :widths: 50 50
-           :header-rows: 0
+           :header-rows: 1
 
+           * - **Production runs**
+             - **Test runs**
            * - .. figure:: quick_start/quick_start_ESA_general.png
                   :alt: ESAnalysis general tab
+                  :width: 100%
+                  :align: center
+
+                  ESAnalysis general tab´
+             - .. figure:: quick_start/quick_start_ESA_general.png
+                   :alt: ESAnalysis general tab
+                   :width: 100%
+                   :align: center
+
+
+
+        * In the ``Engines`` tab, set `Memory per CPU` to the total memory of your compute node divided by the number of processors.
+
+
+        .. list-table::
+           :widths: 50 50
+           :header-rows: 1
+
+           * - **Production runs**
+             - **Test runs**
+           * - .. figure:: quick_start/quick_start_ESA_engines.png
+                  :alt: ESAnalysis engines tab
                   :width: 100%
                   :align: center
 
@@ -139,34 +189,28 @@ e. Set Up Individual Modules
                    :alt: ESAnalysis engines tab
                    :width: 100%
                    :align: center
-            
-                   ESAnalysis engines tab
 
-        * In the ``General`` tab of the ESAnalysis module, adapt the following:
-
-            * `Morphology`: `Deposit3/outputs/structurePBC.cml` (again using the rightmost button)
-            * `Core Shell/Number of molecules`: For a quick test, reduce this number, minimal value 2.
-            * `Shell for Disorder and Couplings/Number of molecules`: For a quick test, reduce this number to 100, increase to 400 for significant statistics.
-
-        * In the ``Engines`` tab, set `Memory per CPU` to the total memory of your compute node divided by the number of processors.
 
 f. Set Up Resources for Every Module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    For each module, go to the ``Resources`` tab and set the computational resources:
 
-   +------------+--------------+-------------+-----------+
-   | Module     | CPUs         | Memory (MB) | Walltime  |
-   +============+==============+=============+===========+
-   | MolPrep    | ≥32          | ≥64000      | A few     |
-   |            |              |             | hours     |
-   +------------+--------------+-------------+-----------+
-   | Deposit    | 32           | ≥64000      | A few     |
-   |            |              |             | hours     |
-   +------------+--------------+-------------+-----------+
-   | ESAnalysis | ≥64          | ≥128000     | Several   |
-   |            |              |             | hours     |
-   +------------+--------------+-------------+-----------+
+    * For test runs using test-settings as indicated above: Use whatever you have available
+    * For production runs, the following is recommended:
+
+       +------------+--------------+-------------+-----------+
+       | Module     | CPUs         | Memory (MB) | Walltime  |
+       +============+==============+=============+===========+
+       | MolPrep    | ≥32          | ≥64000      | A few     |
+       |            |              |             | hours     |
+       +------------+--------------+-------------+-----------+
+       | Deposit    | 32           | ≥64000      | A few     |
+       |            |              |             | hours     |
+       +------------+--------------+-------------+-----------+
+       | ESAnalysis | ≥64          | ≥128000     | Several   |
+       |            |              |             | hours     |
+       +------------+--------------+-------------+-----------+
 
    .. note :: * You can run the workflow with fewer cores, if the above resources are not available. This increases runtime respectively.
 
