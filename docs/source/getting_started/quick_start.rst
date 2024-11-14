@@ -99,7 +99,9 @@ d. Set Up Individual Modules
     1. **MolPrep**.
 
         * Set the `Input Molecule File`: select the molecule you created above.
-        * Adjust other settings as shown below. 
+        * Only for test runs:
+            * Disable `Optimize Molecule`
+            * Disable `Compute Dihedral Forcefield`
 
         .. list-table::
            :widths: 50 50
@@ -156,9 +158,11 @@ d. Set Up Individual Modules
     3. **ESAnalysis**
 
         * In the ``General`` tab of the ESAnalysis module, adapt the following:
+
             * `Morphology`: `Deposit3/outputs/structurePBC.cml` (again using the rightmost button)
 
         * For **Test Runs** only or if the absolute energy levels is not important:
+
             * Disable computation of absolute values and compute disorder and couplings only for a small shell
 
 
