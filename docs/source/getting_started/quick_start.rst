@@ -15,10 +15,13 @@ Prerequesits
 .. _getting_started_quick_start_setup:
 
 
-Production run vs. test run
+Production Run vs. Test Run
 -----------------------------
 
-Below we provde settings for each of the modules of the Nanoscope workflow. For each module, two sets of settings are provided in tables as follows: 
+Below, we provide settings for each module in the Nanoscope workflow.
+Each module includes configurations for two types of runs: **Production Runs** for meaningful and accurate results,
+and **Test Runs** for quick checks of workflow functionality and output.
+
 
 
 .. raw:: html
@@ -26,17 +29,20 @@ Below we provde settings for each of the modules of the Nanoscope workflow. For 
    <table class="docutils" style="width: 100%; table-layout: fixed; border-collapse: collapse;">
       <thead>
          <tr>
-            <th style="width: 50%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;"><b>Production runs</b></th>
-            <th style="width: 50%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;"><b>Test runs</b></th>
+            <th style="width: 50%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;"><b>Production Runs</b></th>
+            <th style="width: 50%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;"><b>Test Runs</b></th>
          </tr>
       </thead>
       <tbody>
          <tr>
             <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Settings for production runs, resulting in meaningful, accurate results.</td>
-            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Settings suitable for quick technical tests that deliver quick, but meaningless results also on small computational resources. </td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Settings suitable for quick technical tests that deliver quick (but meaningless) results also on small computational resources. </td>
          </tr>
       </tbody>
     </table>
+
+
+
 
 Find out more about setups for :ref:`production runs <getting_started_production_setup>` and quick :ref:`technical tests <getting_started_test_setup>`.
 
@@ -59,13 +65,11 @@ a. Design and Download the Molecule.
            Design a molecule with MolView
 
 
-    .. note:: We use biphenyl as a simple example as it allows for quick computation. It is not meant as a physical case study.
-
-    .. note:: Feel free to try a different molecule. Keep in mind that the basic usage of Nanoscope covers molecules with up to 40 atoms.
+    .. note:: We use biphenyl as a simple example as it allows for quick computation. It is not meant as a physical case study. Feel free to try a different molecule. Keep in mind that the basic usage of Nanoscope covers molecules with up to 40 atoms.
 
 
 
-c. Launch SimStack.
+b. Launch SimStack.
 ^^^^^^^^^^^^^^^^^^^
     On your local PC do the following:
 
@@ -76,7 +80,7 @@ c. Launch SimStack.
 
     This will activate SimStack environment and launch SimStack.
 
-d. Set Up the Basic Nanoscope Workflow.
+c. Set Up the Basic Nanoscope Workflow.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     **Drag&Drop** the modules `MolPrep`, `Deposit` and `ESAnalysis` from the top left panel into the middle workflow panel into a linear workflow and arrange as depicted below. Double click on each module to adapt settings and allocate resources for each simulation step.
@@ -87,7 +91,7 @@ d. Set Up the Basic Nanoscope Workflow.
            :align: center
         
 
-e. Set Up Individual Modules
+d. Set Up Individual Modules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     In the central panel, double-click on the module to set it up.
@@ -96,14 +100,11 @@ e. Set Up Individual Modules
 
         * Set the `Input Molecule File`: select the molecule you created above.
         * Adjust other settings as shown below. 
-        * Only for test runs:
-            * Disable `Optimize Molecule`
-            * Disable `Compute Dihedral Forcefield` 
 
         .. list-table::
            :widths: 50 50
            :header-rows: 1
-        
+
            * - **Production runs**
              - **Test runs**
            * - .. image:: quick_start/quick_start_molprep_prod.png
@@ -145,8 +146,6 @@ e. Set Up Individual Modules
 
             .. note :: The `*.pdb`/`*.spf` files above do not yet exist; you specify the file paths where `MolProp` module will generate them.
 
-            .. note :: This step is the same for both production and test runs.
-
 
         .. figure:: quick_start/quick_start_Deposit_mols.png
            :alt: deposit_molecules_input
@@ -154,15 +153,14 @@ e. Set Up Individual Modules
            :align: center
 
 
-
-
     3. **ESAnalysis**
 
-
         * In the ``General`` tab of the ESAnalysis module, adapt the following:
-
             * `Morphology`: `Deposit3/outputs/structurePBC.cml` (again using the rightmost button)
-            * For a quick test, disable computation of absolute values and compute disorder and couplings only for a small shell
+
+        * For **Test Runs** only or if the absolute energy levels is not important:
+            * Disable computation of absolute values and compute disorder and couplings only for a small shell
+
 
         .. list-table::
            :widths: 50 50
@@ -200,7 +198,7 @@ e. Set Up Individual Modules
                    :align: center
 
 
-f. Set Up Resources for Every Module
+e. Set Up Resources for Every Module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    For each module, go to the ``Resources`` tab and set the computational resources:
@@ -223,12 +221,12 @@ f. Set Up Resources for Every Module
 
    .. note :: * You can run the workflow with fewer cores, if the above resources are not available. This increases runtime respectively.
 
-        * Memory is provided in MB in the resources tab. Running Nanoscope with less memory than indicated in the table above is possible, but you may run into out-of-memory issues especially for larger molecules.
+        * Memory is provided in MB in the ``Resources`` tab. Running Nanoscope with less memory than indicated in the table above is possible, but you may run into out-of-memory issues especially for larger molecules.
 
-        * Further information on resources is provided in the :ref:`user_guide_settings` section.
+        * Walltime is provided in seconds in the ``Resources`` tab.
 
 
-g. Save and Submit the Workflow
+f. Save and Submit the Workflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Save the workflow with ``Ctrl+S`` or by clicking ``File -> Save`` or ``File -> Save As...``
@@ -236,7 +234,7 @@ g. Save and Submit the Workflow
     3. Submit the workflow wiht ``Ctrl+R`` or by clicking ``Run -> Run``.
  
 
-h. Monitor Progress
+g. Monitor Progress
 ^^^^^^^^^^^^^^^^^^^
 
     You can monitor the progress of your workflow with the ``Jobs & Workflows`` tab in the right panel of SimStack:
