@@ -20,15 +20,25 @@ Production run vs. test run
 
 Below we provde settings for each of the modules of the Nanoscope workflow. For each module, two sets of settings are provided in tables as follows: 
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 1
 
-   * - **Production runs**
-     - **Test runs**
-   * - Settings for :ref:`production runs <getting_started_production_setup>`, resulting in meaningful, accurate results
-     - Settings suitable for quick :ref:`technical tests <getting_started_test_setup>` that deliver quick, but meaningless results also on small computational resources. 
+.. raw:: html
 
+   <table class="docutils" style="width: 100%; table-layout: fixed; border-collapse: collapse;">
+      <thead>
+         <tr>
+            <th style="width: 50%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;"><b>Production runs</b></th>
+            <th style="width: 50%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;"><b>Test runs</b></th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Settings for production runs, resulting in meaningful, accurate results.</td>
+            <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Settings suitable for quick technical tests that deliver quick, but meaningless results also on small computational resources. </td>
+         </tr>
+      </tbody>
+    </table>
+
+Find out more about setups for :ref:`production runs <getting_started_production_setup>` and quick :ref:`technical tests <getting_started_test_setup>`.
 
 
 Simulation Setup
@@ -85,7 +95,10 @@ e. Set Up Individual Modules
     1. **MolPrep**.
 
         * Set the `Input Molecule File`: select the molecule you created above.
-        * Adjust other settings as shown below.
+        * Adjust other settings as shown below. 
+        * Only for test runs:
+            * Disable `Optimize Molecule`
+            * Disable `Compute Dihedral Forcefield` 
 
         .. list-table::
            :widths: 50 50
@@ -93,17 +106,17 @@ e. Set Up Individual Modules
         
            * - **Production runs**
              - **Test runs**
-           * - .. image:: quick_start/quick_start_molprep.png
+           * - .. image:: quick_start/quick_start_molprep_prod.png
                   :width: 100%
                   :alt: MolPrep settings prod
                   :align: center
-             - .. image:: quick_start/quick_start_molprep.png
+             - .. image:: quick_start/quick_start_molprep_test.png
                   :width: 100%
                   :alt: MolPrep settings test
                   :align: center
 
 
-    2. **Desposit**
+    2. **Deposit**
 
         * Adjust the ``Simulation Parameters`` tab:
 
@@ -113,11 +126,11 @@ e. Set Up Individual Modules
         
            * - **Production runs**
              - **Test runs**
-           * - .. image:: quick_start/quick_start_deposit_box.png
+           * - .. image:: quick_start/quick_start_deposit_box_prod.png
                   :width: 100%
                   :alt: deposit_box_settings
                   :align: center
-             - .. image:: quick_start/quick_start_deposit_box.png
+             - .. image:: quick_start/quick_start_deposit_box_test.png
                   :width: 100%
                   :alt: deposit_box_settings
                   :align: center
@@ -157,13 +170,11 @@ e. Set Up Individual Modules
 
            * - **Production runs**
              - **Test runs**
-           * - .. figure:: quick_start/quick_start_ESA_general.png
+           * - .. figure:: quick_start/quick_start_ESA_general_prod.png
                   :alt: ESAnalysis general tab
                   :width: 100%
                   :align: center
-
-                  ESAnalysis general tab´
-             - .. figure:: quick_start/quick_start_ESA_general.png
+             - .. figure:: quick_start/quick_start_ESA_general_test.png
                    :alt: ESAnalysis general tab
                    :width: 100%
                    :align: center
@@ -179,13 +190,11 @@ e. Set Up Individual Modules
 
            * - **Production runs**
              - **Test runs**
-           * - .. figure:: quick_start/quick_start_ESA_engines.png
+           * - .. figure:: quick_start/quick_start_ESA_engines_prod.png
                   :alt: ESAnalysis engines tab
                   :width: 100%
                   :align: center
-
-                  ESAnalysis general tab´
-             - .. figure:: quick_start/quick_start_ESA_engines.png
+             - .. figure:: quick_start/quick_start_ESA_engines_test.png
                    :alt: ESAnalysis engines tab
                    :width: 100%
                    :align: center
@@ -251,6 +260,12 @@ h. Monitor Progress
        :width: 60%
        :align: center
 
+    5. Analyze output with one of the two options:
+
+        * Right-click on a workflow or a module and click `Browse workflow` or `Browse directory` to browse output files in a web browser.
+        * Download individual files to your hard drive by double-clicking on the respective file in the panel depicted above.
+
+
 
 
 
@@ -258,6 +273,7 @@ Output
 ------
 
 Here we present a few examples of outputs of the standard Nanoscope workflow. For a detailed description, refer to :ref:`user_guide_computed_properties` or :ref:`user_guide_examples`.
+
 
 MolPrep Output
 ^^^^^^^^^^^^^^^
