@@ -44,7 +44,7 @@ and **Test Runs** for quick checks of workflow functionality and output.
 
 
 
-Find out more about setups for :ref:`production runs <getting_started_production_setup>` and quick :ref:`technical tests <getting_started_test_setup>`.
+Refer to the installation guide for recommendations for hardware and software setup for :ref:`production runs <getting_started_production_setup>` and quick :ref:`technical tests <getting_started_test_setup>`.
 
 
 Simulation Setup
