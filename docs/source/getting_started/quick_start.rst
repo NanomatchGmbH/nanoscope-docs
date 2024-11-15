@@ -149,8 +149,10 @@ d. Set Up Individual Modules
             .. note :: The `*.pdb`/`*.spf` files above do not yet exist; you specify the file paths where `MolProp` module will generate them.
 
 
-        .. figure:: quick_start/quick_start_Deposit_mols.png
-           :alt: deposit_molecules_input
+           The video below shows how to load the molecule and force-field files:
+
+        .. figure:: quick_start/quick_start_Deposit_mols.webm
+           :alt: Click to animate
            :width: 100%
            :align: center
 
@@ -222,6 +224,15 @@ e. Set Up Resources for Every Module
        | ESAnalysis | ≥64          | ≥128000     | Several   |
        |            |              |             | hours     |
        +------------+--------------+-------------+-----------+
+
+    Please do not forget to set up resources for each and every module in your workflow as animated below.
+
+    .. figure:: quick_start/quick_start_resources.webm
+        :alt: Click to animate
+        :width: 100%
+        :align: center
+
+
 
    .. note :: * You can run the workflow with fewer cores, if the above resources are not available. This increases runtime respectively.
 
