@@ -76,7 +76,7 @@ Open a terminal to execute the following steps.
 
         "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 
-    You will be asked four questions, if you do know now how to answer or do not have any preferences, just hit `Enter` four times.
+    During installation, you’ll be prompted with four questions. If you’re fine with the default installation paths, just press `Enter` at each prompt to accept.
 
     1.2. Activate it:
 
@@ -93,7 +93,7 @@ Open a terminal to execute the following steps.
 
     For details or special installation requirements, refer to the `Micromamba documentation page <https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html>`_.
 
-    .. note:: Downgrade tio version 1.5.6 is required due to a bug in the latest micromamba release. We will update the documentation once the bug is fixed by micromamba.
+    .. note:: Downgrade to version 1.5.6 is required due to a bug in the latest micromamba release. We will update the documentation once the bug is fixed by micromamba.
 
 2. Download and install Nanoscope
 
