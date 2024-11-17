@@ -68,6 +68,8 @@ Open a terminal to execute the following steps.
 
 .. ToDo: Check if all the stuff below including submission works on WSL. If so, lose 1 sentence that WSL works as well as a pristine Linux machine, and how to open a terminal in WSL.
 
+All of the Linux installation instructions work seamlessly on WSL2; to open a WSL shell on Windows, simply launch your installed Linux distribution from the Start menu or use Windows Terminal, then follow the instructions below. WSL2 can be easily found in the Microsoft store by searching for the Windows Subsystem for Linux app published by Microsoft Corporation. For the Linux distro, we suggest Ubuntu-22.04.
+
 1. Install micromamba and downgrade to version 1.5.6:
 
     1.1. Install the latest micromamba version:
