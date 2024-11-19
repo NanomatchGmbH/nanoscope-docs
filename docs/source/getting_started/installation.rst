@@ -25,7 +25,7 @@ Nanoscope Test Runs
 ~~~~~~~~~~~~~~~~~~~~
 
 To test the `Nanoscope` software functionality, by e.g. depositing a few small molecules with relaxed
-accuracy, you can use your laptop with a Linux OS or Windows with WSL (see below). Just make sure you have 20 GiB of free space on your local disk, and proceed
+accuracy, you can use your laptop with a Linux OS or Windows with WSL (see :ref:`note_on_wsl`). Just make sure you have 20 GiB of free space on your local disk, and proceed
 with :ref:`getting_started_installation_workstation`. 
 
 
@@ -67,6 +67,8 @@ Linux or Windows with WSL
 """"""""""""""""""""""""""""
 
 Nanoscope in the workstation setup is installed in a Linux distribution. You can therefore install Nanoscope on a workstation directly running a Linux OS, or alternatively Windows with WSL2 (Windows Subsystem for Linux 2). 
+
+.. _note_on_wsl:
 
 Note on WSL
 """"""""""""""
@@ -212,8 +214,8 @@ The setup is summarized in the figure below.
 
 Technical requirements
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Computational resource
-"""""""""""""""""""""""""
+Server / HPC Cluster
+""""""""""""""""""""""
 The Nanoscope modules are best executed on 32 cores or more. Especially the `ES Analysis` scales very well with the number of cores. The modules `MolPrep` and `Deposit` scale well up to 64 and 32 cores respectively. 
 
 =============================== ======================= =======================
@@ -224,7 +226,7 @@ Number of cores                 120 or more             16
 Memory                          3 GB / core             1.5 GB / core
 =============================== ======================= =======================
 
-Client / local PC
+Client (local PC)
 """"""""""""""""""""""""
 There are no special requirements for the `Client` where the SimStack Client and the WaNos are installed.
 The SimStack Client is available for Linux, Windows and MacOS.
@@ -297,7 +299,7 @@ On the `Server` / HPC Cluster
 
                 export NM_LICENSE_SERVER=localhost
 
-          In case the CodeMeter runtime is installed on a different computer in your network than the computational resource itself, provide the corresponding IP address. See also :ref:`getting_started_licensing` for details.
+          In case the CodeMeter runtime is installed on a different computer in your network than the `Server` itself, provide the corresponding IP address. See also :ref:`getting_started_licensing` for details.
 
 3. Install the SimStack **Server**
     In the list of available installs from step 2.2 above, execute the **topmost** command to install SimStack Server:
@@ -368,8 +370,8 @@ SimStack configuration
 Setup of passwordless ssh
 """"""""""""""""""""""""""""""
 
-Communication between the SimStack Client and the SimStack Server requires passwordless ssh access from your local PC to your computational resource.
-*On your local PC*, generate a ``ssh`` keypair and transfer the key to the ``authorized_keys`` file of your user account on the computational resource with one of the following commands:
+Communication between the SimStack Client and the SimStack Server requires passwordless ssh access from your local PC to your `Server`.
+*On your local PC*, generate a ``ssh`` keypair and transfer the key to the ``authorized_keys`` file of your user account on the `Server` with one of the following commands:
 
 **On Linux and OSX (Arm and x64)**
 
@@ -466,7 +468,7 @@ Configuration of the SimStack Client
 
        Example Server Configuration Form
 
-    In this form, enter the following information on your computational resources:
+    In this form, enter the following information on your `Server`:
 
     =============================== =================================================================
     Label                           Description
@@ -484,11 +486,11 @@ Configuration of the SimStack Client
 
 .. note::
 
-    The data provided in the image above is only an example. Please adapt all values according to your computational resource. **Contact your system administrator** if you don't know how to set these values.
+    The data provided in the image above is only an example. Please adapt all values according to your `Server`. **Contact your system administrator** if you don't know how to set these values.
 
 .. note::
 
-    You can add the same computational resource multiple times, but with different ``Default Resources`` to simplify defining computational resources when setting up workflows.
+    You can add the same `Server` multiple times, but with different ``Default Resources`` to simplify defining computational resources when setting up workflows.
 
 **Set local paths**
 
