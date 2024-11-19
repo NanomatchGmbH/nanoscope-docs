@@ -41,13 +41,13 @@ In particular, the `ES Analysis` scales very well with the number of cores.
 The modules `MolPrep` and `Deposit` scale well up to 64 and 32 cores respectively.
 This and other requirements are listed below:
 
-=============================== ======================= =======================
-Feature                         Recommendation          Minimal requirement
-=============================== ======================= =======================
-Operating system                Linux                   Linux
-Number of cores                 32 or more              16
-Memory                          3 GB / core             1.5 GB / core
-=============================== ======================= =======================
+=============================== =========================== ==========================
+Feature                         Recommendation              Minimal requirement
+=============================== =========================== ==========================
+Operating system                Linux, Windows (with WSL2)  Linux, Windows (with WSL2)
+Number of cores                 32 or more                  16
+Memory                          3 GB / core                 1.5 GB / core
+=============================== =========================== ==========================
 
 
 .. admonition:: Choosing Resources for Production Runs
