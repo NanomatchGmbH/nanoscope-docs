@@ -25,7 +25,7 @@ Nanoscope Test Runs
 ~~~~~~~~~~~~~~~~~~~~
 
 To test the `Nanoscope` software functionality, by e.g. depositing a few small molecules with relaxed
-accuracy, you can use your laptop with a Linux OS. Just make sure you have 20 GiB of free space on your local disk, and proceed
+accuracy, you can use your laptop with a Linux OS or Windows with WSL (see below). Just make sure you have 20 GiB of free space on your local disk, and proceed
 with :ref:`getting_started_installation_workstation`. 
 
 
@@ -44,12 +44,10 @@ This and other requirements are listed below:
 =============================== =========================== ==========================
 Feature                         Recommendation              Minimal requirement
 =============================== =========================== ==========================
-Operating system                Linux, Windows (with WSL2)  Linux, Windows (with WSL2)
 Number of cores                 32 or more                  16
 Memory                          3 GB / core                 1.5 GB / core
 =============================== =========================== ==========================
 
-WSL2 (Windows Subsystem for Linux 2) allows you to run a Linux environment directly on Windows, enabling compatibility with Linux-based tools and workflows; for more information, see the `official documentation <https://learn.microsoft.com/en-us/windows/wsl/>`_.
 
 .. admonition:: Choosing Resources for Production Runs
 
@@ -62,14 +60,24 @@ WSL2 (Windows Subsystem for Linux 2) allows you to run a Linux environment direc
 Workstation Installation
 -------------------------
 
+Operating System
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Linux or Windows with WSL
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Nanoscope in the workstation setup is installed in a Linux distribution. You can therefore install Nanoscope on a workstation directly running a Linux OS, or alternatively Windows with WSL2 (Windows Subsystem for Linux 2). 
+
+Note on WSL
+^^^^^^^^^^^
+
+WSL allows you to run a Linux environment directly on Windows, enabling compatibility with Linux-based tools and workflows; for more information, see the `official documentation <https://learn.microsoft.com/en-us/windows/wsl/>`_. WSL2 can be easily found in the Microsoft store by searching for the Windows Subsystem for Linux app published by Microsoft Corporation. For the Linux distro, we suggest Ubuntu-22.04. 
+All of the Linux installation instructions work seamlessly on WSL2; open a WSL shell on Windows, simply launch your installed Linux distribution from the Start menu or use Windows Terminal, then follow the instructions below. 
+
 Installation step-by-step
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Open a terminal to execute the following steps.
-
-.. ToDo: Check if all the stuff below including submission works on WSL. If so, lose 1 sentence that WSL works as well as a pristine Linux machine, and how to open a terminal in WSL.
-
-All of the Linux installation instructions work seamlessly on WSL2; to open a WSL shell on Windows, simply launch your installed Linux distribution from the Start menu or use Windows Terminal, then follow the instructions below. WSL2 can be easily found in the Microsoft store by searching for the Windows Subsystem for Linux app published by Microsoft Corporation. For the Linux distro, we suggest Ubuntu-22.04.
 
 1. Install micromamba and downgrade to version 1.5.6:
 
