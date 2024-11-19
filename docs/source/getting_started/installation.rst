@@ -49,6 +49,7 @@ Number of cores                 32 or more                  16
 Memory                          3 GB / core                 1.5 GB / core
 =============================== =========================== ==========================
 
+WSL2 (Windows Subsystem for Linux 2) allows you to run a Linux environment directly on Windows, enabling compatibility with Linux-based tools and workflows; for more information, see the `official documentation <https://learn.microsoft.com/en-us/windows/wsl/>`_.
 
 .. admonition:: Choosing Resources for Production Runs
 
