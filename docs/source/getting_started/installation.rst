@@ -64,12 +64,12 @@ Operating System
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Linux or Windows with WSL
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""
 
 Nanoscope in the workstation setup is installed in a Linux distribution. You can therefore install Nanoscope on a workstation directly running a Linux OS, or alternatively Windows with WSL2 (Windows Subsystem for Linux 2). 
 
 Note on WSL
-^^^^^^^^^^^
+""""""""""""""
 
 WSL allows you to run a Linux environment directly on Windows, enabling compatibility with Linux-based tools and workflows; for more information, see the `official documentation <https://learn.microsoft.com/en-us/windows/wsl/>`_. WSL2 can be easily found in the Microsoft store by searching for the Windows Subsystem for Linux app published by Microsoft Corporation. For the Linux distro, we suggest Ubuntu-22.04. 
 All of the Linux installation instructions work seamlessly on WSL2; open a WSL shell on Windows, simply launch your installed Linux distribution from the Start menu or use Windows Terminal, then follow the instructions below. 
