@@ -120,7 +120,7 @@ To simulate a pristine layer we construct a linear worklfow in SimStack comprisi
 
 **Deposit**:
 
-    1. Adjust settings in the ``Simulation Parameters`` Tab as described in :ref:`user_guide_settings`.
+    1. Adjust settings in the ``Simulation Parameters`` Tab as described in :ref:`user_guide_settings`, specifically box size or number of molecules, depending on your purpose.
     2. Switch to the ``Molecules`` Tab. Use the rightmost buttons next to the `Molecule` and `Forcefield` input fields to load `MolPrep/outputs/molecule.pdb` and `MolPrep/outputs/molecule_forcefield.spf`, respectively.
 
 
@@ -172,7 +172,7 @@ Your workflow should look like this:
 
 **Deposit**:
 
-    1. Adjust settings in the ``Simulation Parameters`` Tab as described in :ref:`user_guide_settings`.
+    1. Adjust settings in the ``Simulation Parameters`` Tab as described in :ref:`user_guide_settings`, specifically box size or number of molecules, depending on your purpose.
     2. Switch to the ``Molecules`` Tab.
     
         a. Press the `+` button to add the input for a second molecule.
@@ -246,9 +246,13 @@ Your workflow should look like this:
 
 **Deposit modules**:
 
-    1. Adjust settings in the ``Simulation Parameters Tab`` as described in :ref:`user_guide_settings`.
+    1. Adjust settings in the ``Simulation Parameters Tab`` as described in :ref:`user_guide_settings`. Specifically, set the same total box height for all deposition steps.
 
-        .. note:: All Deposit modules must have the same box settings!
+        .. warning:: All Deposit modules must have the same box dimensions. Make sure that, for all deposition steps:
+
+            * `X / A` and `Y / A` are the same value
+            * `Set total box height for multilayer` is enabled
+            * `Total Z / A` is the same value
 
     2. Switch to the `Molecules` Tab. Use the rightmost buttons next to the `Molecule` and `Forcefield` input fields to load `Parallel/X/MolPrep/outputs/molecule.pdb` and `Parallel/X/MolPrep/outputs/molecule_forcefield.spf`, respectively. Adjust `X` depending on which material you would like to have in your layer.
     3. For all Deposit modules **except the first**: 
