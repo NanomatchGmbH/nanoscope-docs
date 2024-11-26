@@ -145,7 +145,7 @@ Dimensions
         </thead>
          <tbody>
     <tr>
-      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Morphology size</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Morphology size defined by</td>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">The size of the morphology can be either defined by depositing a certain number of molecules (option <code>number of molecules</code>) or by providing a certain box size that is automatically filled with the required number of molecules (option <code>box size</code>).</td>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">box size</td>
     </tr>
@@ -178,7 +178,7 @@ Dimensions
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">200.0</td>
     </tr>
     <tr>
-      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Set total height for multilayer</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Set total box height for multilayer</td>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">To deposit multilayer systems (multiple Deposit steps) requires setting the same global height in all Deposit steps. Enable and set the value as described below.</td>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">False (unchecked)</td>
     </tr>
@@ -193,7 +193,7 @@ Dimensions
 Simulation Parameters
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: Most of the simulation parameters are calibrated to generate good morphologies. We recommend to modify parameters only as indicated.
+.. note:: Most of the simulation parameters are calibrated to generate good morphologies. We recommend to modify parameters only as indicated. The simulation parameters listed below are hidden in the WaNo and displayed only if `Show simulation parameters (advanced)` is enabled.
 
 .. This is the table in grid format. Update it here and let the LLM format it as HTML below.
 .. +--------------------+-------------------------------------------------------+----------------+
