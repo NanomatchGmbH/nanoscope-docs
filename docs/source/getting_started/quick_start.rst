@@ -121,7 +121,7 @@ d. Set Up Individual Modules
 
     2. **Deposit**
 
-        * Adjust the ``Simulation Parameters`` tab:
+        * Adjust the ``Simulation Parameters`` tab as indicated in the screenshots below. Note that for a standard production run, the preset simulation parameters can be used without adjustment.
 
         .. list-table::
            :widths: 50 50
