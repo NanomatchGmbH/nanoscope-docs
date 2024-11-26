@@ -91,30 +91,46 @@ Deposit
 Simulation Parameters Tab
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Simulation Box
+Dimensions
 ~~~~~~~~~~~~~~
     
 .. This is the table in grid format. Update it here and let the LLM format it as HTML below.
 .. +--------------------+-------------------------------------------------------+----------------+
 .. | Setting            | Description                                           | Standard value |
 .. +====================+=======================================================+================+
-.. | Lx                 | Half the box size in x direction in A. Box extends    | 45.0           |
+.. | Morphology size    | The size of the morphology can be either defined by   | box size       |
+.. | defined by         | depositing a certain number of molecules (option      |                |
+.. |                    | `number of molecules`) or by providing a certain box  |                |
+.. |                    | size that is automatically filled with the required   |                |
+.. |                    | number of molecules (option `box size`).              |                |
+.. +--------------------+-------------------------------------------------------+----------------+
+.. | Number of Molecules| Visible only if Morphology size defined by number of  | 1000 - 4000    |
+.. |                    | molecules. Sets the number of molecules in the        |                |
+.. |                    | morphology                                            |                |
+.. +--------------------+-------------------------------------------------------+----------------+
+.. | Cubic box          | Visible only if Morphology size defined by number of  | False          |
+.. |                    | molecules. If set, an approximately cubic morphology  |                |
+.. |                    | is generated. If disabled, X and Y are required.      |                |
+.. +--------------------+-------------------------------------------------------+----------------+
+.. | X / A              | Half the box size in x direction in A. Box extends    | 100.0          |
 .. |                    | from -Lx to Lx.                                       |                |
 .. +--------------------+-------------------------------------------------------+----------------+
-.. | Ly                 | Half the box size in y direction in A. Box extends    | 45.0           |
+.. | Y / A              | Half the box size in y direction in A. Box extends    | 100.0          |
 .. |                    | from -Ly to Ly. Recommended: Lx=Ly                    |                |
 .. +--------------------+-------------------------------------------------------+----------------+
-.. | Lz                 | Box size in z direction (deposition axis) in A. For   | 180.0          |
-.. |                    | 180A is sufficient for 2000 standard molecules with   |                |
-.. |                    | 60-100 atoms. Increase for morphologies containing    |                |
-.. |                    | more or larger molecules                              |                |
+.. | Z / A              | Box size in z direction (deposition axis) in A.       | 200.0          |
+.. |                    | Visible only for Morphology size defined by box size. |                |
+.. |                    |                                                       |                |
+.. |                    |                                                       |                |
 .. +--------------------+-------------------------------------------------------+----------------+
-.. | PBC enabled        | If enabled, periodic boundary conditions in x and y   | True           |
-.. |                    | direction are applied, and the final morphology is    | (checked)      |
-.. |                    | expanded in x and y direction (file `structurePBC.cml`)|               |
+.. | Set total height   | To deposit multilayer systems (multiple Deposit steps)| False          |
+.. | for multilayer     | requires to set the same global height in all Deposit | (unchecked)    |
+.. |                    | steps. Enable and set the value as described below.   |                |
 .. +--------------------+-------------------------------------------------------+----------------+
-.. | PBC cutoff         | Cutoff in A applied in the computation of forcefield  | 20.0           |
-.. |                    | contributions of periodic copies.                     |                |
+.. | Total Z / A        | Visible only if "Set total height.." above is enabled.|   200          |
+.. |                    | Defines the estimated total box height of your        |                |
+.. |                    | multilayer deposition. Needs to be the same value for |                |
+.. |                    | all sequential Deposit modules.                       |                |
 .. +--------------------+-------------------------------------------------------+----------------+
 
 .. raw:: html
@@ -127,45 +143,51 @@ Simulation Box
                 <th style="width: 20%; padding: 8px; border: 1px solid #ddd; text-align: left; overflow-wrap: break-word; white-space: normal;">Standard Value</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Lx</td>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">
-                    Half the box size in x direction in A. Box extends from -Lx to Lx.
-                </td>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">45.0</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Ly</td>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">
-                    Half the box size in y direction in A. Box extends from -Ly to Ly. Recommended: Lx=Ly
-                </td>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">45.0</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Lz</td>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">
-                    Box size in z direction (deposition axis) in A. For 180A, it is sufficient for 2000 standard
-                    molecules with 60-100 atoms. Increase for morphologies containing more or larger molecules.
-                </td>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">180.0</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">PBC enabled</td>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">
-                    If enabled, periodic boundary conditions in x and y direction are applied, and the final
-                    morphology is expanded in x and y direction (file <code>structurePBC.cml</code>).
-                </td>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">True (checked)</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">PBC cutoff</td>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">
-                    Cutoff in A applied in the computation of forcefield contributions of periodic copies.
-                </td>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">20.0</td>
-            </tr>
-        </tbody>
+         <tbody>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Morphology size</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">The size of the morphology can be either defined by depositing a certain number of molecules (option <code>number of molecules</code>) or by providing a certain box size that is automatically filled with the required number of molecules (option <code>box size</code>).</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">box size</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Number of Molecules</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Visible only if Morphology size defined by number of molecules. 
+        Sets the number of molecules in the morphology. Number required for ESAnalysis depends on the molecule size.
+                    For NPB, 2000 molecules are sufficient. For small molecules such as BPhen, increase to 3000.
+        </td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">1000-4000</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Cubic box</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Visible only if Morphology size defined by number of molecules. If set, an approximately cubic morphology is generated. If disabled, X and Y are required.</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">False</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">X / A</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Half the box size in x direction in A. Box extends from -Lx to Lx.</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">100.0</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Y / A</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Half the box size in y direction in A. Box extends from -Ly to Ly. Recommended: Lx=Ly.</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">100.0</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Z / A</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Box size in z direction (deposition axis) in A. Visible only for Morphology size defined by box size.</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">200.0</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Set total height for multilayer</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">To deposit multilayer systems (multiple Deposit steps) requires setting the same global height in all Deposit steps. Enable and set the value as described below.</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">False (unchecked)</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Total Z / A</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Visible only if "Set total height..." above is enabled. Defines the estimated total box height of your multilayer deposition. Needs to be the same value for all sequential Deposit modules.</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">200</td>
+    </tr>
+  </tbody>
     </table>
 
 Simulation Parameters
@@ -177,11 +199,6 @@ Simulation Parameters
 .. +--------------------+-------------------------------------------------------+----------------+
 .. | Setting            | Description                                           | Standard value |
 .. +====================+=======================================================+================+
-.. | Number of          | Number of molecules in the morphology. Number required| 1000-4000      |
-.. | Molecules          | for ESAnalysis depends on the molecule size.          |                |
-.. |                    | For NPB, 2000 molecules are sufficient.               |                |
-.. |                    | For small molecules such as BPhen, increase to 3000   |                |
-.. +--------------------+-------------------------------------------------------+----------------+
 .. | Initial            | Initial temperature of the simulated annealing cycles.| 4000.0         |
 .. | Temperature [K]    | *Leave as is*.                                        |                |
 .. +--------------------+-------------------------------------------------------+----------------+
@@ -219,14 +236,6 @@ Simulation Parameters
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Number of Molecules</td>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">
-                    Number of molecules in the morphology. Number required for ESAnalysis depends on the molecule size.
-                    For NPB, 2000 molecules are sufficient. For small molecules such as BPhen, increase to 3000.
-                </td>
-                <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">1000-4000</td>
-            </tr>
             <tr>
                 <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Initial Temperature [K]</td>
                 <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">
