@@ -164,27 +164,27 @@ Dimensions
     </tr>
     <tr>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">X [A]</td>
-      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Box size in x direction in A.</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Box size in x direction in &Aring.</td>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">100.0</td>
     </tr>
     <tr>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Y [A]</td>
-      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Box size in y direction in A. Recommended: Lx=Ly.</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Box size in y direction in &Aring. Recommended: X=Y.</td>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">100.0</td>
     </tr>
     <tr>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Z [A]</td>
-      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Box size in z direction (deposition axis) in A. Visible only for Morphology size defined by box size.</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Box size in z direction (deposition axis) in &Aring. Visible only for Morphology size defined by box size.</td>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">200.0</td>
     </tr>
     <tr>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Set total box height for multilayer</td>
-      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">To deposit multilayer systems (multiple Deposit steps) requires setting the same global height in all Deposit steps. Enable and set the value as described below.</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">This setting must be enabled if you are depositing a multilayer system, i.e., using multiple Deposit steps.</td>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">False (unchecked)</td>
     </tr>
     <tr>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Total Z [A]</td>
-      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Visible only if "Set total height..." above is enabled. Defines the estimated total box height of your multilayer deposition. Needs to be the same value for all sequential Deposit modules.</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Visible only if "Set total box height..." above is enabled. Defines the estimated total box height of your multilayer deposition. Needs to be the same value for all sequential Deposit modules.</td>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">200</td>
     </tr>
   </tbody>
