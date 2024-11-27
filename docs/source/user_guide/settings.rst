@@ -112,11 +112,11 @@ Dimensions
 .. |                    | molecules. If set, an approximately cubic morphology  |                |
 .. |                    | is generated. If disabled, X and Y are required.      |                |
 .. +--------------------+-------------------------------------------------------+----------------+
-.. | X [A]              | Half the box size in x direction in A. Box extends    | 100.0          |
-.. |                    | from -Lx to Lx.                                       |                |
+.. | X [A]              | Box size in x direction in A.                         | 100.0          |
+.. |                    |                                                       |                |
 .. +--------------------+-------------------------------------------------------+----------------+
-.. | Y [A]              | Half the box size in y direction in A. Box extends    | 100.0          |
-.. |                    | from -Ly to Ly. Recommended: Lx=Ly                    |                |
+.. | Y [A]              | Box size in y direction in A.                         | 100.0          |
+.. |                    | Recommended: Lx=Ly                                    |                |
 .. +--------------------+-------------------------------------------------------+----------------+
 .. | Z [A]              | Box size in z direction (deposition axis) in A.       | 200.0          |
 .. |                    | Visible only for Morphology size defined by box size. |                |
@@ -164,12 +164,12 @@ Dimensions
     </tr>
     <tr>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">X [A]</td>
-      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Half the box size in x direction in A. Box extends from -Lx to Lx.</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Box size in x direction in A.</td>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">100.0</td>
     </tr>
     <tr>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Y [A]</td>
-      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Half the box size in y direction in A. Box extends from -Ly to Ly. Recommended: Lx=Ly.</td>
+      <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">Box size in y direction in A. Recommended: Lx=Ly.</td>
       <td style="padding: 8px; border: 1px solid #ddd; overflow-wrap: break-word; white-space: normal;">100.0</td>
     </tr>
     <tr>
